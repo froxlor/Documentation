@@ -63,7 +63,7 @@ If you now chose to use PHP via FCGID or FPM, then you should also read our fcgi
 After adjusting the settings and activating/deactivating of wanted features you can start the configuration of the services by running the following command:
 
 ```shell
-php /var/www/froxlor/install/config-services.php --froxlor-dir /var/www/froxlor --create
+php /var/www/froxlor/install/scripts/config-services.php --froxlor-dir=/var/www/froxlor/ --create
 ```
 
 It will install the chosen services and configure them according to your settings with the froxlor configuration templates.
