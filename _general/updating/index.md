@@ -6,6 +6,6 @@ nav_order: 2
 has_toc: false
 ---
 
-# Updating Froxlor
+# Updating froxlor
 
 Soon™

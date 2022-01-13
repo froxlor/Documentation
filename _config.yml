@@ -20,6 +20,8 @@ color_scheme: froxlor
 aux_links:
   "Froxlor on GitHub":
     - "https://github.com/Froxlor/Froxlor"
+  "Join us on Discord":
+    - "https://discord.froxlor.org/"
 
 # Footer content
 footer_content: "Copyright &copy; 2022 Froxlor Team."

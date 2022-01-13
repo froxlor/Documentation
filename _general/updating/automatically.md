@@ -4,6 +4,6 @@ title: Updating automatically
 parent: Updating
 ---
 
-# Updating Froxlor automatically
+# Updating froxlor automatically
 
 Soon™

@@ -6,7 +6,7 @@ parent: Configuration
 
 # Configure Apache2 or Nginx with PHP-FPM
 
-> ***Untested** on Ubuntu 20.04 LTS (Focal Fossa) with Froxlor 0.10.30*
+> ***Untested** on Ubuntu 20.04 LTS (Focal Fossa) with froxlor 0.10.30*
 
 ## 1. Introduction
 
@@ -27,15 +27,15 @@ More Infos can be found here:
 
 * More difficult to setup.
 
-I assume that you have Froxlor already running (using mod_php) and the database set up.
+I assume that you have froxlor already running (using mod_php) and the database set up.
 
-## 2. Configure Froxlor Settings
+## 2. Configure froxlor Settings
 
 **It is very important that you first adjust all settings** according to your needs before configuring the services. This is because some configuration-templates/commands change dynamically depending on the settings you chose.
 
 To adjust settings, login as admin and click on 'Settings' in the menu on the left side.
 
-**Note:** Please remember to check that you're using the correct PHP-FPM version in Froxlor. You can do it on the 'PHP-FPM versions' page.
+**Note:** Please remember to check that you're using the correct PHP-FPM version in froxlor. You can do it on the 'PHP-FPM versions' page.
 
 ````
 Webserver settings
@@ -46,9 +46,9 @@ PHP-FPM
     Enabled: Yes
         Save
 
-Froxlor VirtualHost settings
-    Make Froxlor directly accessible by hostname: Yes
-    Use PHP-FPM in Froxlor host: Yes
+froxlor VirtualHost settings
+    Make froxlor directly accessible by hostname: Yes
+    Use PHP-FPM in froxlor host: Yes
         Save
 
 System settings
@@ -60,7 +60,7 @@ System settings
 
 ### 3.1. Quick installation
 
-This method is especially useful for freshly installed Froxlor instances.
+This method is especially useful for freshly installed froxlor instances.
 
 #### 3.1.1 Run the config-services script
 
@@ -68,7 +68,7 @@ This method is especially useful for freshly installed Froxlor instances.
 php /var/www/froxlor/install/scripts/config-services.php --froxlor-dir=/var/www/froxlor/ --create
 ````
 
-The installer will guide you through the configuration of Froxlor, at least the following options must be selected when configuring the *SYSTEM*:
+The installer will guide you through the configuration of froxlor, at least the following options must be selected when configuring the *SYSTEM*:
 
 * `libnssextrausers`
 * `php-fpm`
@@ -81,7 +81,7 @@ If your system has already been heavily modified, manual installation is recomme
 
 #### 3.2.1. Setting up the environment
 
-You should ensure that the Froxlor cronjob isn't executed while you set up php-fpm. This could produce unwanted results!
+You should ensure that the froxlor cronjob isn't executed while you set up php-fpm. This could produce unwanted results!
 
 ````shell
 service cron stop
@@ -89,7 +89,7 @@ service cron stop
 
 #### 3.2.2. Setting up webserver
 
-Please execute the commands from the Froxlor configuration page:
+Please execute the commands from the froxlor configuration page:
 
 ````
 Configuration » Ubuntu Focal (20.04) » Webserver (HTTP) » webserver you plan to use
@@ -97,7 +97,7 @@ Configuration » Ubuntu Focal (20.04) » Webserver (HTTP) » webserver you plan 
 
 #### 3.2.3. Setting up libnss-extrausers
 
-Please execute the commands from the Froxlor configuration page:
+Please execute the commands from the froxlor configuration page:
 
 ````
 Configuration » Ubuntu Focal (20.04) » Others (System) » libnss-extrausers
@@ -105,7 +105,7 @@ Configuration » Ubuntu Focal (20.04) » Others (System) » libnss-extrausers
 
 #### 3.2.4. Setting up php-fpm
 
-Please execute the commands from the Froxlor configuration page:
+Please execute the commands from the froxlor configuration page:
 
 ````
 Configuration » Ubuntu Focal (20.04) » Others (System) » PHP-FPM
@@ -113,9 +113,9 @@ Configuration » Ubuntu Focal (20.04) » Others (System) » PHP-FPM
 
 #### 3.2.5. Final Steps
 
-Log in to Froxlor and click on 'Rebuild Configuration Files'.
+Log in to froxlor and click on 'Rebuild Configuration Files'.
 
-Run Froxlor's global cron job once to immediately produce php-fpm configurations for all VirtualHosts:
+Run froxlor's global cron job once to immediately produce php-fpm configurations for all VirtualHosts:
 
  ````shell
 php /var/www/froxlor/scripts/froxlor_master_cronjob.php --force

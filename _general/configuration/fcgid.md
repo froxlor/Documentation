@@ -6,7 +6,7 @@ parent: Configuration
 
 # Configure Apache2 with FCGID
 
-> ***Untested** on Ubuntu 20.04 LTS (Focal Fossa) with Froxlor 0.10.30*
+> ***Untested** on Ubuntu 20.04 LTS (Focal Fossa) with froxlor 0.10.30*
 
 ## 1. Introduction
 
@@ -34,9 +34,9 @@ The old mod_fastcgi doesn't seem to be in development anymore and wasn't release
 * Wrong installations can cause more security holes than using the original mod_php5 module
 * A lot of RAM is used when there are a lot of vHosts (can be limited slightly)
 
-I assume that you have Froxlor already running and the database set up.
+I assume that you have froxlor already running and the database set up.
 
-## 2. Configure Froxlor Settings
+## 2. Configure froxlor Settings
 
 **It is very important that you first adjust all settings** according to your needs before configuring the services. This is because some configuration-templates/commands change dynamically depending on the settings you chose.
 
@@ -48,8 +48,8 @@ FCGID
         Save
 
 Froxlor VirtualHost settings
-    Make Froxlor directly accessible by hostname: Yes
-    Use FCGID in Froxlor host: Yes
+    Make froxlor directly accessible by hostname: Yes
+    Use FCGID in froxlor host: Yes
         Save
 
 System settings
@@ -61,7 +61,7 @@ System settings
 
 ### 3.1. Quick installation
 
-This method is especially useful for freshly installed Froxlor instances.
+This method is especially useful for freshly installed froxlor instances.
 
 #### 3.1.1 Run the config-services script
 
@@ -69,7 +69,7 @@ This method is especially useful for freshly installed Froxlor instances.
 php /var/www/froxlor/install/scripts/config-services.php --froxlor-dir=/var/www/froxlor/ --create
 ```
 
-The installer will guide you through the configuration of Froxlor, at least the following options must be selected when configuring the 'SYSTEM':
+The installer will guide you through the configuration of froxlor, at least the following options must be selected when configuring the 'SYSTEM':
 
 * `libnssextrausers`
 * `fcgid`
@@ -82,7 +82,7 @@ If your system has already been heavily modified, manual installation is recomme
 
 #### 3.2.1. Setting up the environment
 
-You should ensure that the Froxlor cronjob isn't executed while you set up fcgid. This could produce unwanted results!
+You should ensure that the froxlor cronjob isn't executed while you set up fcgid. This could produce unwanted results!
 
 ```shell
 service cron stop
@@ -90,7 +90,7 @@ service cron stop
 
 #### 3.2.2. Setting up apache2
 
-Please execute the commands from the Froxlor configuration page:
+Please execute the commands from the froxlor configuration page:
 
 ```
 Configuration » Ubuntu Focal (20.04) » Webserver (HTTP) » Apache 2.4
@@ -98,7 +98,7 @@ Configuration » Ubuntu Focal (20.04) » Webserver (HTTP) » Apache 2.4
 
 #### 3.2.3. Setting up libnss-extrausers
 
-Please execute the commands from the Froxlor configuration page:
+Please execute the commands from the froxlor configuration page:
 
 ```
 Configuration » Ubuntu Focal (20.04) » Others (System) » libnss-extrausers
@@ -106,7 +106,7 @@ Configuration » Ubuntu Focal (20.04) » Others (System) » libnss-extrausers
 
 #### 3.2.4. Setting up FCGID
 
-Please execute the commands from the Froxlor configuration page:
+Please execute the commands from the froxlor configuration page:
 
 ```
 Configuration » Ubuntu Focal (20.04) » Others (System) » FCGID
@@ -114,9 +114,9 @@ Configuration » Ubuntu Focal (20.04) » Others (System) » FCGID
 
 #### 3.2.5. Final Steps
 
-Log in to Froxlor and click on 'Rebuild Configuration Files'.
+Log in to froxlor and click on 'Rebuild Configuration Files'.
 
-Run Froxlor's global cron job once to immediately produce fcgid configurations for all VirtualHosts:
+Run froxlor's global cron job once to immediately produce fcgid configurations for all VirtualHosts:
 
 ```shell
 php /var/www/froxlor/scripts/froxlor_master_cronjob.php --force

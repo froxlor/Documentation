@@ -4,7 +4,7 @@ title: Updating manually
 parent: Updating
 ---
 
-# Updating Froxlor manually
+# Updating froxlor manually
 
 ## 1. Backup
 
@@ -27,7 +27,7 @@ cp /var/www/froxlor/lib/userdata.inc.php /tmp/
 
 Now that we have all important data backed up, we can safely remove the old files, and replace them with the new ones.
 
-Download the latest version of Froxlor from [https://files.froxlor.org/releases/](https://files.froxlor.org/releases/)
+Download the latest version of froxlor from [https://files.froxlor.org/releases/](https://files.froxlor.org/releases/)
 
 ````shell
 rm -rf /var/www/froxlor/*
@@ -60,7 +60,7 @@ mv /tmp/userdata.inc.php /var/www/froxlor/lib/
 ## 4. Correct permissions
 
 In order for the webserver to be able to server the files, the owner must be set correctly.
-*Note*: If you're using FCGID/PHP-Fpm for the Froxlor-Vhost, you have to replace the webserver-user with your local froxlor-user.
+*Note*: If you're using FCGID/PHP-Fpm for the froxlor-Vhost, you have to replace the webserver-user with your local froxlor-user.
 
 ````shell
 chown -R [webserver-user]:[webserver-user] /var/www/froxlor/
@@ -68,6 +68,6 @@ chown -R [webserver-user]:[webserver-user] /var/www/froxlor/
 
 *(the 'webserver-user' on most systems is 'www-data' or 'apache')*
 
-## 5. Login to Froxlor
+## 5. Login to froxlor
 
-Now open Froxlor in your browser and login with the admin-account. You will be prompted to run the database-update.
+Now open froxlor in your browser and login with the admin-account. You will be prompted to run the database-update.

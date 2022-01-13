@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Git source
+title: Git / development
 parent: Installation
 ---
 
-# Install Froxlor from Git source
+# Install froxlor from git source
 
 ## 1. Download/install git
 
@@ -18,7 +18,7 @@ Connect to a shell on your server and change the directory to `/var/www/`.
 cd /var/www/
 ````
 
-Now you can 'clone' the Froxlor.git-repository using the following command. It will store the files into the given target-directory froxlor (/var/www/froxlor/).
+Now you can 'clone' the froxlor repository using the following command. It will store the files into the given target-directory froxlor (/var/www/froxlor/).
 
 ````shell
 git clone https://github.com/Froxlor/Froxlor.git froxlor
@@ -35,4 +35,4 @@ composer install --no-dev
 
 ## 4. Proceed with installation and configuration
 
-Now follow the general installation documentation starting with **step 2**: [Install froxlor from tarball](/general/installation/tarball.html)
+Now follow the general installation documentation starting with **step 2**: [Install froxlor from tarball](/general/installation/tarball.html#2-set-permissions)
