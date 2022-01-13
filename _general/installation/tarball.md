@@ -51,9 +51,8 @@ To adjust settings, login as admin and click on 'Settings' in the menu on the le
 
 If you now chose to use PHP via FCGID or FPM, then you should also read our fcgid/php-fpm handbooks:
 
-* [Apache2 / FCGID](/general/configuration/apache2/fcgid)
-* [Apache2 / PHP-FPM](/general/configuration/apache2/php-fpm)
-* [nginx / PHP-FPM](/general/configuration/nginx/php-fpm)
+* [Apache2 / FCGID](/general/configuration/fcgid.html)
+* [Apache2 & nginx / PHP-FPM](/general/configuration/php-fpm.html)
 
 ## 5. Configuration of services
 
