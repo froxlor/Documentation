@@ -45,6 +45,8 @@ collections:
         output: true
   userguide:
         output: true
+  apiguide:
+        output: true
   special:
         output: true
 
@@ -56,5 +58,7 @@ just_the_docs:
       name: Admin Guide
     userguide:
       name: User Guide
+    apiguide:
+      name: API Guide
     special:
       name: Special

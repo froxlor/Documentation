@@ -59,19 +59,7 @@ If you now chose to use PHP via FCGID or FPM, then you should also read our fcgi
 
 ## 5. Configuration of services
 
-### Automatically
-After adjusting the settings and activating/deactivating of wanted features you can start the configuration of the services by running the following command:
+&#8594; see [Configuration Guide](/general/configuration/index.html)
 
-```shell
-php /var/www/froxlor/install/scripts/config-services.php --froxlor-dir=/var/www/froxlor/ --create
-```
-
-It will install the chosen services and configure them according to your settings with the froxlor configuration templates.
-
-### Manual (copy'n'paste)
-On of the most important parts of froxlor's setup-process. Froxlor shows you all needed commands and configuration files in the panel. You just have to copy and paste. Note: Please keep in mind that froxlor just facilitates your work, but it cannot think for itself (yet). Please read carefully (you actually just doing that, thanks) and do things slowly.
-
-To configure the services, login as admin and click on 'Configuration' in the menu on the left side. Then select the distribution you are using from the list. The second select-box shows the different services, you should go through them all, one after another. For each service from the second select-box there will be different possibilities in the third select-box. Froxlor-defaults are marked (e.g. Courier and Dovecot [default]). You do not need all of these entries but as admin you should know which ones you need :)
-
-### Need help?
+## 6. Need help?
 If you run into any problems or have difficulties understanding / setting-up / whatever - don't hesitate to contact us either via e-mail ([team@froxlor.org](mailto:team@froxlor.org)) or the preferred way: on Discord ([https://discord.froxlor.org](https://discord.froxlor.org)) and our forums ([https://forum.froxlor.org/](https://forum.froxlor.org/))
