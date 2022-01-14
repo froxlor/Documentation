@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: page
 title: E-Mail Account
-parent: E-Mail
+parent: E-mail
+grand_parent: Interface
 ---
 
 # E-Mail Account
