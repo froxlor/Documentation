@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: E-mail
 nav_order: 1
 has_children: true

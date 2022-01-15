@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Interface
 has_toc: false
 has_children: true

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Domain
 nav_order: 3
 has_children: false

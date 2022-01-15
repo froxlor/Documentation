@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Overview
 has_toc: false
 nav_order: 1
