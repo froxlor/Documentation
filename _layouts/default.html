@@ -101,30 +101,47 @@ layout: table_wrappers
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
-        {% if page.parent %}
-          {%- for node in pages_list -%}
-            {%- if node.parent == nil -%}
-              {%- if page.parent == node.title or page.grand_parent == node.title -%}
-                {%- assign first_level_url = node.url | absolute_url -%}
-              {%- endif -%}
-              {%- if node.has_children -%}
-                {%- assign children_list = pages_list | where: "parent", node.title -%}
-                {%- for child in children_list -%}
-                  {%- if page.url == child.url or page.parent == child.title -%}
-                    {%- assign second_level_url = child.url | absolute_url -%}
-                  {%- endif -%}
-                {%- endfor -%}
-              {%- endif -%}
-            {%- endif -%}
-          {%- endfor -%}
+        {% if site.collections != nil %}
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
             <ol class="breadcrumb-nav-list">
-              {% if page.grand_parent %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
-                <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
-              {% else %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
+              <!-- display collection name -->
+              {% for collection in site.collections %}
+                {% for item in site[collection.label] %}
+                  {% if page.url == item.url %}
+                    {% assign current_collection = collection.label %}
+                    <!-- we cannot give it a name because we have no "index" file for the collection at the moment -->
+                    <li class="breadcrumb-nav-list-item">{{ site.just_the_docs.collections[current_collection].name }}</li>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+
+              <!-- calculate parent and grandparent from collection -->
+              {% if page.parent %}
+                {% for collection in site.collections %}
+                  {% if collection.label == current_collection %}
+                    {% for item in site[collection.label] %}
+                      {% if item.title == page.grand_parent %}
+                        {% assign grand_parent_url = item.url %}
+                      {% endif %}
+                      {% if item.title == page.parent %}
+                        {% assign parent_url = item.url %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
               {% endif %}
+
+              <!-- display grand_parent name -->
+              {% if page.grand_parent %}
+                <li class="breadcrumb-nav-list-item"><a href="{{ grand_parent_url }}">{{ page.grand_parent }}</a></li>
+              {% endif %}
+
+              <!-- display parent name -->
+              {% if page.parent %}
+                <li class="breadcrumb-nav-list-item"><a href="{{ parent_url }}">{{ page.parent }}</a></li>
+              {% endif %}
+
+              <!-- display current name -->
               <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
             </ol>
           </nav>
