@@ -13,14 +13,14 @@ For a manual installation, you need to have a recent webserver (apache2 or nginx
 
 ## 1. Download the tarball
 
-You can download the latest version of froxlor from [http://files.froxlor.org/releases/](http://files.froxlor.org/releases/)
+You can download the latest version of froxlor from [https://files.froxlor.org/releases/](https://files.froxlor.org/releases/)
 
 ````shell
 # change directory
 cd /var/www/
 
 # download latest froxlor version
-wget http://files.froxlor.org/releases/froxlor-latest.tar.gz
+wget https://files.froxlor.org/releases/froxlor-latest.tar.gz
 
 # the content should go in to the folder /var/www/froxlor
 # note: the archive contains the folder 'froxlor' already!

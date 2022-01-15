@@ -13,7 +13,7 @@ nav_order: 3
 
 In order to install froxlor on Gentoo we need to add the layman repositories first. Assuming you have *layman* installed already, edit `/etc/layman/layman.cfg` and *add* the following line to the *overlays* section:
 
-    http://files.froxlor.org/gentoo/repositories.xml
+    https://files.froxlor.org/gentoo/repositories.xml
 
 Then, let layman fetch (-f) our repository and add (-a) it to your local overlay:
 

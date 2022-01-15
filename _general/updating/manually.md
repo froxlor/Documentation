@@ -36,10 +36,10 @@ rm -rf /var/www/froxlor/*
 cd /var/www/
 
 # download latest froxlor version
-wget http://files.froxlor.org/releases/froxlor-latest.tar.gz
+wget https://files.froxlor.org/releases/froxlor-latest.tar.gz
 
 # or download specific version
-# wget http://files.froxlor.org/releases/froxlor-0.x.y.tar.gz
+# wget https://files.froxlor.org/releases/froxlor-0.x.y.tar.gz
 
 # the content should go in to the folder /var/www/froxlor 
 # note: the archive contains the folder 'froxlor' already!
