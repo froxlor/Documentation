@@ -104,16 +104,34 @@ layout: table_wrappers
         {% if site.collections != nil %}
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
             <ol class="breadcrumb-nav-list">
-              <!-- display collection name -->
+              <!-- generate current_collection -->
               {% for collection in site.collections %}
                 {% for item in site[collection.label] %}
                   {% if page.url == item.url %}
                     {% assign current_collection = collection.label %}
-                    <!-- we cannot give it a name because we have no "index" file for the collection at the moment -->
-                    <li class="breadcrumb-nav-list-item">{{ site.just_the_docs.collections[current_collection].name }}</li>
                   {% endif %}
                 {% endfor %}
               {% endfor %}
+
+              <!-- generate collection_index_url from current_collection -->
+              {% for collection in site.collections %}
+                {% if current_collection == collection.label %}
+                  {% for item in site[collection.label] %}
+                      {% assign collection_index_url_guess = collection.label | prepend: "/" | append: "/index.html" %}
+                      {% if item.url == collection_index_url_guess %}
+                        {% assign collection_index_url = item.url %}
+                      {% endif %}
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+
+              {% if collection_index_url != nil and collection_index_url != page.url %}
+                <!-- return the collection with link if collection_index_url is set and not the "index" file -->
+                <li class="breadcrumb-nav-list-item"><a href="{{ collection_index_url }}">{{ site.just_the_docs.collections[current_collection].name }}</a></li>
+              {% else %}
+                <!-- we cannot give it a name because we have no "index" file for the collection at the moment -->
+                <li class="breadcrumb-nav-list-item">{{ site.just_the_docs.collections[current_collection].name }}</li>
+              {% endif %}
 
               <!-- calculate parent and grandparent from collection -->
               {% if page.parent %}
