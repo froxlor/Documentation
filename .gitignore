@@ -1,4 +1,5 @@
 _site
+.generator
 .idea
 .sass-cache
 .jekyll-cache
