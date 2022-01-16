@@ -88,3 +88,48 @@ The result should then look somewhat like this (removed headers and actual data 
 	]
 }
 ```
+
+## 4. Usage with PHP
+
+In the froxlor repository, we provide an example class / curl-wrapper to work with the API. See [https://github.com/Froxlor/Froxlor/tree/master/doc/example](https://github.com/Froxlor/Froxlor/tree/master/doc/example)
+
+## 5. Response structure/layout
+
+A response from the API endpoint has the following structure:
+
+```php
+[
+	'status' => 200,
+	'status_message' => 'a status message',
+	'data' => [...]
+]
+```
+
+All status-codes above or equal to **400** can be considered as an **error** and the `data` field will be empty/null. The error message can be read from the `status_message` field.
+
+On success, the `data` field contains the corresponding result as array. All `listing` methods will always have a data-structure in the format shown below. The `get`, `add`, `update` and `delete` methods with return a single entry and do not include _count_ and _list_ indeces.
+
+Listing response:
+```php
+[
+	'status' => 200,
+	'status_message' => 'success',
+	'data' => [
+		'count' => number-of-entries,
+		'list' => [
+			{array-of-entries}
+		]
+	]
+]
+```
+
+Single entity response:
+```php
+[
+	'status' => 200,
+	'status_message' => 'success',
+	'data' => [
+		entity-data
+	]
+]
+```
