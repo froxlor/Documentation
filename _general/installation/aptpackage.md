@@ -68,6 +68,4 @@ EXIT;
 
 ## 5. Proceed with installation and configuration
 
-Note: be sure your webserver's webroot is `/var/www/`. If not, just adjust the default-vhost config of the webserver to point to `/var/www/`, restart/reload webserver and keep reading :)
-
 Now follow the general installation documentation starting with **step 3**: [Install froxlor from tarball](/general/installation/tarball.html#3-installation-via-web-installer)

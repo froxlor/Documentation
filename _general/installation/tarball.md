@@ -11,6 +11,8 @@ nav_order: 1
 
 For a manual installation, you need to have a recent webserver (apache2 or nginx) with PHP and MySQL/MariaDB-server running.
 
+You should also have at least one (sub-)domain available to use as froxlor's main system hostname (FQDN). This (sub-)domain _cannot_ be used for customers or hosting websites/e-mails. In case you want to use e.g. **mydomain.tld** yourself for your website and email accounts etc. you can just use a subdomain like **froxlor.mydomain.tld** in the installation process. This way, **mydomain.tld** can be added as a domain for a customer.
+
 ## 1. Download the tarball
 
 You can download the latest version of froxlor from [https://files.froxlor.org/releases/](https://files.froxlor.org/releases/)
@@ -41,6 +43,8 @@ chown -R [webserver-user]:[webserver-user] /var/www/froxlor/
 (the 'webserver-user' on most systems is 'www-data' or 'apache')
 
 ## 3. Installation via Web-Installer
+
+<div class="bg-yellow-200 text-grey-dk-300 p-3 mt-3"><b>Note:</b> On some distributions, the default web-root directory differs from <b>/var/www/</b>. To access froxlor, you need to adjust the default virtual-host to set <b>/var/www/</b> as document-root.</div>
 
 Now that you have extracted all the files you are ready to (re)start the webserver. You should now be able to access froxlor via `http://{your-ip-address}/froxlor` Just follow the installation-process and froxlor will be installed in no time.
 
