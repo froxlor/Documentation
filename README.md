@@ -33,5 +33,5 @@ Now browse to http://localhost:4000
 ## Generating api documentation from froxlor
 
 ```
-php .generator/generate.php
+php .generator/generate.php <version>
 ```

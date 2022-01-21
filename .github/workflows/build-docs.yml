@@ -2,6 +2,11 @@ name: build-docs
 
 on:
   workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Version'
+        required: true
+        default: 'latest'
 
 jobs:
   build:
@@ -13,12 +18,12 @@ jobs:
         with:
           php-version: '8.0'
       - name: Build configs
-        run: php generate.php
+        run: php generate.php "${{ github.event.inputs.ref }}"
         working-directory: .generator
       - name: Commit changes
         run: |
-          git config --global user.name 'envoyr'
-          git config --global user.email 'hello@envoyr.com'
+          git config --global user.name 'froxlor-bot'
+          git config --global user.email 'github@froxlor.org'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git checkout "${GITHUB_REF:11}"
           git add -A

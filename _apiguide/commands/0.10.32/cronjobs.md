@@ -11,10 +11,6 @@ grand_parent: Commands
 
 You cannot add new cronjobs yet.
 
-#### Response
-
-`-1` as `-1`
-
 ## Cronjobs.get
 
 return a cronjob entry by id
@@ -90,7 +86,3 @@ returns the total number of cronjobs
 ## Cronjobs.delete
 
 You cannot delete system cronjobs.
-
-#### Response
-
-`-1` as `-1`

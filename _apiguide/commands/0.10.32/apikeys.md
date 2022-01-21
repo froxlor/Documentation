@@ -11,14 +11,6 @@ grand_parent: Commands
 
 There is no comment-block for "ApiKeys.listing"
 
-#### Response
-
-`-1` as `-1`
-
 ## ApiKeys.listingCount
 
 There is no comment-block for "ApiKeys.listingCount"
-
-#### Response
-
-`-1` as `-1`

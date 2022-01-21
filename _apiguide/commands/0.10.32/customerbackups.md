@@ -34,17 +34,9 @@ add a new customer backup job
 
 You cannot get a planned backup. Try CustomerBackups.listing()
 
-#### Response
-
-`-1` as `-1`
-
 ## CustomerBackups.update
 
 You cannot update a planned backup. You need to delete it and re-add it.
-
-#### Response
-
-`-1` as `-1`
 
 ## CustomerBackups.listing
 

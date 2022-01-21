@@ -14,9 +14,18 @@ class generate
         return rmdir($dir);
     }
 
-    public function start()
+    /**
+     * @throws Exception
+     */
+    public function start($arguments)
     {
-        $dir = __DIR__ . '/current';
+        if (!isset($arguments[1])) {
+            throw new Exception('No ref set!');
+        }
+
+        $ref = $arguments[1];
+        $dir = __DIR__ . '/release';
+        $file = 'Froxlor-' . $ref;
 
         echo "Cleanup ..." . PHP_EOL;
         if (is_dir($dir)) {
@@ -25,26 +34,38 @@ class generate
         }
 
         echo "Get from github ..." . PHP_EOL;
-        copy('https://github.com/Froxlor/Froxlor/archive/refs/heads/master.zip', __DIR__ . '/Froxlor-master.zip');
+        if(!copy('https://github.com/Froxlor/Froxlor/archive/refs/tags/' . $ref . '.zip', __DIR__ . '/' . $file . '.zip')) {
+            throw new Exception('Failed to get release!');
+        }
 
         echo "Extract from zip ..." . PHP_EOL;
         $zip = new ZipArchive;
-        if ($zip->open(__DIR__ . '/Froxlor-master.zip')) {
+        if ($zip->open(__DIR__ . '/' . $file . '.zip')) {
             $zip->extractTo($dir);
             $zip->close();
         } else {
-            die('Cannot extract file!');
+            throw new Exception('Cannot extract file!');
         }
 
         echo "Install composer packages ..." . PHP_EOL;
-        exec('cd ' . $dir . '/Froxlor-master && composer install');
+        $command = 'cd ' . $dir . '/' . $file . ' && composer install';
+        if(!exec($command)) {
+            throw new Exception('Failed to install packages! Command: ' . $command);
+        };
 
         echo "Copy file generator to froxlor ..." . PHP_EOL;
-        copy(__DIR__ . '/api-local.php', $dir . '/Froxlor-master/api-local.php');
+        if(!copy(__DIR__ . '/api-local.php', $dir . '/' . $file . '/api-local.php')) {
+            throw new Exception('Failed to install packages!');
+        }
 
-        echo exec('php ' . $dir . '/Froxlor-master/api-local.php') . PHP_EOL;
+        $command = escapeshellcmd('php ' . $dir . '/' . $file . '/api-local.php ' . $ref);
+        if(!$result = exec($command)) {
+            throw new Exception('Failed to generate docs! Command: ' . $command);
+        } else {
+            echo $result . PHP_EOL;
+        }
     }
 }
 
 $debug = new generate();
-$debug->start();
+$debug->start($argv);

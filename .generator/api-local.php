@@ -14,8 +14,9 @@ class ApiLocal
      * @return void
      * @throws Exception
      */
-    public function generateDocs()
+    public function generateDocs($arguments)
     {
+        $version = $arguments[1];
         $dir = sprintf(__DIR__ . '/../../../_apiguide/commands/%s', \Froxlor\Froxlor::VERSION);
         if (!is_dir($dir)) {
             mkdir($dir, 0777, true);
@@ -26,6 +27,8 @@ class ApiLocal
             $data = $this->parseModuleCollection($module, $collection);
             file_put_contents(sprintf('%s/%s.md', $dir, strtolower($module)), $data);
         }
+
+        echo "Files for release " . $version . " generated!" . PHP_EOL;
     }
 
     /**
@@ -84,12 +87,9 @@ class ApiLocal
             }
 
             // shows the response type
-            if (isset($item['return_type'])) {
+            if (isset($item['return_type']) && $item['return_type'] != -1) {
                 $data[] = "#### Response";
-                $data[] = sprintf('`%s`', $item['return_type']) . ($item['return_desc'] ? sprintf(
-                        ' as `%s`',
-                        $item['return_desc']
-                    ) : null);
+                $data[] = sprintf('`%s`', $item['return_type']) . ($item['return_desc'] ? sprintf(' as `%s`', $item['return_desc']) : null);
             }
 
             // only for debug
@@ -359,6 +359,4 @@ class ApiLocal
 }
 
 $api = new ApiLocal();
-$api->generateDocs();
-
-echo "Files generated!" . PHP_EOL;
+$api->generateDocs($argv);
