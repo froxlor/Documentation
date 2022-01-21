@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Cronjobs
-parent: Commands
+parent: 0.10.32
+grand_parent: Commands
 ---
 
 # Cronjobs
@@ -9,6 +10,10 @@ parent: Commands
 ## Cronjobs.add
 
 You cannot add new cronjobs yet.
+
+#### Response
+
+`-1` as `-1`
 
 ## Cronjobs.get
 
@@ -85,3 +90,7 @@ returns the total number of cronjobs
 ## Cronjobs.delete
 
 You cannot delete system cronjobs.
+
+#### Response
+
+`-1` as `-1`

@@ -1,14 +1,15 @@
 ---
 layout: page
-title: DirProtections
-parent: Commands
+title: DirOptions
+parent: 0.10.32
+grand_parent: Commands
 ---
 
-# DirProtections
+# DirOptions
 
-## DirProtections.add
+## DirOptions.add
 
-add htaccess protection to a given directory
+add options for a given directory
 
 #### Permission
 
@@ -20,18 +21,20 @@ add htaccess protection to a given directory
 | :--- | :--- | :--- |
 | customerid | int | optional, required when called as admin (if $loginname is not specified) |
 | loginname | string | optional, required when called as admin (if $customerid is not specified) |
-| path | string |  |
-| username | string |  |
-| directory_password | string |  |
-| directory_authname | string | optional name/description for the protection |
+| path | string | path relative to the customer's home-Directory |
+| options_indexes | bool | optional, activate directory-listing for this path, default 0 (false) |
+| options_cgi | bool | optional, allow Perl/CGI execution, default 0 (false) |
+| error404path | string | optional, custom 404 error string/file |
+| error403path | string | optional, custom 403 error string/file |
+| error500path | string | optional, custom 500 error string/file |
 
 #### Response
 
 `string` as `json-encoded array`
 
-## DirProtections.get
+## DirOptions.get
 
-return a directory-protection entry by either id or username
+return a directory-protection entry by id
 
 #### Permission
 
@@ -41,16 +44,15 @@ return a directory-protection entry by either id or username
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| id | int | optional, the directory-protection-id |
-| username | string | optional, the username |
+| id | int | id of dir-protection entry |
 
 #### Response
 
 `string` as `json-encoded array`
 
-## DirProtections.update
+## DirOptions.update
 
-update htaccess protection of a given directory
+update options for a given directory by id
 
 #### Permission
 
@@ -60,20 +62,22 @@ update htaccess protection of a given directory
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| id | int | optional the directory-protection-id |
-| username | string | optional, the username |
+| id | int | id of dir-protection entry |
 | customerid | int | optional, required when called as admin (if $loginname is not specified) |
 | loginname | string | optional, required when called as admin (if $customerid is not specified) |
-| directory_password | string | optional, leave empty for no change |
-| directory_authname | string | optional name/description for the protection |
+| options_indexes | bool | optional, activate directory-listing for this path, default 0 (false) |
+| options_cgi | bool | optional, allow Perl/CGI execution, default 0 (false) |
+| error404path | string | optional, custom 404 error string/file |
+| error403path | string | optional, custom 403 error string/file |
+| error500path | string | optional, custom 500 error string/file |
 
 #### Response
 
 `string` as `json-encoded array`
 
-## DirProtections.listing
+## DirOptions.listing
 
-list all directory-protections, if called from an admin, list all directory-protections of all customers you are allowed to view, or specify id or loginname for one specific customer
+list all directory-options, if called from an admin, list all directory-options of all customers you are allowed to view, or specify id or loginname for one specific customer
 
 #### Permission
 
@@ -94,9 +98,9 @@ list all directory-protections, if called from an admin, list all directory-prot
 
 `string` as `json-encoded array count|list`
 
-## DirProtections.listingCount
+## DirOptions.listingCount
 
-returns the total number of accessible directory protections
+returns the total number of accessible directory options
 
 #### Permission
 
@@ -113,9 +117,9 @@ returns the total number of accessible directory protections
 
 `string` as `json-encoded array count|list`
 
-## DirProtections.delete
+## DirOptions.delete
 
-delete a directory-protection by either id or username
+delete a directory-options by id
 
 #### Permission
 
@@ -125,8 +129,7 @@ delete a directory-protection by either id or username
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| id | int | optional, the directory-protection-id |
-| username | string | optional, the username |
+| id | int | id of dir-protection entry |
 
 #### Response
 

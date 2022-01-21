@@ -1,7 +1,8 @@
 ---
 layout: page
 title: EmailAccounts
-parent: Commands
+parent: 0.10.32
+grand_parent: Commands
 ---
 
 # EmailAccounts
@@ -35,6 +36,10 @@ add a new email account for a given email-address either by id or emailaddr
 
 You cannot directly get an email account. You need to call Emails.get()
 
+#### Response
+
+`-1` as `-1`
+
 ## EmailAccounts.update
 
 update email-account entry for given email-address by either id or email-address
@@ -63,9 +68,17 @@ update email-account entry for given email-address by either id or email-address
 
 You cannot directly list email accounts. You need to call Emails.listing()
 
+#### Response
+
+`-1` as `-1`
+
 ## EmailAccounts.listingCount
 
 You cannot directly count email accounts. You need to call Emails.listingCount()
+
+#### Response
+
+`-1` as `-1`
 
 ## EmailAccounts.delete
 

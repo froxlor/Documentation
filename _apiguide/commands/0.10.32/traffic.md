@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Traffic
-parent: Commands
+parent: 0.10.32
+grand_parent: Commands
 ---
 
 # Traffic
@@ -10,13 +11,25 @@ parent: Commands
 
 You cannot add traffic data
 
+#### Response
+
+`-1` as `-1`
+
 ## Traffic.get
 
 to get specific traffic details use year, month and/or day parameter for Traffic.listing()
 
+#### Response
+
+`-1` as `-1`
+
 ## Traffic.update
 
 You cannot update traffic data
+
+#### Response
+
+`-1` as `-1`
 
 ## Traffic.listing
 
@@ -47,6 +60,14 @@ list traffic information
 
 You cannot count the traffic data list
 
+#### Response
+
+`-1` as `-1`
+
 ## Traffic.delete
 
 You cannot delete traffic data
+
+#### Response
+
+`-1` as `-1`

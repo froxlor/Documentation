@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Froxlor
-parent: Commands
+parent: 0.10.32
+grand_parent: Commands
 ---
 
 # Froxlor
@@ -76,7 +77,7 @@ return a setting by settinggroup.varname couple
 
 #### Response
 
-`string`
+`string` as `-1`
 
 ## Froxlor.updateSetting
 
@@ -95,7 +96,7 @@ updates a setting
 
 #### Response
 
-`string`
+`string` as `-1`
 
 ## Froxlor.generatePassword
 
@@ -107,7 +108,7 @@ returns a random password based on froxlor settings for min-length, included cha
 
 #### Response
 
-`string`
+`string` as `-1`
 
 ## Froxlor.integrityCheck
 
@@ -119,7 +120,7 @@ can be used to remotely run the integritiy checks froxlor implements
 
 #### Response
 
-`string`
+`string` as `-1`
 
 ## Froxlor.listFunctions
 

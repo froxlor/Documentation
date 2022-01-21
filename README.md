@@ -29,3 +29,9 @@ bundle exec jekyll serve --host localhost
 ```
 
 Now browse to http://localhost:4000
+
+## Generating api documentation from froxlor
+
+```
+php .generator/generate.php
+```

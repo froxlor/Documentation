@@ -1,7 +1,8 @@
 ---
 layout: page
 title: CustomerBackups
-parent: Commands
+parent: 0.10.32
+grand_parent: Commands
 ---
 
 # CustomerBackups
@@ -33,9 +34,17 @@ add a new customer backup job
 
 You cannot get a planned backup. Try CustomerBackups.listing()
 
+#### Response
+
+`-1` as `-1`
+
 ## CustomerBackups.update
 
 You cannot update a planned backup. You need to delete it and re-add it.
+
+#### Response
+
+`-1` as `-1`
 
 ## CustomerBackups.listing
 
@@ -97,4 +106,4 @@ delete a planned backup-jobs by id, if called from an admin you need to specify 
 
 #### Response
 
-`bool`
+`bool` as `-1`

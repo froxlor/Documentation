@@ -1,7 +1,8 @@
 ---
 layout: page
 title: EmailForwarders
-parent: Commands
+parent: 0.10.32
+grand_parent: Commands
 ---
 
 # EmailForwarders
@@ -32,9 +33,17 @@ add new email-forwarder entry for given email-address by either id or email-addr
 
 You cannot directly get an email forwarder. Try EmailForwarders.listing()
 
+#### Response
+
+`-1` as `-1`
+
 ## EmailForwarders.update
 
 You cannot update an email forwarder. You need to delete the entry and create a new one.
+
+#### Response
+
+`-1` as `-1`
 
 ## EmailForwarders.listing
 

@@ -1,7 +1,8 @@
 ---
 layout: page
 title: DomainZones
-parent: Commands
+parent: 0.10.32
+grand_parent: Commands
 ---
 
 # DomainZones
@@ -53,6 +54,10 @@ return a domain-dns entry by either id or domainname
 
 You cannot update a dns zone entry. You need to delete it and re-add it.
 
+#### Response
+
+`-1` as `-1`
+
 ## DomainZones.listing
 
 List all entry records of a given domain by either id or domainname
@@ -74,7 +79,7 @@ List all entry records of a given domain by either id or domainname
 
 #### Response
 
-`bool`
+`bool` as `-1`
 
 ## DomainZones.listingCount
 
@@ -93,7 +98,7 @@ returns the total number of domainzone-entries for given domain
 
 #### Response
 
-`bool`
+`bool` as `-1`
 
 ## DomainZones.delete
 
@@ -113,4 +118,4 @@ deletes a domain-dns entry by id
 
 #### Response
 
-`bool`
+`bool` as `-1`

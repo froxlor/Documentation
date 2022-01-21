@@ -1,5 +1,6 @@
 _site
-.generator
+/.generator/current
+/.generator/Froxlor-master.zip
 .idea
 .sass-cache
 .jekyll-cache

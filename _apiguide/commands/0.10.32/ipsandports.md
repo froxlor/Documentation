@@ -1,7 +1,8 @@
 ---
 layout: page
 title: IpsAndPorts
-parent: Commands
+parent: 0.10.32
+grand_parent: Commands
 ---
 
 # IpsAndPorts

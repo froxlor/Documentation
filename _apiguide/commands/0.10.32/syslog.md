@@ -1,7 +1,8 @@
 ---
 layout: page
 title: SysLog
-parent: Commands
+parent: 0.10.32
+grand_parent: Commands
 ---
 
 # SysLog
@@ -43,13 +44,25 @@ returns the total number of log-entries
 
 You cannot get log entries
 
+#### Response
+
+`-1` as `-1`
+
 ## SysLog.add
 
 You cannot add log entries
 
+#### Response
+
+`-1` as `-1`
+
 ## SysLog.update
 
 You cannot update log entries
+
+#### Response
+
+`-1` as `-1`
 
 ## SysLog.delete
 
