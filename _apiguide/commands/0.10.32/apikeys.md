@@ -1,7 +1,8 @@
 ---
 layout: page
 title: ApiKeys
-parent: Commands
+parent: 0.10.32
+grand_parent: Commands
 ---
 
 # ApiKeys
