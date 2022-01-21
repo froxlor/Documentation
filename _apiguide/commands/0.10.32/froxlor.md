@@ -77,7 +77,7 @@ return a setting by settinggroup.varname couple
 
 #### Response
 
-`string` as `-1`
+`string`
 
 ## Froxlor.updateSetting
 
@@ -96,7 +96,7 @@ updates a setting
 
 #### Response
 
-`string` as `-1`
+`string`
 
 ## Froxlor.generatePassword
 
@@ -108,7 +108,7 @@ returns a random password based on froxlor settings for min-length, included cha
 
 #### Response
 
-`string` as `-1`
+`string`
 
 ## Froxlor.integrityCheck
 
@@ -120,7 +120,7 @@ can be used to remotely run the integritiy checks froxlor implements
 
 #### Response
 
-`string` as `-1`
+`string`
 
 ## Froxlor.listFunctions
 

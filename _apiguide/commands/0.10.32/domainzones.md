@@ -75,7 +75,7 @@ List all entry records of a given domain by either id or domainname
 
 #### Response
 
-`bool` as `-1`
+`bool`
 
 ## DomainZones.listingCount
 
@@ -94,7 +94,7 @@ returns the total number of domainzone-entries for given domain
 
 #### Response
 
-`bool` as `-1`
+`bool`
 
 ## DomainZones.delete
 
@@ -114,4 +114,4 @@ deletes a domain-dns entry by id
 
 #### Response
 
-`bool` as `-1`
+`bool`

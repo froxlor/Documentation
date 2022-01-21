@@ -89,7 +89,7 @@ class ApiLocal
             // shows the response type
             if (isset($item['return_type']) && $item['return_type'] != -1) {
                 $data[] = "#### Response";
-                $data[] = sprintf('`%s`', $item['return_type']) . ($item['return_desc'] ? sprintf(' as `%s`', $item['return_desc']) : null);
+                $data[] = sprintf('`%s`', $item['return_type']) . ($item['return_desc'] && $item['return_desc'] != -1 ? sprintf(' as `%s`', $item['return_desc']) : null);
             }
 
             // only for debug

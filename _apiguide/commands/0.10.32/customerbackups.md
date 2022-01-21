@@ -98,4 +98,4 @@ delete a planned backup-jobs by id, if called from an admin you need to specify 
 
 #### Response
 
-`bool` as `-1`
+`bool`
