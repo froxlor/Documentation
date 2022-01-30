@@ -41,7 +41,7 @@ class ApiLocal
     {
         $data = [
             sprintf(
-                "---\nlayout: page\ntitle: %s\nparent: Commands\nhas_children: true\nhas_toc: false\n---",
+                "---\nlayout: page\ntitle: %s\nparent: Commands\nhas_children: true\nhas_toc: false\napi_entry: true\n---",
                 \Froxlor\Froxlor::VERSION
             ),
             sprintf('# %s', \Froxlor\Froxlor::VERSION)

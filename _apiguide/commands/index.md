@@ -8,5 +8,20 @@ has_toc: false
 # Commands
 
 <!--
-this file can be edited without being overwritten by the script
+determine latest version
 -->
+{% assign sites = site.apiguide %}
+{% for s in sites reversed %}
+{% if s.api_entry %}
+{% assign current_api = s.title %}
+{% break %}
+{% endif %}
+{% endfor %}
+
+List of API modules, current stable version {{ current_api }}
+
+{% for s in sites -%}
+{% if s.parent == current_api -%}
+|  [{{ s.title }}]({{ s.url }})  |
+{% endif %}
+{%- endfor -%}
