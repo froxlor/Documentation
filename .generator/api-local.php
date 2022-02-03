@@ -21,7 +21,9 @@ class ApiLocal
         if (!is_dir($dir)) {
             mkdir($dir, 0777, true);
         }
+
         $this->generateIndex($dir);
+        $this->hideOtherVersions(__DIR__ . '/../../../_apiguide/commands/', $version);
 
         foreach ($this->getModuleCollections() as $module => $collection) {
             $data = $this->parseModuleCollection($module, $collection);
@@ -353,6 +355,39 @@ class ApiLocal
                         'The required module "' . $module . '" could not be found' . PHP_EOL . $e->getMessage(), 404
                     );
                 }
+            }
+        }
+    }
+
+    /**
+     * Hide older api versions from the navigation.
+     *
+     * @param $dir
+     * @param $currentVersion
+     * @return void
+     */
+    public function hideOtherVersions($dir, $currentVersion)
+    {
+        foreach (scandir($dir) as $directory) {
+            $path = $dir . $directory;
+            $index = $path . '/index.md';
+            $ignored = ['.', '..', 'index.md'];
+
+            // Check the path
+            if($directory == $currentVersion || in_array($directory, $ignored) || !file_exists($index)) {
+                continue;
+            }
+
+            // Get content of index file
+            $content = file_get_contents($index);
+
+            // Check index file
+            if (preg_match("/api_entry: true/", $content, $apiEntryMatches)) {
+                if (preg_match("/nav_exclude: true/", $content, $apiEntryMatches)) {
+                    continue;
+                }
+
+                file_put_contents($index, str_replace('api_entry: true', "api_entry: true\nnav_exclude: true", $content));
             }
         }
     }
