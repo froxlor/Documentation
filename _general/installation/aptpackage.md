@@ -15,16 +15,16 @@ In order to install froxlor on Debian we need to add the repositories first and 
 
 ### Debian
 ````shell
-apt-get -y install apt-transport-https lsb-release ca-certificates gnupg
-wget -O - https://deb.froxlor.org/froxlor.gpg | apt-key add -
-echo "deb https://deb.froxlor.org/debian $(lsb_release -sc) main" > /etc/apt/sources.list.d/froxlor.list
+apt-get -y install apt-transport-https lsb-release ca-certificates curl
+curl -sSLo /usr/share/keyrings/deb.froxlor.org-froxlor.gpg https://deb.froxlor.org/froxlor.gpg
+echo sh -c '"deb [signed-by=/usr/share/keyrings/deb.froxlor.org-froxlor.gpg] https://deb.froxlor.org/debian $(lsb_release -sc) main" > /etc/apt/sources.list.d/froxlor.list'
 ````
 
 ### Ubuntu
 ````shell
 apt-get -y install apt-transport-https lsb-release ca-certificates gnupg
-wget -O - https://deb.froxlor.org/froxlor.gpg | apt-key add -
-echo "deb https://deb.froxlor.org/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/froxlor.list
+curl -sSLo /usr/share/keyrings/deb.froxlor.org-froxlor.gpg https://deb.froxlor.org/froxlor.gpg
+echo sh -c '"deb [signed-by=/usr/share/keyrings/deb.froxlor.org-froxlor.gpg] https://deb.froxlor.org/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/froxlor.list'
 ````
 
 ## 2. Update package list
