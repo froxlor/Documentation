@@ -20,6 +20,13 @@ wget -O - https://deb.froxlor.org/froxlor.gpg | apt-key add -
 echo "deb https://deb.froxlor.org/debian $(lsb_release -sc) main" > /etc/apt/sources.list.d/froxlor.list
 ````
 
+### Debian 11
+```` shell
+apt-get -y install apt-transport-https lsb-release ca-certificates gnupg wget
+wget -O- https://deb.froxlor.org/froxlor.gpg | gpg --dearmor | tee /usr/share/keyrings/froxlor-archive-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/froxlor-archive-keyring.gpg] https://deb.froxlor.org/debian $(lsb_release -sc) main" > /etc/apt/sources.list.d/froxlor.list
+````
+
 ### Ubuntu
 ````shell
 apt-get -y install apt-transport-https lsb-release ca-certificates gnupg
