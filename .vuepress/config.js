@@ -11,7 +11,7 @@ export default defineUserConfig({
     title: 'Froxlor Documentation',
     description: 'Froxlor is the lightweight server management software for your needs.',
 
-    base: 'Documentation/docs/.vuepress/dist',
+    dest: 'dist',
 
     plugins: [
         registerComponentsPlugin({
