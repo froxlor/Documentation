@@ -1,8 +1,6 @@
-_site
-/.generator/release
-/.generator/Froxlor-*.zip
+node_modules
+docs/.vuepress/dist
+.temp
+.cache
 .idea
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
 vendor
