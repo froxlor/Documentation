@@ -18,7 +18,7 @@ Some settings cannot be changed or are unavailable due to other setting-values, 
 
 <UiBrowser src="/img/frx_settings_reconf.png" alt="Settings: Require reconfiguration of services"/>
 
-A few settings will show the above notice. This means that adjusting the value or, in case of an enable/disable, when enabling it might be required to (re-)configure the shown services in `Configuration`, see [Configuration Guide](/adminguide/configuration) for more information.
+A few settings will show the above notice. This means that adjusting the value or, in case of an enable/disable, when enabling it might be required to (re-)configure the shown services in `Configuration`, see [Configuration Guide](../configuration) for more information.
 
 ### 1.3 Import / Export of settings
 
@@ -26,7 +26,7 @@ A few settings will show the above notice. This means that adjusting the value o
 
 To **export** your current settings-set, click the `Download/export Settings` in the top-right corner. You can use the generated file to import your settings again or on another froxlor installation. Keep in mind that depending on your settings, possible sensitive data cloud be stored in the export-file.
 
-In order to **import** settings, either from a possible backup or another froxlor installation, select the JSON file and press `Upload and import` to proceed. Depending on what settings are possibly overwritten, you might need to reconfigure some services, see [Configuration Guide](/adminguide/configuration) for more information.
+In order to **import** settings, either from a possible backup or another froxlor installation, select the JSON file and press `Upload and import` to proceed. Depending on what settings are possibly overwritten, you might need to reconfigure some services, see [Configuration Guide](../configuration) for more information.
 
 ## 2. Cronjob settings
 

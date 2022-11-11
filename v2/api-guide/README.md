@@ -14,7 +14,7 @@ interface. If enabled, you can find that in the top-right corner `options` menu 
 Click on `Add new key` and a new key/secret pair will be genereated. You can add as many as you like. A `click` on a
 specific row reveals the full key and secret.
 
-![frx_apikey_view](../.vuepress/public/img/frx_apikey_view.png" alt="Details of an API key/secret")
+<UiBrowser src="/img/frx_apikey_view.png" alt="Details of an API key/secret"/>
 
 You can also specify IP-addresses to require a specific origin and a date if you want to limit the key/secret pair usage
 for a time-period.

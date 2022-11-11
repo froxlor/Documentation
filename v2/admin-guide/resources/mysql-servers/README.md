@@ -4,7 +4,7 @@ Every froxlor installation has at least one mysql server specified, the default 
 
 <UiBrowser src="/img/frx_mysqlsrv_overview.png" alt="Admin MySQL server overview"/>
 
-If there are multiple MySQL servers configured and assigned to a customer, a selection on which database server the new database shall be created on is visible for the customer (see [User Guide -> Database](/userguide/interface/database))
+If there are multiple MySQL servers configured and assigned to a customer, a selection on which database server the new database shall be created on is visible for the customer (see [User Guide -> Database](../../../userguide/interface/database))
 
 <UiBrowser src="/img/frx_mysqlsrv_new.png" alt="Add new database with selection of MySQL server"/>
 
@@ -16,7 +16,7 @@ Specify the hostname or IP address of the mysql-server you want to add. Note tha
 
 ### 2. Privileged user and password
 
-In order for froxlor to be able to add new databases and users, the privileged user needs to have `ALL PRIVILEGES` as well as the `GRANT` permission. See [Create privileged database user](/general/installation/tarball#create-froxroot) from the installation guide.
+In order for froxlor to be able to add new databases and users, the privileged user needs to have `ALL PRIVILEGES` as well as the `GRANT` permission. See [Create privileged database user](../../../general/installation/tarball#create-froxroot) from the installation guide.
 
 ### 3. Test connection when saving
 

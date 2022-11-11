@@ -37,7 +37,7 @@ Nightly builds are current snapshots of the Git repository including dependencie
 
 ## 2. Set Permissions
 
-In order for the webserver to be able to server the files, the owner must be set correctly. Note: If you're using [FCGID](/adminguide/configuration/fcgid)/[PHP-FPM](/adminguide/configuration/php-fpm) for the froxlor-Vhost, you have to replace the webserver-user with your local froxlor-user.
+In order for the webserver to be able to server the files, the owner must be set correctly. Note: If you're using [FCGID](../../admin-guide/configuration/fcgid)/[PHP-FPM](../../admin-guide/configuration/php-fpm) for the froxlor-Vhost, you have to replace the webserver-user with your local froxlor-user.
 
 ```bash
 chown -R [webserver-user]:[webserver-user] /var/www/html/froxlor/
@@ -78,7 +78,7 @@ The _unprivileged_ MySQL user does not need to exist, it will be created using t
 
 ## 5. Configuration of services
 
-&#8594; See [Configuration guide](/adminguide/configuration).
+&#8594; See [Configuration guide](../../admin-guide/configuration).
 
 ## 6. Need help?
 If you run into any problems or have difficulties understanding / setting-up / whatever - don't hesitate to contact us either via e-mail ([team@froxlor.org](mailto:team@froxlor.org)) or the preferred way: on Discord ([https://discord.froxlor.org](https://discord.froxlor.org)) and our forums ([https://forum.froxlor.org/](https://forum.froxlor.org/))

@@ -30,13 +30,13 @@ To update the database password or description, you have to choose your database
 
 <UiBrowser src="/img/Screenshot%202022-05-23%20at%2010-53-04%20Froxlor.png" alt="Database overview"/>
 
-Click on the [fa icon=fa-edit /] icon to edit the database.
+Click on the <i class="fa fa-edit"></i> icon to edit the database.
 
 <UiBrowser src="/img/Screenshot%202022-05-23%20at%2010-53-27%20Froxlor.png" alt="Edit existing database"/>
 
 ## Delete existing database
 
-If you want to delete your database, you have to click on the red <span style="color: red">[fa icon=fa-trash /]</span> icon.
+If you want to delete your database, you have to click on the red <span style="color: red"><i class="fa fa-trash"></i></span> icon.
 
 <UiBrowser src="/img/Screenshot%202022-05-23%20at%2010-53-04%20Froxlor.png" alt="Database overview"/>
 

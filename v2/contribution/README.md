@@ -1,6 +1,6 @@
 # Contribution
 
-Before you start working on a PR, contact us via [Discord](https://discord.froxlor.org) or the forum at https://forum.froxlor.org to get a clue whether someone else isn't already working on it or if we don not want/need this certain change. Of course, bugfixes are always welcome.
+Before you start working on a PR, contact us via [Discord](https://discord.froxlor.org) or the forum at [https://forum.froxlor.org](https://forum.froxlor.org) to get a clue whether someone else isn't already working on it or if we don not want/need this certain change. Of course, bugfixes are always welcome.
 
 Please always focus on the **main** branch of our [Github repository](https://github.com/Froxlor/Froxlor).
 

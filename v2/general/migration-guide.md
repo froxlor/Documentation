@@ -3,7 +3,7 @@
 ## Version 0.10.x to 2.0
 
 ::: tip NOTE
-If you are using a version prior 0.10, please use the [update guide (manual mode)](/general/update-guide#2-3-manual-update) to update to the latest 0.10.x version first
+If you are using a version prior 0.10, please use the [update guide (manual mode)](update-guide#_2-3-manual-update) to update to the latest 0.10.x version first
 :::
 
 ## 1. Requirements
@@ -42,7 +42,7 @@ A click opens a modal window where the shown columns can be managed:
 
 ### New command line tools
 
-Our crons and helper scripts were migrated and can now be accessed via `bin/froxlor-cli`. More details see [Froxlor console scripts (CLI)](/adminguide/cli-scripts).
+Our crons and helper scripts were migrated and can now be accessed via `bin/froxlor-cli`. More details see [Froxlor console scripts (CLI)](../admin-guide/cli-scripts).
 
 ```shell
 bin/froxlor-cli froxlor:api-call admin Froxlor.generatePassword '{"length":20}'
@@ -54,7 +54,7 @@ bin/froxlor-cli froxlor:api-call admin Froxlor.generatePassword '{"length":20}'
 
 ### MysqlServer API command
 
-Easy manage multiple database server instances for your customers with the new MysqlServer API command via webinterface or directly via API-call (admin only). You can also specifiy which servers are available for each customer individually. The mysql-servers do not have to meet any special requirements. You will need a privileged user that has the ability to create databases and users, see [step 3 on install guide](/general/installation/tarball#create-froxroot) for the required permissions.
+Easy manage multiple database server instances for your customers with the new MysqlServer API command via webinterface or directly via API-call (admin only). You can also specifiy which servers are available for each customer individually. The mysql-servers do not have to meet any special requirements. You will need a privileged user that has the ability to create databases and users, see [step 3 on install guide](installation/tarball#create-froxroot) for the required permissions.
 
 <UiBrowser src="/img/frx_mysqlserver_add.png" alt="Add new MySQL server for your customers" />
 
@@ -85,7 +85,7 @@ The `auto-update` feature must now be enabled explicitly in `lib/config.inc.php`
 
 ### Cron / Helper scripts
 
-The main cron file in `scripts/froxlor_master_cronjob.php` as well as the helper scripts in `scripts/` and `install/scripts/` have been migrated to the new [command line tools](/adminguide/cli-scripts).
+The main cron file in `scripts/froxlor_master_cronjob.php` as well as the helper scripts in `scripts/` and `install/scripts/` have been migrated to the new [command line tools](../admin-guide/cli-scripts).
 
 | Old script                           | New command                              |
 |--------------------------------------|------------------------------------------|

@@ -88,10 +88,6 @@ export default defineUserConfig({
                         ],
                     },
                     {
-                        text: 'Configuration',
-                        link: '/v2/general/configuration/'
-                    },
-                    {
                         text: 'Update Guide',
                         link: '/v2/general/update-guide.md'
                     },
@@ -167,7 +163,7 @@ export default defineUserConfig({
                     },
                     {
                         text: 'Froxlor console scripts (CLI)',
-                        link: '/v2/admin-guide/helper-scripts/'
+                        link: '/v2/admin-guide/cli-scripts/'
                     },
                 ]
             },

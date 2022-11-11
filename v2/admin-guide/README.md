@@ -9,5 +9,4 @@ The admin guide is designed to help you get started with configuration as well a
 * [Resources](resources)
 * [PHP Configuration](php-versions-and-configuration)
 * [Domain import](domain-import)
-* [CLI scripts](cli-scripts)
-* [Froxlor console scripts (CLI)](helper-scripts)
+* [Froxlor console scripts (CLI)](cli-scripts)

@@ -26,7 +26,9 @@ If enabled, a slow-log for each domain with this configuration assigned will be 
 
 ##### Add "-pass-header Authorization" / "CGIPassAuth On" to vhosts
 
-!!! **Note:** This is available for apache only
+::: tip NOTE
+This is available for apache only
+:::
 
 If enabled, enables passing HTTP authorization headers to scripts as CGI variables.
 
@@ -40,11 +42,15 @@ You can set and adjust desired `php.ini` directives and values as needed/require
 
 <UiBrowser src="/img/frx_phpini_vars.png" alt="php.ini replacer variables"/>
 
-! **Note:** If you add new directives you need to validate that they are added to the list of available directives in `Settings  » PHP-FPM` as the generated fpm-pool configuration files need a mapping of the directive to the corresponding section, e.g. **php_flags**, **php_values**, **php_admin_flags** and **php_admin_values**
+::: warning ATTENTION
+If you add new directives you need to validate that they are added to the list of available directives in `Settings  » PHP-FPM` as the generated fpm-pool configuration files need a mapping of the directive to the corresponding section, e.g. **php_flags**, **php_values**, **php_admin_flags** and **php_admin_values**
+:::
 
 #### 1.2.2 FCGID
 
-!!! **Note:** FCGID is available for apache only
+::: tip NOTE
+FCGID is available for apache only
+:::
 
 ##### PHP Binary
 
@@ -72,7 +78,7 @@ You can set and adjust desired php.ini directives and values as needed/required.
 
 <UiBrowser src="/img/frx_phpini_vars.png" alt="php.ini replacer variables"/>
 
-## 2. PHP-FPM versions
+<h2 id="2-php-fpm-versions">2. PHP-FPM versions</h2>
 
 Froxlor allows management of multiple php-fpm versions. For Debian/Ubuntu this can easily be achieved by using the deb.sury.org repository, or ppa:ondrej/php on ubuntu respectively. Then simply install the desired version with the required/needed extensions.
 
@@ -101,7 +107,9 @@ Limits the extensions of the main script FPM will allow to parse. This can preve
 
 Add custom configuration to each PHP-FPM pool-configuration, for example `pm.status_path = /status` for monitoring. The replacer variables below can be used in this setting. Possible values can be found on [https://www.php.net/manual/en/install.fpm.configuration.php](https://www.php.net/manual/en/install.fpm.configuration.php) (note that froxlor generates the required ones for you automatically).
 
-! **Attention:** The config won't be checked for any errors. If it contains errors, PHP-FPM might not start again!
+::: warning ATTENTION
+The config won't be checked for any errors. If it contains errors, PHP-FPM might not start again!
+:::
 
 
 <UiBrowser src="/img/frx_fpm_vars.png" alt="Custom config replacer variables"/>

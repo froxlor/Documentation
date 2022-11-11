@@ -49,4 +49,4 @@ npm run prod
 
 ## 4. Proceed with installation and configuration
 
-Now follow the general installation documentation starting with **step 2**: [Install froxlor from tarball](/general/installation/tarball.html#2-set-permissions)
+Now follow the general installation documentation starting with **step 2**: [Install froxlor from tarball](tarball.html#_2-set-permissions)
