@@ -3,6 +3,7 @@ import {registerComponentsPlugin} from "@vuepress/plugin-register-components";
 import { getDirname, path } from '@vuepress/utils'
 import {palettePlugin} from "@vuepress/plugin-palette";
 import {searchPlugin} from "@vuepress/plugin-search";
+import {gitPlugin} from "@vuepress/plugin-git";
 
 const __dirname = getDirname(import.meta.url)
 
@@ -19,6 +20,9 @@ export default defineUserConfig({
         }),
         palettePlugin({ preset: 'sass' }),
         searchPlugin({}),
+        gitPlugin({
+            contributors: false
+        }),
     ],
 
     theme: defaultTheme({
