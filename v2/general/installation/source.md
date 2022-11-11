@@ -28,7 +28,7 @@ git clone https://github.com/Froxlor/Froxlor.git froxlor
 
 ## 3. Download dependencies
 
-Froxlor 2.x is composer and npm based. In order to use the development version you need to install [composer](https://getcomposer.org/download/) and [npm](#).
+Froxlor 2.x is composer and npm based. In order to use the development version you need to install [composer](https://getcomposer.org/download/) and [npm](https://nodejs.org/).
 
 ```shell
 cd /var/www/html/froxlor
@@ -49,4 +49,4 @@ npm run prod
 
 ## 4. Proceed with installation and configuration
 
-Now follow the general installation documentation starting with **step 2**: [Install froxlor from tarball](tarball.html#_2-set-permissions)
+Now follow the general installation documentation starting with **step 2**: [Install froxlor from tarball](tarball#_2-set-permissions)

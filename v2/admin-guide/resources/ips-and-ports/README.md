@@ -12,23 +12,31 @@ If your are **behind a Proxy** and/or your server only has an **internal IP addr
 
 <UiBrowser src="/img/frx_ipsports_overview.png" alt="IPs and ports overview"/>
 
-<h3 id="1-ip-listen-statement">1. Create Listen statement (<i>not available/required for nginx</i>)</h3>
+### 1. Create Listen statement
+
+::: tip NOTE
+Not available/required for nginx
+:::
 
 If using non-standard ports you might need to activate the `Listen` directive for these ports. This is most likely not required for the default standard ports **80** and **443**, depending on your system.
 
-### 2. Create NameVirtualHost statement (<i>apache-2.2 only</i>)
+### 2. Create NameVirtualHost statement
+
+::: tip NOTE
+Applies to apache-2.2 only
+:::
 
 For older system using apache-2.2 the `NameVirtualHost` statement will be required in order for the VirtualHosts to be named based instead of IP based. You most likely will not need or even see this setting.
 
 ### 3. Create vHost-Container
 
-When selected, froxlor creates a complete virtual-host for this ip/port combination, meaning it will point to a specified directory with corresponding content for PHP and/or SSL etc. If unchecked, only the `Listen` directive will be generated (see [1. Create Listen statement](#1-ip-listen-statement)).
+When selected, froxlor creates a complete virtual-host for this ip/port combination, meaning it will point to a specified directory with corresponding content for PHP and/or SSL etc. If unchecked, only the `Listen` directive will be generated (see [1. Create Listen statement](#_1-create-listen-statement)).
 
 ### 4. Custom docroot
 
 By default (and empty value) the IP/port virtual host will point to your froxlor installation. You can, especially when using multiple ip addresses, also specify a different document root. Keep in mind that depending on your php related settings, you might encounter permission/ownership issues.
 
-<h3 id="5-own-vhost-settings">5. Own vHost-settings</h3>
+### 5. Own vHost-settings
 
 ::: tip NOTE
 The code won't be checked for any errors. If it contains errors, webserver might not start again!
@@ -68,7 +76,7 @@ Specify the path to the certificate, private key, optionally intermediate and CA
 
 #### 8.3 Own SSL vHost-settings
 
-Same as [5. Own vHost-settings](#5-own-vhost-settings) but for **SSL** virtualhost.
+Same as [5. Own vHost-settings](#_5-own-vhost-settings) but for **SSL** virtualhost.
 
 #### 8.4 Include non-SSL vHost-settings in SSL-vHost
 

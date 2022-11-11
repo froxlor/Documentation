@@ -31,7 +31,7 @@ cd /var/www/html/froxlor
 bin/froxlor-cli froxlor:update
 ```
 
-See the [froxlor console scripts](../admin-guide/cli-scripts#froxlor-update) page for detailed information.
+See the [froxlor console scripts](../admin-guide/cli-scripts#update) page for detailed information.
 
 ## 2.3 Manual Update
 
