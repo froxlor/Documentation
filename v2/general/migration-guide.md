@@ -58,7 +58,9 @@ Easy manage multiple database server instances for your customers with the new M
 
 <UiBrowser src="/img/frx_mysqlserver_add.png" alt="Add new MySQL server for your customers" />
 
-!!! **Note:** All mysqls server credentials are stored in the `lib/userdata.inc.php` file and **no cleartext** passwords are stored in the database
+::: tip NOTE
+All mysqls server credentials are stored in the `lib/userdata.inc.php` file and **no cleartext** passwords are stored in the database
+:::
 
 ## 3. Important changes
 
@@ -94,6 +96,20 @@ The main cron file in `scripts/froxlor_master_cronjob.php` as well as the helper
 | scripts/php-sessionclean.php         | bin/froxlor-cli froxlor:php-sessionclean |
 | scripts/froxlor_master_cronjob.php   | bin/froxlor-cli froxlor:cron             |
 
+### Services configuration changes
+
+#### Dovecot / dovecot-sql.conf.ext
+
+The sql-configuration for dovecot in `/etc/dovecot/dovecot-sql.conf.ext` is needed for dovecot to communicate with the froxlor database and to know about existing email accounts. As froxlor now uses more recent password hashes for the stored passwords, it is required to remove/comment out the following option in the given config file to allow the new password-hashes to be used correctly.
+
+```diff
+- default_pass_scheme = CRYPT
++ #default_pass_scheme = CRYPT
+```
+
+::: warning ATTENTION
+E-mail users might not be able to login if this setting is not adjusted
+:::
 
 ### Debian Stretch / Ubuntu Xenial and CentOS
 
