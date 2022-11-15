@@ -1,7 +1,8 @@
-/.generator/release
-/.generator/Froxlor-*.zip
 /node_modules
 /dist
+.env
+.generator/release
+.generator/Froxlor-*.zip
 .temp
 .cache
 .idea
