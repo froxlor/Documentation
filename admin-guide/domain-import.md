@@ -64,7 +64,7 @@ There is no given order for the fields in the file. The first line of the file *
 
 The following problems will only ignore the current domain without displaying an error.
 
-* not a valid domain (/^http:\/\/([a-z0-9]([a-z0-9\-]{0,61}[a-z0-9])?\.)+[a-z0-9\-]{2,63}$/i)
+* not a valid domain (`/^http:\/\/([a-z0-9]([a-z0-9\-]{0,61}[a-z0-9])?\.)+[a-z0-9\-]{2,63}$/i`)
 * the domain is equal to the system-hostname
 * the domain already exists in the froxlor database
 * If you do not have unlimited domain contingent, the import will stop at the maximum allowed number of domains and skip the rest

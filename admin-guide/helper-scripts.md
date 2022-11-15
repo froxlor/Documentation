@@ -19,7 +19,7 @@ Parameters and what they do:
 
 ### Usage
 
-See [Configuration Guide #2.1](../general/configuration/#21-automatically-from-cli)
+See [Configuration Guide #2.1](../general/configuration/#_2-1-automatically-from-cli)
 
 ## 2. Switch IP addresses after migration / new server
 

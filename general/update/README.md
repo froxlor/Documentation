@@ -22,7 +22,7 @@ Login as admin-user and navigate to `Auto-Update` on the main navigation.
 If there is no <code>Auto-Update</code> menu entry ensure that you have <b>change_serversettings</b> permissions and that the <b>php-zip</b> extension is installed and loaded.
 :::
 
-Follow the instructions on the screen. At the end, you will be prompted with the database-update procedure as described in [3. Database update](#3-database-update)
+Follow the instructions on the screen. At the end, you will be prompted with the database-update procedure as described in [3. Database update](#_3-database-update)
 
 ## 2.2 Manually download and extract new version
 

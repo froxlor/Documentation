@@ -77,4 +77,4 @@ emerge --config dev-db/mariadb
 
 ## 5. Proceed with installation and configuration
 
-Now follow the general installation documentation starting with **step 3**: [Install froxlor from tarball](tarball.html#3-installation-via-web-installer)
+Now follow the general installation documentation starting with **step 3**: [Install froxlor from tarball](tarball.html#_3-installation-via-web-installer)

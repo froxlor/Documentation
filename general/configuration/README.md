@@ -33,8 +33,8 @@ If this is the first time you are configuring the server, then running the comma
 
 ## 3. Different PHP interfaces (optional)
 
-* [Apache2 / FCGID](/general/configuration/fcgid.html)
-* [Apache2 & nginx / PHP-FPM](/general/configuration/php-fpm.html)
+* [Apache2 / FCGID](fcgid)
+* [Apache2 & nginx / PHP-FPM](php-fpm)
 
 ## 4. Need help?
 If you run into any problems or have difficulties understanding / setting-up / whatever - don't hesitate to contact us either via e-mail ([team@froxlor.org](mailto:team@froxlor.org)) or the preferred way: on Discord ([https://discord.froxlor.org](https://discord.froxlor.org)) and our forums ([https://forum.froxlor.org/](https://forum.froxlor.org/))
