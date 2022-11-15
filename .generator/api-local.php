@@ -17,13 +17,13 @@ class ApiLocal
     public function generateDocs($arguments)
     {
         $version = $arguments[1];
-        $dir = sprintf(__DIR__ . '/../../../_apiguide/commands/%s', \Froxlor\Froxlor::VERSION);
+        $dir = sprintf(__DIR__ . '/../../../api-guide/commands', \Froxlor\Froxlor::VERSION);
         if (!is_dir($dir)) {
             mkdir($dir, 0777, true);
         }
 
-        $this->generateIndex($dir);
-        $this->hideOtherVersions(__DIR__ . '/../../../_apiguide/commands/', $version);
+        //$this->generateIndex($dir);
+        //$this->hideOtherVersions(__DIR__ . '/../../../api-guide/commands/', $version);
 
         foreach ($this->getModuleCollections() as $module => $collection) {
             $data = $this->parseModuleCollection($module, $collection);
@@ -42,14 +42,10 @@ class ApiLocal
     private function generateIndex($dir)
     {
         $data = [
-            sprintf(
-                "---\nlayout: page\ntitle: %s\nparent: Commands\nhas_children: true\nhas_toc: false\napi_entry: true\n---",
-                \Froxlor\Froxlor::VERSION
-            ),
             sprintf('# %s', \Froxlor\Froxlor::VERSION)
         ];
 
-        file_put_contents(sprintf('%s/index.md', $dir), implode("\n\n", $data));
+        file_put_contents(sprintf('%s/README.md', $dir), implode("\n\n", $data));
     }
 
     /**
@@ -63,11 +59,6 @@ class ApiLocal
     {
         // init document
         $data = [
-            sprintf(
-                "---\nlayout: page\ntitle: %s\nparent: %s\ngrand_parent: Commands\n---",
-                $module,
-                \Froxlor\Froxlor::VERSION
-            ),
             sprintf('# %s', $module)
         ];
 
@@ -370,8 +361,8 @@ class ApiLocal
     {
         foreach (scandir($dir) as $directory) {
             $path = $dir . $directory;
-            $index = $path . '/index.md';
-            $ignored = ['.', '..', 'index.md'];
+            $index = $path . '/README.md';
+            $ignored = ['.', '..', 'README.md'];
 
             // Check the path
             if($directory == $currentVersion || in_array($directory, $ignored) || !file_exists($index)) {

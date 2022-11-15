@@ -1,8 +1,3 @@
----
-layout: page
-title: Home
----
-
 # Overview
 
 Froxlor is the lightweight server management software for your needs.
