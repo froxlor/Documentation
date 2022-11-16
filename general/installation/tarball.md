@@ -45,7 +45,7 @@ chown -R [webserver-user]:[webserver-user] /var/www/html/froxlor/
 
 (the 'webserver-user' on most systems is 'www-data' or 'apache')
 
-<h2 id="create-froxroot">3. Create privileged database user</h2>
+## 3. Create privileged database user
 
 Log in to MySQL to create a new privileged user (`froxroot`) which is required for froxlor to add/delete mysql users and databases. You need to specify this user as the **_Privileged database user_** in the web-installer.
 

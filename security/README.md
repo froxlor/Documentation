@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Our main and active version is currently 2.x. It will receive maintenance and security updates periodically. The predecessor 0.10.x as the older version 0.9.x will not receive any kind of updates. Please update to [2.x](../general/update-guide).
+Our main and active version is currently **2.x**. It will receive maintenance and security updates periodically. The predecessor 0.10.x as well as the older version 0.9.x will not receive any kind of updates. Please update to [2.x](../general/update-guide).
 
 | Version | Supported                                                            |
 |---------|----------------------------------------------------------------------|

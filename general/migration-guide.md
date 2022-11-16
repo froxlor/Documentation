@@ -54,7 +54,7 @@ bin/froxlor-cli froxlor:api-call admin Froxlor.generatePassword '{"length":20}'
 
 ### MysqlServer API command
 
-Easy manage multiple database server instances for your customers with the new MysqlServer API command via webinterface or directly via API-call (admin only). You can also specifiy which servers are available for each customer individually. The mysql-servers do not have to meet any special requirements. You will need a privileged user that has the ability to create databases and users, see [step 3 on install guide](installation/tarball#create-froxroot) for the required permissions.
+Easy manage multiple database server instances for your customers with the new MysqlServer API command via webinterface or directly via API-call (admin only). You can also specifiy which servers are available for each customer individually. The mysql-servers do not have to meet any special requirements. You will need a privileged user that has the ability to create databases and users, see [step 3 on install guide](installation/tarball#_3-create-privileged-database-user) for the required permissions.
 
 <UiBrowser :src="$withBase('/img/frx_mysqlserver_add.png')" alt="Add new MySQL server for your customers" />
 

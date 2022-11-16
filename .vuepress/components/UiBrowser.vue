@@ -19,6 +19,7 @@
   color: #bbb;
   border-radius: 0.35rem;
   margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 .browser .bar {
   display: flex;
