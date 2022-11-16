@@ -18,7 +18,7 @@ You can manage multiple php configurations (php.ini) for your customers domains.
 
 ##### PHP-FPM config
 
-Select the desired php-version from the selectbox. To manage different version, see [2. PHP-FPM versions](#2-php-fpm-versions) below.
+Select the desired php-version from the selectbox. To manage different version, see [2. PHP-FPM versions](#_2-php-fpm-versions) below.
 
 ##### Enable slowlog (per domain)
 
@@ -78,7 +78,7 @@ You can set and adjust desired php.ini directives and values as needed/required.
 
 <UiBrowser :src="$withBase('/img/frx_phpini_vars.png')" alt="php.ini replacer variables"/>
 
-<h2 id="2-php-fpm-versions">2. PHP-FPM versions</h2>
+## 2. PHP-FPM versions
 
 Froxlor allows management of multiple php-fpm versions. For Debian/Ubuntu this can easily be achieved by using the deb.sury.org repository, or ppa:ondrej/php on ubuntu respectively. Then simply install the desired version with the required/needed extensions.
 

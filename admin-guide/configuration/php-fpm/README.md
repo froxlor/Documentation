@@ -30,14 +30,10 @@ I assume that you have froxlor already running (using mod_php) and the database 
 To adjust settings, login as admin and click on **Settings** in the menu on the left side.
 
 ::: warning NOTE 
-Please remember to check that you're using the correct PHP-FPM version in froxlor. You can do it on the **PHP-FPM versions** page.
+Please remember to check that you're using the correct PHP-FPM version in froxlor. You can do it on the **[PHP-FPM versions](../../php-versions-and-configuration/#_2-php-fpm-versions)** page.
 :::
 
 ```
-Webserver settings
-    Webserver: Nginx or Apache2
-        Save
-
 PHP-FPM
     Enabled: Yes
         Save

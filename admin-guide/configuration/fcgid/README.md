@@ -139,6 +139,5 @@ If you run into any problems or have difficulties understanding / setting-up / w
 
 ## 5. Links and references
 
-* [http://httpd.apache.org/docs/2.0/suexec.html](http://httpd.apache.org/docs/2.0/suexec.html)
-* [http://www.seaoffire.net/fcgi-faq.html](http://www.seaoffire.net/fcgi-faq.html)
-* [http://alain.knaff.lu/howto/PhpSuexec/](http://alain.knaff.lu/howto/PhpSuexec/)
+* [https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html](https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html)
+* [https://httpd.apache.org/docs/2.4/suexec.html](https://httpd.apache.org/docs/2.4/suexec.html)
