@@ -132,9 +132,10 @@ There are like 1 billion problems you might have to face ;)
 * `strace -s 2000 -ff -o /tmp/fastcgi -p <PID of fcgi-pm>` Very useful if you know how to debug!
 * If you edit config files, please don't use WinSCP. This adds Windows format and Linux can't work with this.
 
-Got problems?
+### Got problems?
 
-If you got problems with this howto please let us/me know. But please prefer to use the Forum instead of the Bugtracker or IRC. Thanks!
+If you run into any problems or have difficulties understanding / setting-up / whatever - don't hesitate to contact us either via e-mail ([team@froxlor.org](mailto:team@froxlor.org)) or the preferred way: on Discord ([https://discord.froxlor.org](https://discord.froxlor.org)) and our forums ([https://forum.froxlor.org/](https://forum.froxlor.org/))
+
 
 ## 5. Links and references
 

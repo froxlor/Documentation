@@ -136,6 +136,7 @@ Apache2:
 * Enable debug logging for apache and restart it. (**LogLevel debug** in `/etc/apache2/apache2.conf`) Be sure to uncomment this line and do a restart of apache after debugging!
 * Run `ps faux` and check whether there is a PHP process running under the apache process.
 
-Still problems?
+### Still problems?
 
-If you run into problems with this how-to please let us know. Please prefer the Forum over the Bugtracker or IRC. Thanks!
+If you run into any problems or have difficulties understanding / setting-up / whatever - don't hesitate to contact us either via e-mail ([team@froxlor.org](mailto:team@froxlor.org)) or the preferred way: on Discord ([https://discord.froxlor.org](https://discord.froxlor.org)) and our forums ([https://forum.froxlor.org/](https://forum.froxlor.org/))
+
