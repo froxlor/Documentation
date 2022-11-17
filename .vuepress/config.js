@@ -162,6 +162,10 @@ export default defineUserConfig({
                         text: 'PHP Configurations',
                         link: '/admin-guide/php-versions-and-configuration/'
                     },
+					{
+						text: 'Miscellaneous',
+						link: '/admin-guide/miscellaneous/'
+					},
                     {
                         text: 'Domain import',
                         link: '/admin-guide/domain-import/'
