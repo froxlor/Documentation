@@ -4,24 +4,24 @@ With domains your website is accessible under a certain name. Each customer can 
 
 To manage your domains, click on "_**Domains » Domains overview**_" in the sidebar and your domains will be shown.
 
-## Add new domain
+## 1. Add a new domain
 
 You have to ask your "_**Reseller / Admin**_" to add a new Domain.
 
 To connect a domain to froxlor it is best to add an `A` (IPv4) and an `AAAA` (IPv6) record to the DNS, you can find the IP addresses in the froxlor domain edit page.
 
-## Update existing domain
+## 2. Update an existing domain
 
 To update the domain settings, you have to choose your domain in your overview list.
 
-<UiBrowser :src="$withBase('/img/Screenshot%202022-05-23%20at%2011-10-44%20Froxlor.png')" alt="Domain overview"/>
+<UiBrowser :src="$withBase('/img/frx_ug_domains_overview.png')" alt="Domain overview"/>
 
 Click on the <i class="fa fa-edit"></i> icon to edit the domain.
 
-<UiBrowser :src="$withBase('/img/Screenshot%202022-05-23%20at%2011-12-29%20Froxlor.png')" alt="Edit domain"/>
+<UiBrowser :src="$withBase('/img/frx_ug_domains_edit.png')" alt="Edit domain"/>
 
 After each change, the system needs some time to re-read the configuration (usually 5 minutes).
 
-## Delete existing domain
+## 3. Delete an existing domain
 
 You have to ask your "_**Reseller / Admin**_" to delete your existing domain.

@@ -2,7 +2,7 @@
 
 ## 0. Abstract
 
-The file structure/layout is based on the API parameters for [_Domains.add_](../../api-guide/commands).
+The file structure/layout is based on the API parameters for [_Domains.add_](../../api-guide/commands/domains.html#domains-add).
 
 ## 1. Procedure/UI explanation
 
@@ -19,7 +19,7 @@ The last part is a simple file-select-dialog. Please choose the desired CSV-file
 * Note: The string-fields *must not* be enclosed in quotes!
 * Note: For boolean values, you should use *0* for false and *1* for true
 
-There is no given order for the fields in the file. The first line of the file **must** be the required parameters names from [_Domains.add_](../../api-guide/commands) and of course any optional parameter you need.
+There is no given order for the fields in the file. The first line of the file **must** be the required parameters names from [_Domains.add_](../../api-guide/commands/domains.html#domains-add) and of course any optional parameter you need.
 
 ## 3. Validation and counters
 

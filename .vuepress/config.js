@@ -184,23 +184,13 @@ export default defineUserConfig({
                     {
                         text: 'E-Mails',
                         link: '/user-guide/emails/',
-                        children: [
-                            {
-                                text: 'E-Mail Accounts',
-                                link: '/user-guide/emails/accounts/'
-                            },
-                            {
-                                text: 'E-Mail Domains',
-                                link: '/user-guide/emails/domains/'
-                            },
-                        ]
                     },
                     {
-                        text: 'Databases',
+                        text: 'Databases (MySQL)',
                         link: '/user-guide/databases/'
                     },
                     {
-                        text: 'Domains',
+                        text: 'Domains / Subdomains',
                         link: '/user-guide/domains/'
                     },
                     {
