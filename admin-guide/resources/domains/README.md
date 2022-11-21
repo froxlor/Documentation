@@ -217,8 +217,60 @@ Webserver apache-2.4+ or nginx-1.3.7+ is required for OCSP stapling. If your ver
 
 ### 3.5 PHP Settings
 
+#### OpenBasedir
+
+If enabled (default), the PHP processes of the domain will be restricted to the documentroot. The customer will be able to adjust this setting by choosing one of the following options:
+
+ * Domain documentroot
+ * Parent-directory of domain documentroot
+ * Home-Directory
+
+Froxlor ensures that the directory generated from this setting never leaves the customers home-directory.
+
+#### PHP enabled
+
+Enable/disable PHP availability completely for a domain. PHP files will not be interpreted by any php processor and might be displayed as plain-text in the web-browser.
+
+#### PHP Configuration
+
+Select the PHP configuration for this domain. Only configurations allowed for the selected customer are available. The customer will be able to switch to any other PHP configuration available to him.
+
+::: tip NOTE
+Not available when using **mod_php** (_not recommended_)
+:::
+
+#### PHP Processes for this domain
+
+Specify the number of php-processes to start for this domain. Leave empty for default.
+
+::: tip NOTE
+Only available when using **FCGID**
+:::
+
+#### Maximum php requests for this domain
+
+Specify the number of maximum requests for this domain. Leave empty for default.
+
+::: tip NOTE
+Only available when using **FCGID**
+:::
+
 ### 3.6 Nameserver settings
+
+#### Create dns zone for domain
+
+Whether a DNS zone should be created or not. Requires `Enable Nameserver` to be enabled in the settings.
+
+#### Custom / unmanaged zone file
+
+If a filename is specified, froxlor will not generate a zone for this domain but **include** this zone-file for the corresponding domain.
+
+Leave empty to automatically generate a zone-file.
+
+::: warning ATTENTION
+You are responsible for a complete and valid zone file.
+:::
 
 ## 4. Import domains
 
-Please see separate [Domain import](../../domain-import) site.
+Please see [Domain import guide](../../domain-import).
