@@ -45,4 +45,4 @@ apt-get install froxlor
 
 ## 4. Proceed with installation and configuration
 
-Now follow the general installation documentation starting with **step 3**: [Create privileged database user](tarball#_3-create-privileged-database-user)
+Now follow the general installation documentation starting with **step 3**: [Create privileged database user](tarball.html#_3-create-privileged-database-user)

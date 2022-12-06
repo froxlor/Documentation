@@ -44,9 +44,9 @@ Download and build javascript/css:
 
 ```shell
 npm install
-npm run prod
+npm run build
 ```
 
 ## 4. Proceed with installation and configuration
 
-Now follow the general installation documentation starting with **step 2**: [Install froxlor from tarball](tarball#_2-set-permissions)
+Now follow the general installation documentation starting with **step 2**: [Install froxlor from tarball](tarball.html#_2-set-permissions)

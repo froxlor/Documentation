@@ -3,7 +3,7 @@
 ## 1. General
 
 The customer is the end-user of the managed resources, like domains, email-addresses, databases, etc. Each resource
-available to the customer can be defined and restricted (see [3.3. Service Data](#_3-3-service-data) below).
+available to the customer can be defined and restricted (see [3.4. Service Data](#_3-4-service-data) below).
 
 ## 2. Locked and deactivated states
 

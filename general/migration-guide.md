@@ -3,7 +3,7 @@
 ## Version 0.10.x to 2.0
 
 ::: tip NOTE
-If you are using a version prior 0.10, please use the [update guide (manual mode)](update-guide#_2-3-manual-update) to update to the latest 0.10.x version first
+If you are using a version prior 0.10, please use the [update guide (manual mode)](update-guide.html#_2-3-manual-update) to update to the latest 0.10.x version first
 :::
 
 ## 1. Requirements

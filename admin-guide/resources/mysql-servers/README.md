@@ -16,7 +16,7 @@ Specify the hostname or IP address of the mysql-server you want to add. Note tha
 
 ### 2. Privileged user and password
 
-In order for froxlor to be able to add new databases and users, the privileged user needs to have `ALL PRIVILEGES` as well as the `GRANT` permission. See [Create privileged database user](../../../general/installation/tarball#_3-create-privileged-database-user) from the installation guide.
+In order for froxlor to be able to add new databases and users, the privileged user needs to have `ALL PRIVILEGES` as well as the `GRANT` permission. See [Create privileged database user](../../../general/installation/tarball.html#_3-create-privileged-database-user) from the installation guide.
 
 ### 3. Test connection when saving
 
