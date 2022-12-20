@@ -54,7 +54,7 @@ If enabled, the domain will listen on all configured and assigned SSL-enabled IP
 
 This option creates redirects for non-ssl vhosts so that all requests are redirected to the SSL-vhost.
 
-E.g. a request to **http**://domain.tld/ will redirect you to **https**://domain.tld/
+e.g. a request to <b>http://</b>domain.tld/ will redirect you to <b>https://</b>domain.tld/
 
 #### Use Let's Encrypt
 
