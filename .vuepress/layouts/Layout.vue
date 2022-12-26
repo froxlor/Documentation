@@ -12,7 +12,7 @@ import DeveloperNotice from "../components/DeveloperNotice.vue";
       <div class="copyright-footer">
         Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" class="footer-link" rel="noopener noreferrer" target="_blank">Creative Commons Attribution 4.0 License</a>,
         and code samples are licensed under the <a href="https://opensource.org/licenses/MIT" class="footer-link" rel="noopener noreferrer" target="_blank">MIT</a>.
-        Copyright © 2022-present froxlor & contributors.
+        Copyright © 2022-present froxlor Team & contributors.
       </div>
     </template>
   </ParentLayout>
