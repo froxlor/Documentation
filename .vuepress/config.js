@@ -22,7 +22,10 @@ export default defineUserConfig({
             componentsDir: path.resolve(__dirname, './components'),
         }),
         palettePlugin({preset: 'sass'}),
-        searchPlugin({}),
+        searchPlugin({
+			// exclude the homepage
+			isSearchable: (page) => page.path !== '/',
+		}),
         gitPlugin({
             contributors: false
         }),

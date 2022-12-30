@@ -9,7 +9,7 @@ API, you need to enable it in `Settings -> System settings -> Enable external AP
 
 Froxlor provides an API interface to access various functions like adding customers, domains, e-mails, etc. In order to
 use the API the user (admin, reseller or customer) needs to create an **API-key / secret** pair from within the froxlor
-interface. If enabled, you can find that in the top-right corner `options` menu and select `API keys`.
+interface. If enabled, you can find that in the top-right corner dropdown menu _<i class="fa-solid fa-user me-1"></i> username_ and select `API keys`.
 
 Click on `Add new key` and a new key/secret pair will be genereated. You can add as many as you like. A `click` on a
 specific row reveals the full key and secret.
