@@ -22,7 +22,7 @@ import DeveloperNotice from "../components/DeveloperNotice.vue";
 export default {
   computed: {
     showDeveloperNotice: function () {
-      return true;
+      return false;
     }
   }
 }

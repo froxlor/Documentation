@@ -6,26 +6,21 @@ froxlor provides packages for Debian and Ubuntu systems via its own repository.
 
 In order to install froxlor, we need to add the GPG keys and the repository to the APT sources (key: `FD88018B6F2D5390D051343FF6B4A8704F9E9BBC`).
 
-<CodeGroup>
-  <CodeGroupItem title="Debian" active>
+### Debian
 
 ````shell
-apt-get -y install apt-transport-https lsb-release ca-certificates curl
+apt-get -y install apt-transport-https lsb-release ca-certificates curl gnupg
 curl -sSLo /usr/share/keyrings/deb.froxlor.org-froxlor.gpg https://deb.froxlor.org/froxlor.gpg
 sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.froxlor.org-froxlor.gpg] https://deb.froxlor.org/debian $(lsb_release -sc) main" > /etc/apt/sources.list.d/froxlor.list'
 ````
 
-  </CodeGroupItem>
-  <CodeGroupItem title="Ubuntu">
+### Ubuntu
 
 ````shell
-apt-get -y install apt-transport-https lsb-release ca-certificates gnupg
+apt-get -y install apt-transport-https lsb-release ca-certificates curl gnupg
 curl -sSLo /usr/share/keyrings/deb.froxlor.org-froxlor.gpg https://deb.froxlor.org/froxlor.gpg
 sh -c 'echo "deb [signed-by=/usr/share/keyrings/deb.froxlor.org-froxlor.gpg] https://deb.froxlor.org/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/froxlor.list'
 ````
-
-  </CodeGroupItem>
-</CodeGroup>
 
 ## 2. Update package list
 
