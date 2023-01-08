@@ -2,7 +2,7 @@
   <div class="developer-notice">
     <div class="custom-container warning">
       <p class="custom-container-title">ATTENTION</p>
-      <p>You're browsing the documentation for an <b>development</b> version of froxlor.<br>The current stable version's documentation can be found <a href="https://docs.froxlor.org/latest/">here</a>.</p>
+      <p>We are excited to announce that the new froxlor version 2.0 will be available soon. This version includes many new features and improvements, which we are introducing on our new website. Stay tuned and look forward to the release of froxlor v2!<br>The 0.10.x documentation can be found <a href="https://docs.froxlor.org/v0.10/">here</a>.</p>
     </div>
   </div>
 </template>

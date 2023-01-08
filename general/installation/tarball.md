@@ -10,10 +10,6 @@ You should also have at least one (sub-)domain available to use as froxlor's mai
 
 #### Stable build
 
-::: tip NOTE
-Currently not available, as release is still pending
-:::
-
 ```shell
 # change directory
 cd /var/www/html/
