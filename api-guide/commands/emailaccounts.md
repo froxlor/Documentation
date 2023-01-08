@@ -19,7 +19,7 @@ add a new email account for a given email-address either by id or emailaddr
 | email_password | string | password for the account |
 | alternative_email | string | optional email address to send account information to, default is the account that is being created |
 | email_quota | int | optional quota if enabled in MB, default 0 |
-| sendinfomail | bool | optional, sends the welcome message to the new account (needed for creation, without the user won't be able to login before any mail is received), default 1 (true) |
+| sendinfomail | bool | optional, sends the welcome message to the new account (needed for creation, without the user won'tbe able to login before any mail is received), default 1 (true) |
 
 #### Response
 

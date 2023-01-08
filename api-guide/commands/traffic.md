@@ -29,7 +29,7 @@ list traffic information
 | day | int | optional, default empty |
 | date_from | int | optional timestamp, default empty, if specified, $year, $month and $day will be ignored |
 | date_until | int | optional timestamp, default empty, if specified, $year, $month and $day will be ignored |
-| customer_traffic | bool | optional, admin-only, whether to output ones own traffic or all of ones customers, default is 0 (false) |
+| customer_traffic | bool | optional, admin-only, whether to output ones own traffic or all of ones customers, default is 0(false) |
 | customerid | int | optional, admin-only, select traffic of a specific customer by id |
 | loginname | string | optional, admin-only, select traffic of a specific customer by loginname |
 

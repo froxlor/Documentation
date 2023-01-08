@@ -12,10 +12,10 @@ lists all admin entries
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| sql_search | array | optional array with index = fieldname, and value = array with 'op' => operator (one of <, > or =), LIKE is used if left empty and 'value' => searchvalue |
+| sql_search | array | optional array with index = fieldname, and value = array with 'op' => operator (one of <, > or =),LIKE is used if left empty and 'value' => searchvalue |
 | sql_limit | int | optional specify number of results to be returned |
 | sql_offset | int | optional specify offset for resultset |
-| sql_orderby | array | optional array with index = fieldname and value = ASC\|DESC to order the resultset by one or more fields |
+| sql_orderby | array | optional array with index = fieldname and value = ASC\|DESC to order the resultset by one or morefields |
 
 #### Response
 
@@ -31,26 +31,7 @@ returns the total number of admins for the given admin
 
 #### Response
 
-`string` as `json-encoded array`
-
-## Admins.get
-
-return an admin entry by either id or loginname
-
-#### Permission
-
-`admin`
-
-#### Parameter
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| id | int | optional, the admin-id |
-| loginname | string | optional, the loginname |
-
-#### Response
-
-`string` as `json-encoded array`
+`string` as `json-encoded response message`
 
 ## Admins.add
 
@@ -95,10 +76,28 @@ create a new admin user
 | mysqls | int | optional, default 0 |
 | mysqls_ul | bool | optional, default false |
 | customers_see_all | bool | optional, default false |
-| domains_see_all | bool | optional, default false |
 | caneditphpsettings | bool | optional, default false |
 | change_serversettings | bool | optional, default false |
 | ipaddress | array | optional, list of ip-address id's; default -1 (all IP's) |
+
+#### Response
+
+`string` as `json-encoded array`
+
+## Admins.get
+
+return an admin entry by either id or loginname
+
+#### Permission
+
+`admin`
+
+#### Parameter
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| id | int | optional, the admin-id |
+| loginname | string | optional, the loginname |
 
 #### Response
 
@@ -150,7 +149,6 @@ update an admin user by given id or loginname
 | mysqls | int | optional, default 0 |
 | mysqls_ul | bool | optional, default false |
 | customers_see_all | bool | optional, default false |
-| domains_see_all | bool | optional, default false |
 | caneditphpsettings | bool | optional, default false |
 | change_serversettings | bool | optional, default false |
 | ipaddress | array | optional, list of ip-address id's; default -1 (all IP's) |

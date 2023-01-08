@@ -12,10 +12,10 @@ list all available hosting plans
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| sql_search | array | optional array with index = fieldname, and value = array with 'op' => operator (one of <, > or =), LIKE is used if left empty and 'value' => searchvalue |
+| sql_search | array | optional array with index = fieldname, and value = array with 'op' => operator (one of <, > or =),LIKE is used if left empty and 'value' => searchvalue |
 | sql_limit | int | optional specify number of results to be returned |
 | sql_offset | int | optional specify offset for resultset |
-| sql_orderby | array | optional array with index = fieldname and value = ASC\|DESC to order the resultset by one or more fields |
+| sql_orderby | array | optional array with index = fieldname and value = ASC\|DESC to order the resultset by one or morefields |
 
 #### Response
 
@@ -31,26 +31,7 @@ returns the total number of accessible hosting plans
 
 #### Response
 
-`string` as `json-encoded array`
-
-## HostingPlans.get
-
-return a hosting-plan entry by either id or plan-name
-
-#### Permission
-
-`admin`
-
-#### Parameter
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| id | int | optional, the hosting-plan-id |
-| planname | string | optional, the hosting-plan-name |
-
-#### Response
-
-`string` as `json-encoded array`
+`string` as `json-encoded response message`
 
 ## HostingPlans.add
 
@@ -89,8 +70,27 @@ add new hosting-plan
 | phpenabled | bool | optional, whether to allow usage of PHP, default 0 (false) |
 | allowed_phpconfigs | array | optional, array of IDs of php-config that the customer is allowed to use, default empty (none) |
 | perlenabled | bool | optional, whether to allow usage of Perl/CGI, default 0 (false) |
-| dnsenabled | bool | optional, whether to allow usage of the DNS editor (requires activated nameserver in settings), default 0 (false) |
+| dnsenabled | bool | optional, whether to allow usage of the DNS editor (requires activated nameserver in settings),default 0 (false) |
 | logviewenabled | bool | optional, whether to allow access to webserver access/error-logs, default 0 (false) |
+
+#### Response
+
+`string` as `json-encoded array`
+
+## HostingPlans.get
+
+return a hosting-plan entry by either id or plan-name
+
+#### Permission
+
+`admin`
+
+#### Parameter
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| id | int | optional, the hosting-plan-id |
+| planname | string | optional, the hosting-plan-name |
 
 #### Response
 
@@ -135,7 +135,7 @@ update hosting-plan by either id or plan-name
 | phpenabled | bool | optional, whether to allow usage of PHP, default 0 (false) |
 | allowed_phpconfigs | array | optional, array of IDs of php-config that the customer is allowed to use, default empty (none) |
 | perlenabled | bool | optional, whether to allow usage of Perl/CGI, default 0 (false) |
-| dnsenabled | bool | optional, either to allow usage of the DNS editor (requires activated nameserver in settings), default 0 (false) |
+| dnsenabled | bool | optional, either to allow usage of the DNS editor (requires activated nameserver in settings),default 0 (false) |
 | logviewenabled | bool | optional, either to allow access to webserver access/error-logs, default 0 (false) |
 
 #### Response

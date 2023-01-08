@@ -70,7 +70,7 @@ count email forwarders for a given email address
 
 #### Response
 
-`string` as `json-encoded array`
+`string` as `json-encoded response message`
 
 ## EmailForwarders.delete
 

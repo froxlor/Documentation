@@ -12,10 +12,10 @@ lists all ip/port entries
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| sql_search | array | optional array with index = fieldname, and value = array with 'op' => operator (one of <, > or =), LIKE is used if left empty and 'value' => searchvalue |
+| sql_search | array | optional array with index = fieldname, and value = array with 'op' => operator (one of <, > or =),LIKE is used if left empty and 'value' => searchvalue |
 | sql_limit | int | optional specify number of results to be returned |
 | sql_offset | int | optional specify offset for resultset |
-| sql_orderby | array | optional array with index = fieldname and value = ASC\|DESC to order the resultset by one or more fields |
+| sql_orderby | array | optional array with index = fieldname and value = ASC\|DESC to order the resultset by one or morefields |
 
 #### Response
 
@@ -31,25 +31,7 @@ returns the total number of accessible ip/port entries
 
 #### Response
 
-`string` as `json-encoded array`
-
-## IpsAndPorts.get
-
-return an ip/port entry by id
-
-#### Permission
-
-`admin`
-
-#### Parameter
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| id | int | ip-port-id |
-
-#### Response
-
-`string` as `json-encoded array`
+`string` as `json-encoded response message`
 
 ## IpsAndPorts.add
 
@@ -81,6 +63,24 @@ create a new ip/port entry
 | include_specialsettings | bool | optional, requires $ssl = 1, whether or not to include non-ssl specialsettings, default false |
 | ssl_default_vhostconf_domain | string | optional, requires $ssl = 1, defatul empty |
 | include_default_vhostconf_domain | bool | optional, requires $ssl = 1, whether or not to include non-ssl default_vhostconf_domain, default false |
+
+#### Response
+
+`string` as `json-encoded array`
+
+## IpsAndPorts.get
+
+return an ip/port entry by id
+
+#### Permission
+
+`admin`
+
+#### Parameter
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| id | int | ip-port-id |
 
 #### Response
 

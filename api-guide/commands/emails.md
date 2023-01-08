@@ -79,10 +79,10 @@ list all email addresses, if called from an admin, list all email addresses of a
 | :--- | :--- | :--- |
 | customerid | int | optional, admin-only, select email addresses of a specific customer by id |
 | loginname | string | optional, admin-only, select email addresses of a specific customer by loginname |
-| sql_search | array | optional array with index = fieldname, and value = array with 'op' => operator (one of <, > or =), LIKE is used if left empty and 'value' => searchvalue |
+| sql_search | array | optional array with index = fieldname, and value = array with 'op' => operator (one of <, > or =),LIKE is used if left empty and 'value' => searchvalue |
 | sql_limit | int | optional specify number of results to be returned |
 | sql_offset | int | optional specify offset for resultset |
-| sql_orderby | array | optional array with index = fieldname and value = ASC\|DESC to order the resultset by one or more fields |
+| sql_orderby | array | optional array with index = fieldname and value = ASC\|DESC to order the resultset by one or morefields |
 
 #### Response
 
@@ -105,7 +105,7 @@ returns the total number of accessible email addresses
 
 #### Response
 
-`string` as `json-encoded array`
+`string` as `json-encoded response message`
 
 ## Emails.delete
 

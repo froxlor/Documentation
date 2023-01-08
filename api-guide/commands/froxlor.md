@@ -8,6 +8,12 @@ checks whether there is a newer version of froxlor available
 
 `admin`
 
+#### Parameter
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| force | bool | optional, force live update-check |
+
 #### Response
 
 `string` as `json-encoded array`
@@ -99,6 +105,12 @@ returns a random password based on froxlor settings for min-length, included cha
 
 `admin` `customer`
 
+#### Parameter
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| length | int | optional length of password, defaults to 10 |
+
 #### Response
 
 `string`
@@ -128,6 +140,7 @@ returns a list of all available api functions
 | Field | Type | Description |
 | :--- | :--- | :--- |
 | module | string | optional, return list of functions for a specific module |
+| function | string | optional, return parameter information for a specific module and function |
 
 #### Response
 
