@@ -28,11 +28,9 @@ A request to the API endpoint has the following structure:
 
 ```php
 [
-	'body' => [
-		'command' => 'Command',
-		'params => [
-			// optional parameters to the given command
-		]
+	'command' => 'Command',
+	'params => [
+		// optional parameters to the given command
 	]
 ]
 ```
@@ -63,9 +61,7 @@ The output should look like this:
 
 ```json
 {
-  "body": {
     "command": "Froxlor.listFunctions"
-  }
 }
 ```
 
@@ -79,7 +75,7 @@ curl -v \
   --header "Content-Type: application/json" \
   --header "Authorization: Basic $AUTH" \
   --request POST \
-  --data  '{"body":{"command":"Froxlor.listFunctions"}}' \
+  --data  '{"command":"Froxlor.listFunctions"}' \
   https://froxlor.example.com/api.php
 ```
 
