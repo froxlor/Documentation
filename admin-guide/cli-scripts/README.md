@@ -1,17 +1,19 @@
 # Froxlor console scripts (CLI)
 
-All froxlor cli interactions can be accessed using the **`bin/froxlor-cli`** console command. The possible actions are listed below.
+All froxlor cli interactions can be accessed using the **`bin/froxlor-cli`** console command. The possible actions are
+listed below.
 
-| Action                                        | Description                                            |
-|-----------------------------------------------|--------------------------------------------------------|
-| [froxlor:api-call](#api-call)                 | Run an API command as given user                       |
-| [froxlor:config-services](#config-services)   | Configure system services                              |
-| [froxlor:cron](#cron)                         | Regulary perform tasks created by froxlor              |
-| [froxlor:install](#install)                   | Installation process to use instead of web-ui          |
-| [froxlor:php-sessionclean](#php-sessionclean) | Clean old php-session files from tmp folder            |
-| [froxor:switch-server-ip](#switch-server-ip)  | Easily switch IP addresses e.g. after server migration |
-| [froxlor:update](#update)                     | Check for newer version and update froxlor             |
-| [froxlor:user](#user)                         | Various user actions                                   |
+| Action                                                  | Description                                                                                           |
+|---------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| [froxlor:api-call](#api-call)                           | Run an API command as given user                                                                      |
+| [froxlor:config-services](#config-services)             | Configure system services                                                                             |
+| [froxlor:cron](#cron)                                   | Regulary perform tasks created by froxlor                                                             |
+| [froxlor:install](#install)                             | Installation process to use instead of web-ui                                                         |
+| [froxlor:php-sessionclean](#php-sessionclean)           | Clean old php-session files from tmp folder                                                           |
+| [froxlor:switch-server-ip](#switch-server-ip)           | Easily switch IP addresses e.g. after server migration                                                |
+| [froxlor:update](#update)                               | Check for newer version and update froxlor                                                            |
+| [froxlor:user](#user)                                   | Various user actions                                                                                  |
+| [froxlor:validate-acme-webroot](#validate-acme-webroot) | Validates the Le_Webroot value is correct for froxlor managed domains with Let's Encrypt certificate. |
 
 <h2 id="api-call">1. Run an API command as given user</h2>
 
@@ -24,7 +26,6 @@ All froxlor cli interactions can be accessed using the **`bin/froxlor-cli`** con
 | `user`        | Loginname of the user you want to run the command as |
 | `api-command` | The command to execute in the form "Module.function" |
 | `parameters`  | Paramaters to pass to the command as JSON array      |
-
 
 **Options:**
 
@@ -95,7 +96,8 @@ All froxlor cli interactions can be accessed using the **`bin/froxlor-cli`** con
 
 <h2 id="switch-server-ip">6. Easily switch IP addresses e.g. after server migration</h2>
 
-If you ever switch your servers IP address or migrate to another server, you can invoke this script to switch your old IP's with the new IP's in your froxlor installation.
+If you ever switch your servers IP address or migrate to another server, you can invoke this script to switch your old
+IP's with the new IP's in your froxlor installation.
 
 **Usage:** `bin/froxlor-cli froxlor:switch-server-ip [options]`
 
@@ -108,7 +110,8 @@ If you ever switch your servers IP address or migrate to another server, you can
 
 **Example usage:**
 
-Let's say your server currently has the IP address `123.10.20.30`. You have migrated to a new provider and get a new IP address assigned, let's say `234.30.20.10`. To switch these for your froxlor installation, run the following command:
+Let's say your server currently has the IP address `123.10.20.30`. You have migrated to a new provider and get a new IP
+address assigned, let's say `234.30.20.10`. To switch these for your froxlor installation, run the following command:
 
 ```shell
 bin/froxlor-cli froxlor:switch-server-ip --switch=123.10.20.30,234.30.20.10
@@ -145,3 +148,16 @@ bin/froxlor-cli froxlor:switch-server-ip --switch=123.10.20.30,234.30.20.10
 | `-u, --unlock`        | Unlock user after too many failed login attempts |
 | `-p, --change-passwd` | Set new password for given user                  |
 | `-s, --show-info`     | Output information details of given user         |
+
+<h2 id="validate-acme-webroot">9. Validate ACME webroot</h2>
+
+If your documentroot for froxlor or the acme-challenge-directory setting has changed, run this to update existing
+acme.sh configuration files to reflect the new path so certificates can be renewed.
+
+**Usage:** `bin/froxlor-cli froxlor:validate-acme-webroot [options]`
+
+**Options:**
+
+| Option             | Description                                            |
+|--------------------|--------------------------------------------------------|
+| `-A, --yes-to-all` | Do not ask for confirmation, update files if necessary |
