@@ -24,7 +24,7 @@ A few settings will show the above notice. This means that adjusting the value o
 
 <UiBrowser :src="$withBase('/img/frx_settings_imexport.png')" alt="Settings: Import / Export"/>
 
-To **export** your current settings-set, click the `Download/export Settings` in the top-right corner. You can use the generated file to import your settings again or on another froxlor installation. Keep in mind that depending on your settings, possible sensitive data cloud be stored in the export-file.
+To **export** your current settings-set, click the `Download/export Settings` in the top-right corner. You can use the generated file to import your settings again or on another froxlor installation. Keep in mind that depending on your settings, possible sensitive data could be stored in the export-file.
 
 In order to **import** settings, either from a possible backup or another froxlor installation, select the JSON file and press `Upload and import` to proceed. Depending on what settings are possibly overwritten, you might need to reconfigure some services, see [Configuration Guide](../configuration) for more information.
 
