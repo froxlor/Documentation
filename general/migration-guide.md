@@ -111,6 +111,19 @@ The sql-configuration for dovecot in `/etc/dovecot/dovecot-sql.conf.ext` is need
 E-mail users might not be able to login if this setting is not adjusted
 :::
 
+#### ProFTPd / sql.conf
+
+The sql-configuration for proftpd in `/etc/proftpd/sql.conf` is used by proftpd to read the virtual users from froxlors database. As froxlor now uses more recent password hashes for the stored passwords, it is required to adjust the possible auth-types to allow new password-hashes to be used correctly.
+
+```diff
+- SQLAuthTypes Crypt
++ SQLAuthTypes Crypt OpenSSL
+```
+
+::: warning ATTENTION
+FTP users might not be able to login if this setting is not adjusted
+:::
+
 ### Debian Stretch / Ubuntu Xenial and CentOS
 
 As of version 2.0, froxlor removed the configuration templates for Debian Stretch / Ubuntu Xenial and CentOS.

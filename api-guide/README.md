@@ -22,6 +22,10 @@ for a time-period.
 The **API endpoint** is `https://your-hostname.tld/api.php`. As froxlor's API is not a RESTful API, all commands are
 called via HTTP **POST** with the `application/json` content-type.
 
+::: warning NOTE
+If you are using **php-fpm** with **apache2**, in order for the API authentication to work properly, you need to enable `Add "-pass-header Authorization" / "CGIPassAuth On" to vhosts` in the [PHP-configuration](../admin-guide/php-versions-and-configuration/#_1-php-configurations-php-ini) assigned to froxlor. 
+:::
+
 ## 2. Request structure/layout
 
 A request to the API endpoint has the following structure:

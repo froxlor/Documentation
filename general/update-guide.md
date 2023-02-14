@@ -8,11 +8,14 @@ Before updating, make sure to backup the froxlor database in case something unex
 mysqldump -u root -p froxlor > /tmp/backup_froxor-YYYYMMDD.sql
 ```
 
-Also backup your old **userdata.inc.php** from the `froxlor/lib/` folder:
+Also backup your old **userdata.inc.php** from the `froxlor/lib/` folder. Additionally, if you have uploaded custom header logos, you need to copy them over too:
 
 ```shell
-cp /var/www/html/froxlor/lib/userdata.inc.php /tmp/
+mkdir -p /tmp/froxlor-backup/
+cp /var/www/html/froxlor/lib/userdata.inc.php /tmp/froxlor-backup/
+cp /var/www/html/froxlor/img/* /tmp/froxlor-backup/
 ```
+
 
 ## 2.1 Update via Webinterface
 
@@ -42,23 +45,23 @@ The latest version of froxlor is always available via [https://files.froxlor.org
 ```shell
 # change directory
 cd /var/www/html
+# create backup directory
+mkdir -p /tmp/froxlor-backup/
 # backup userdata.inc.php (mysql credentials)
-cp froxlor/lib/userdata.inc.php /tmp/
-# remove old files
-rm -rf froxlor/
+cp froxlor/lib/userdata.inc.php /tmp/froxlor-backup/
+# backup custom logos (if applicable)
+cp froxlor/img/* /tmp/froxlor-backup/
 
 # download latest froxlor version
 wget https://files.froxlor.org/releases/froxlor-latest.tar.gz
 # or download specific version
 # wget https://files.froxlor.org/releases/froxlor-x.y.z.tar.gz
 
-# note: the archive contains the folder 'froxlor' already!
+# note: the archive contains the folder 'froxlor' already! 
+#       You can safely overwrite all existing/old froxlor files.
 tar xvfz froxlor-latest.tar.gz
 # remove archive
 rm froxlor-latest.tar.gz
-
-# put back userdata.inc.php
-mv /tmp/userdata.inc.php froxlor/lib/
 ```
 
 ### 2.3.2 Correct ownership
@@ -77,4 +80,12 @@ chown -R [webserver-user]:[webserver-user] /var/www/html/froxlor/
 
 Now open froxlor in your browser and login with the admin-account. You will be prompted to run the required database-updates. In case of auto-update, you will be redirected to the corresponding update page.
 
-Keep in mind that customers cannot login to your froxlor and the cronjob won’t regenerate any configfiles until the database is up-to-date with the new version.
+Keep in mind that customers cannot log in to your froxlor and the cronjob won’t regenerate any config-files until the database is up-to-date with the new version.
+
+### 2.3.4 Validate and remove backup files
+
+If everything went smoothly and your froxlor is up-to-date you can now remove the backup-data if you want:
+
+```shell
+rm -rf /tmp/froxlor-backup/
+```
