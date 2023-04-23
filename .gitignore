@@ -6,5 +6,6 @@
 .temp
 .cache
 .idea
+.DS_Store
 vendor
 api-guide/commands/

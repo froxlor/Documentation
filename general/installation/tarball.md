@@ -78,6 +78,8 @@ Now that you have extracted all the files you are ready to (re)start the webserv
 
 The _unprivileged_ MySQL user does not need to exist, it will be created using the provided root-privileged user by the installation process.
 
+<UiBrowser :src="$withBase('/img/frx_inst_database.png')" alt="Create database and user"/>
+
 ## 5. Configuration of services
 
 &#8594; See [Configuration guide](../../admin-guide/configuration).
