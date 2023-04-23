@@ -24,7 +24,7 @@ froxlor provides packages from the following Linux distributions and architectur
 Everything you need for froxlor can be installed with one command:
 
 ```shell
-$ curl -fsSL https://get.froxlor.org | sh
+$ curl -fsSL https://get.froxlor.org | bash
 ```
 
 Within a few minutes the installation is completed and the passwords for the database and the admin portal are displayed in the CLI.
@@ -37,16 +37,20 @@ The installation is now complete and all services are configured.
 
 If you want to install other services than the default installation, you can add more arguments to the above command. Please note that you must do this before the first installation.
 
-| Service | Flag    | Default | Description |
-|---------|---------|---------|-------------|
-| Nginx   | --nginx |         |             |
-| MySQL   | --mysql |         |             |
-| WIP...  |         |         |             |
+| Service         | Flag                          | Default | Description                                                   |
+|-----------------|-------------------------------|---------|---------------------------------------------------------------|
+| Apache 2.4      | --webserver=apache24          | Yes     | This enables Apache as webserver                              |
+| Nginx           | --webserver=nginx             |         | This enables Nginx as webserver                               |
+| MySQL           | --mysql=default-mysql-server  | Yes     | This will install MySQL as backend                            |
+| Mariadb         | --mysql=mariadb               |         | This will install MariaDB as backend                          |
+| IPv4            | --ipv4=xxx.xxx.xxx.xxx        | DNS     | This should be set the public IPv4                            |
+| IPV6            | --ipv6=xxxx:xxxx:xxxx:xxxx::x | DNS     | This should be set the public IPv6                            |
+| Non interactive | --noninteractive              |         | This should skip all prompts as long as all variables are set |
 
-The command then looks like this:
+The command then looks like this, notice the two dashes (--) which are telling bash to not process anything following it as arguments to bash:
 
 ```shell
-$ curl -fsSL https://get.froxlor.org | sh --mysql
+$ curl -fsSL https://get.froxlor.org | bash -s -- --noninteractive
 ```
 
 ## Further information
