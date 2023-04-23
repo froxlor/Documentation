@@ -7,3 +7,4 @@ This section covers installation, update and migration of froxlor.
 * [Installation](installation)
 * [Update](update-guide.html)
 * [Migration](migration-guide.html)
+* [Uninstalling froxlor](uninstall.html)

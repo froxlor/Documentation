@@ -102,6 +102,10 @@ export default defineUserConfig({
                         text: 'Migration Guide',
                         link: '/general/migration-guide.md'
                     },
+					{
+						text: 'Uninstall',
+						link: '/general/uninstall.md'
+					},
                 ],
             },
             {
