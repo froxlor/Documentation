@@ -45,12 +45,12 @@ If you want to install other services than the default installation, you can add
 | Mariadb         | --mysql=mariadb               |         | This will install MariaDB as backend                          |
 | IPv4            | --ipv4=xxx.xxx.xxx.xxx        | DNS     | This should be set the public IPv4                            |
 | IPV6            | --ipv6=xxxx:xxxx:xxxx:xxxx::x | DNS     | This should be set the public IPv6                            |
-| Non interactive | --noninteractive              |         | This should skip all prompts as long as all variables are set |
+| Unattended      | --unattended                  |         | This should skip all prompts as long as all variables are set |
 
 The command then looks like this, notice the two dashes (--) which are telling bash to not process anything following it as arguments to bash:
 
 ```shell
-$ curl -fsSL https://get.froxlor.org | bash -s -- --noninteractive
+$ curl -fsSL https://get.froxlor.org | bash -s -- --unattended
 ```
 
 ## Further information
