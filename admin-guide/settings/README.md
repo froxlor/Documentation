@@ -34,3 +34,13 @@ Although it should not be necessary to adjust any values for the cronjobs as it 
 
 <UiBrowser :src="$withBase('/img/frx_settings_cron.png')" alt="Cronjob settings"/>
 
+## 3. Settings in `config.inc.php`
+
+Options that are not adjustable via WebUI settings are read from the `lib/config.inc.php` file within the froxlor's base-directory (most likely /var/www/html/froxlor), in case it exists. By default, froxlor ships it as `lib/config.example.inc.php` so custom adjustments will not be overwritten by an update.
+
+To overwrite the options in this file, rename/copy it and adjust as needed:
+
+```bash
+cd /var/www/html/froxlor
+cp lib/config.example.inc.php lib/config.inc.php
+```

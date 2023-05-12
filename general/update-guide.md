@@ -20,7 +20,7 @@ cp /var/www/html/froxlor/img/* /tmp/froxlor-backup/
 ## 2.1 Update via Webinterface
 
 ::: tip NOTE
-The web-updater is disabled by default. To enable it, edit `lib/config.inc.php` and set `enable_webupdate` to `true`
+The web-updater is disabled by default. To enable it, edit `lib/config.inc.php` and set `enable_webupdate` to `true`. See also [settings in config.inc.php](../admin-guide/settings/#_3-settings-in-config-inc-php)
 :::
 
 Log in as admin and select `System -> Auto-Update` from the left side menu. The update wizard will inform you about the latest version, download and extract the new files and redirect you to the update-process.

@@ -83,7 +83,7 @@ curl \
 
 ### Auto-update via Webinterface
 
-The `auto-update` feature must now be enabled explicitly in `lib/config.inc.php`. This was introduced to avoid updating froxlor via webinterface manually in case it was installed via debian/ubuntu package.
+The `auto-update` feature must now be enabled explicitly in `lib/config.inc.php`. This was introduced to avoid updating froxlor via webinterface manually in case it was installed via debian/ubuntu package. See also [settings in config.inc.php](../admin-guide/settings/#_3-settings-in-config-inc-php).
 
 ### Cron / Helper scripts
 
