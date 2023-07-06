@@ -99,8 +99,6 @@ The result should then look somewhat like this (removed headers and actual data 
 
 ```json
 {
-  "status": 200,
-  "status_message": "successful",
   "data": [
     {
       "module": "SomeModule",
@@ -127,8 +125,6 @@ A response from the API endpoint has the following structure:
 
 ```json
 {
-  "status": 200,
-  "status_message": "a status message",
   "data": {
     ...
   }
@@ -146,8 +142,6 @@ Listing response:
 
 ```json
 {
-  "status": 200,
-  "status_message": "success",
   "data": {
     "count": number-of-entries,
     "list": [
@@ -161,8 +155,6 @@ Single entity response:
 
 ```json
 {
-  "status": 200,
-  "status_message": "success",
   "data": {...}
 }
 ```
