@@ -1,0 +1,12 @@
+/node_modules
+/dist
+.env
+.generator/release
+.generator/Froxlor-*.zip
+.temp
+.cache
+.idea
+.DS_Store
+vendor
+api-guide/commands/
+
