@@ -14,6 +14,8 @@ If you are using a version prior 0.10, please use the [update guide (manual mode
   * session, ctype, xml, filter, posix, mbstring, curl, gmp, json
 * Suggested PHP extensions:
   * bcmath, zip
+* Dovecot 2+
+* Postfix 3.4+
 
 ## 2. New features
 
