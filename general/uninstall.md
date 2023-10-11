@@ -5,7 +5,7 @@
 Before you remove anything, make sure to back up the froxlor database in case you want to go back. By default, the database name is froxlor. If unsure of the details, you can open the `froxlor/lib/userdata.inc.php` file to get all the necessary information.
 
 ```shell
-mysqldump -u root -p froxlor > /tmp/backup_froxor-YYYYMMDD.sql
+mysqldump -u root -p froxlor > /tmp/backup_froxlor-YYYYMMDD.sql
 ```
 
 Also backup your old **userdata.inc.php** from the `froxlor/lib/` folder. Additionally, if you have uploaded custom header logos, you need to copy them over too:
