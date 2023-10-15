@@ -6,6 +6,9 @@ export default defineConfig({
     description: "Froxlor is the lightweight server management software for your needs.",
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
+
+        logo: '/logo_white.png',
+
         nav: [
             {text: 'Home', link: '/'}
         ],

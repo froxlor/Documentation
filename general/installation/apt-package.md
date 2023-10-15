@@ -1,10 +1,23 @@
 # Install froxlor on Debian/Ubuntu using apt
 
-froxlor provides packages for Debian and Ubuntu systems via its own repository.
+froxlor provides packages for __Debian__ and __Ubuntu__ systems via its own repository.
+
+## 0. Supported distribution versions and recommendations
+
+Packages will be build for all supported debian/ubuntu distribution,
+see [configuration templates](https://github.com/Froxlor/Froxlor/tree/main/lib/configfiles).
+
+| Distro  |      Version      |                              Notes |             Recommended source for ISO |
+|---------|:-----------------:|-----------------------------------:|---------------------------------------:|
+| Debian* | stable, oldstable | *oldoldstable* is mostly supported | https://www.debian.org/distrib/netinst |
+| Ubuntu  |   LTS releases    |           e.g. 20.04, 22.04, 24.04 |     https://ubuntu.com/download/server |
+
+<small>*Debian is the recommended and most likely best supported distribution for froxlor.</small>
 
 ## 1. Edit apt sources
 
-In order to install froxlor, we need to add the GPG keys and the repository to the APT sources (key: `FD88018B6F2D5390D051343FF6B4A8704F9E9BBC`).
+In order to install froxlor, we need to add the GPG keys and the repository to the APT sources (
+key: `FD88018B6F2D5390D051343FF6B4A8704F9E9BBC`).
 
 ### Debian
 

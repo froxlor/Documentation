@@ -273,4 +273,4 @@ You are responsible for a complete and valid zone file.
 
 ## 4. Import domains
 
-Please see [Domain import guide](../../domain-import).
+Please see [Domain import guide](../../domain-import/).
