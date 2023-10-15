@@ -1,5 +1,6 @@
 <?php
 
-// todo scan folder, find highest version by semver
+$current_stable = "2.0";
 
-header('Location: /v2/', true, 302);
+header('Location: /v' . $current_stable . '/', true, 302);
+exit;

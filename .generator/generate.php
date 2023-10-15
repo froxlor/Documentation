@@ -41,7 +41,7 @@ class generate
         });
 
         $this->task('Install composer packages', function () use ($dir, $file) {
-            $command = sprintf('cd %s/%s && composer install 2> /dev/null', $dir, $file);
+            $command = sprintf('cd %s/%s && composer --ignore-platform-req=ext-gnupg install 2> /dev/null', $dir, $file);
             if (exec($command) === false) {
                 throw new Exception('Failed to install packages! Command: ' . $command);
             }
@@ -54,7 +54,9 @@ class generate
         });
 
         $this->task('Generate docs', function () use ($dir, $file, $ref) {
-            $command = escapeshellcmd('php ' . $dir . '/' . $file . '/api-local.php ' . $ref);
+            $version_array = explode(".", $ref);
+            $target_version = $version_array[0].'.'.$version_array[1];
+            $command = escapeshellcmd('php ' . $dir . '/' . $file . '/api-local.php ' . $target_version);
             if (!$result = exec($command)) {
                 throw new Exception('Failed to generate docs! Command: ' . $command);
             } else {
