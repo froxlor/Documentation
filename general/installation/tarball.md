@@ -33,7 +33,7 @@ Nightly builds are current snapshots of the Git repository including dependencie
 
 ## 2. Set Permissions
 
-In order for the webserver to be able to server the files, the owner must be set correctly. Note: If you're using [FCGID](../../admin-guide/configuration/fcgid)/[PHP-FPM](../../admin-guide/configuration/php-fpm) for the froxlor-Vhost, you have to replace the webserver-user with your local froxlor-user.
+In order for the webserver to be able to server the files, the owner must be set correctly. Note: If you're using [FCGID](../../admin-guide/configuration/fcgid/)/[PHP-FPM](../../admin-guide/configuration/php-fpm/) for the froxlor-Vhost, you have to replace the webserver-user with your local froxlor-user.
 
 ```bash
 chown -R [webserver-user]:[webserver-user] /var/www/html/froxlor/

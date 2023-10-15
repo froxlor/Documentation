@@ -4,7 +4,7 @@ Every froxlor installation has at least one mysql server specified, the default 
 
 <UiBrowser :src="('/img/frx_mysqlsrv_overview.png')" alt="Admin MySQL server overview"/>
 
-If there are multiple MySQL servers configured and assigned to a customer, a selection on which database server the new database shall be created on is visible for the customer (see [User Guide -> Database](../../../userguide/interface/database))
+If there are multiple MySQL servers configured and assigned to a customer, a selection on which database server the new database shall be created on is visible for the customer (see [User Guide -> Database](../../../user-guide/databases/))
 
 <UiBrowser :src="('/img/frx_mysqlsrv_new.png')" alt="Add new database with selection of MySQL server"/>
 

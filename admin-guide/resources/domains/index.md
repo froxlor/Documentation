@@ -17,7 +17,7 @@ When deleting a domain using the <i class="fa-solid fa-trash text-danger"></i> i
 
 To open the logfiles viewer, click on the <i class="fa-solid fa-file"></i> icon for the desired domain on the right side of the listing.
 
-For froxlor to be able to read the log files, the `exec()`-function needs to be enabled/allowed in the [Froxlor Vhost PHP-configuration](../../php-versions-and-configuration).
+For froxlor to be able to read the log files, the `exec()`-function needs to be enabled/allowed in the [Froxlor Vhost PHP-configuration](../../php-versions-and-configuration/).
 
 ::: tip NOTE
 The logfiles viewer is not available for domains with the `email_only`-flag set.
@@ -37,11 +37,11 @@ Required resource records, like `A`, `AAAA` or `NS` entries, are being generated
 
 For ssl-enabled domains, there are different indicators which show the currently used certificate.
 
-| Indicator                                                                                                                                                                                        | Description                                                                                                                                                                                                                 |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <i class="fa-solid fa-shield text-danger"></i>                                                                                                                                                   | The domain is using the global certificate specified in the settings or in [IPs and ports](../ips-and-ports). <br/><br/>_No ssl-certificate has been specified for this domain explicitly._                                 |
-| <i class="fa-solid fa-shield text-warning"></i> | Domain **inherits** the certificate from its parentdomain (e.g. for subdomains). <br/><br/>_No ssl-certificate has been specified for this domain explicitly._                                                              |
-| <i class="fa-solid fa-shield text-success"></i> | A **domain specific** certificate is assigned to that domain .                                                                                                                                                              |
+| Indicator                                                                                                                                                                                        | Description                                                                                                                                                                                                                |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <i class="fa-solid fa-shield text-danger"></i>                                                                                                                                                   | The domain is using the global certificate specified in the settings or in [IPs and ports](../ips-and-ports/). <br/><br/>_No ssl-certificate has been specified for this domain explicitly._                               |
+| <i class="fa-solid fa-shield text-warning"></i> | Domain **inherits** the certificate from its parentdomain (e.g. for subdomains). <br/><br/>_No ssl-certificate has been specified for this domain explicitly._                                                             |
+| <i class="fa-solid fa-shield text-success"></i> | A **domain specific** certificate is assigned to that domain .                                                                                                                                                             |
 | <i class="fa-solid fa-shield"></i> | This domain receives a **Let's Encrypt** certificate automatically. <br/><br/>_Using this mode, no ssl-editor is available for the domain. If you want to specify your own certificate, deactivate `Let's Encrypt` first._ |
 
 The certificate data given will be validated, e.g. that the private key matches the public key.

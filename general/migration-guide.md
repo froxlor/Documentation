@@ -45,7 +45,7 @@ A click opens a modal window where the shown columns can be managed:
 
 ### New command line tools
 
-Our crons and helper scripts were migrated and can now be accessed via `bin/froxlor-cli`. More details see [Froxlor console scripts (CLI)](../admin-guide/cli-scripts).
+Our crons and helper scripts were migrated and can now be accessed via `bin/froxlor-cli`. More details see [Froxlor console scripts (CLI)](../admin-guide/cli-scripts/).
 
 ```shell
 bin/froxlor-cli froxlor:api-call admin Froxlor.generatePassword '{"length":20}'
@@ -90,7 +90,7 @@ The `auto-update` feature must now be enabled explicitly in `lib/config.inc.php`
 
 ### Cron / Helper scripts
 
-The main cron file in `scripts/froxlor_master_cronjob.php` as well as the helper scripts in `scripts/` and `install/scripts/` have been migrated to the new [command line tools](../admin-guide/cli-scripts).
+The main cron file in `scripts/froxlor_master_cronjob.php` as well as the helper scripts in `scripts/` and `install/scripts/` have been migrated to the new [command line tools](../admin-guide/cli-scripts/).
 
 | Old script                           | New command                              |
 |--------------------------------------|------------------------------------------|

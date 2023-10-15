@@ -3,7 +3,7 @@
 ## 1. Introduction
 
 ::: warning ATTENTION
-It is essential that you verify and adjust the settings prior to configuration as some commands and templates will change according to your settings. See [settings admin-guide](../settings) for more.
+It is essential that you verify and adjust the settings prior to configuration as some commands and templates will change according to your settings. See [settings admin-guide](../settings/) for more.
 :::
 
 To configure the required services that will be running in your server, e.g. webserver and mailserver, froxlor provides simple templates/commands based on the system-default config-files of the used distribution. These steps will also create required directories and users according to your settings.
@@ -21,9 +21,9 @@ bin/froxlor-cli froxlor:config-services --create
 
 You will be prompted to select your Distribution/OS, followed by the webserver you want to use, the mail-services and ftp-service and at last, the system-services. If a specific service-category should not be installed/configured, enter x and continue.
 
-For the system services, the cron service will be included whether you select it or not, as it is required for froxlor to work. Selecting logrotate is advisable. If you enabled FCGID or PHP-FPM in the settings, you should of course select the corresponding service here too. See also [PHP-FPM guide](php-fpm) or [FCGID guide](fcgid)
+For the system services, the cron service will be included whether you select it or not, as it is required for froxlor to work. Selecting logrotate is advisable. If you enabled FCGID or PHP-FPM in the settings, you should of course select the corresponding service here too. See also [PHP-FPM guide](php-fpm/) or [FCGID guide](fcgid/)
 
-You can always re-run the `froxlor:config-services` command to (re-)configure all or specific services. Just run the command with the --help parameter to see all the possibilities or see [here](../cli-scripts#config-services).
+You can always re-run the `froxlor:config-services` command to (re-)configure all or specific services. Just run the command with the --help parameter to see all the possibilities or see [here](../cli-scripts/#config-services).
 
 ## 2.2 Via webinterface
 
@@ -45,4 +45,4 @@ After clicking **Proceed** you will be prompted with a generated command which n
 <UiBrowser :src="('/img/frx_cfg_finish.png')" alt="Apply the configuration for services"/>
 
 
-You can also **Export** the selection to a JSON file which can be used for the `froxlor:config-services` command, see [Froxlor console scripts](../cli-scripts#config-services) for more information.
+You can also **Export** the selection to a JSON file which can be used for the `froxlor:config-services` command, see [Froxlor console scripts](../cli-scripts/#config-services) for more information.

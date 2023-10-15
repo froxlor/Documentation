@@ -4,13 +4,27 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
     title: "Froxlor Documentation",
     description: "Froxlor is the lightweight server management software for your needs.",
+    base: process.env.VERSION,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
 
-        logo: '/logo_white.png',
+        logo: '/logo_wrench.png',
 
         nav: [
-            {text: 'Home', link: '/'}
+            {text: 'Home', link: '/'},
+            {
+                text: 'v2.1',
+                items: [
+                    {
+                        text: 'v2.0',
+                        link: 'https://docs.froxlor.org/v2/',
+                    },
+                    {
+                        text: 'v0.10',
+                        link: 'https://docs.froxlor.org/v0.10/',
+                    }
+                ],
+            }
         ],
 
         sidebar: [
@@ -162,7 +176,7 @@ export default defineConfig({
                 collapsed: true,
                 link: '/api-guide/',
                 items: [
-                    //getChildren('api-guide/commands', "Commands")
+                    getChildren('/api-guide/commands', 'Commands')
                 ]
             },
             {
@@ -199,3 +213,31 @@ export default defineConfig({
         }
     }
 })
+
+function getChildren(folder, text) {
+    const children = [];
+    const fs = require("fs");
+    const files = fs
+        .readdirSync(`./${folder}`, {withFileTypes: true})
+        .filter(
+            (item) =>
+                item.isFile() &&
+                item.name.toLowerCase().endsWith(".md") &&
+                item.name.toLowerCase() !== "readme.md"
+        );
+
+    files.forEach((element) => {
+        const data = fs.readFileSync(`.${folder}/${element.name}`, 'utf8');
+        children.push({text: getMdTitle(data), link: `${folder}/${element.name}`, items: []})
+    });
+    return {text: text, items: [...children], collapsed: true};
+}
+
+function getMdTitle(md) {
+    if (!md) return "";
+    let tokens = md.split("\n");
+    for (let i = 0; i < tokens.length; i++) {
+        if (/^#\s+.+/.test(tokens[i])) return tokens[i].substring(2);
+    }
+    return "missing-header-in-docfile";
+}
