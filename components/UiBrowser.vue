@@ -9,7 +9,7 @@
         <i class="fa fa-bars"></i>
       </div>
     </div>
-    <img :src="src" :alt="alt" data-zoomable>
+    <img :src="withBase(src)" :alt="alt" data-zoomable>
   </div>
 </template>
 
@@ -57,6 +57,7 @@
 
 <script setup>
 import {onMounted} from 'vue';
+import { withBase } from 'vitepress'
 import mediumZoom from 'medium-zoom';
 
 onMounted(() => {

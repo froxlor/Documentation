@@ -21,7 +21,7 @@ Start the debug server :
 npm run docs:dev
 ```
 
-Now browse to http://localhost:5173/
+Now browse to http://localhost:5173
 
 ## Generating api documentation from froxlor
 

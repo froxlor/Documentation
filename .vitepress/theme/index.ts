@@ -16,7 +16,7 @@ export default {
     ...DefaultTheme,
     Layout() {
         return h(DefaultTheme.Layout, null, {
-            'layout-bottom': () => h(FRXFooter)
+            'doc-after': () => h(FRXFooter)
         })
     },
     enhanceApp({app, router, siteData}) {

@@ -2,7 +2,7 @@
 
 Before you start working on a PR, contact us via [Discord](https://discord.froxlor.org) or the forum at [https://forum.froxlor.org](https://forum.froxlor.org) to get a clue whether someone else isn't already working on it or if we don not want/need this certain change. Of course, bugfixes are always welcome.
 
-Please always focus on the **main** branch of our [Github repository](https://github.com/Froxlor/Froxlor).
+Please always focus on the **main** branch of our [GitHub repository](https://github.com/Froxlor/Froxlor).
 
 ## Checklist
 
@@ -27,5 +27,5 @@ If you add new language strings, please make sure you add the english fallback s
 If you add new settings or implement database-changes, please make sure you add these to
 
 * `install/froxlor.sql.php`
-* handle the update (see [`install/updates/froxlor/update_2.x.inc.php`](https://github.com/Froxlor/Froxlor/blob/main/install/updates/froxlor/update_2.x.inc.php))
+* handle the update (see [`install/updates/froxlor/update_2.1.inc.php`](https://github.com/Froxlor/Froxlor/blob/main/install/updates/froxlor/update_2.1.inc.php))
 * if you have any question on how update-process works, please contact us

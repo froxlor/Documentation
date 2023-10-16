@@ -10,17 +10,18 @@ export default defineConfig({
     title: "Froxlor Documentation",
     description: "Froxlor is the lightweight server management software for your needs.",
 
+    base: process.env.VERSION,
+
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
 
         logo: '/logo_wrench.png',
 
-        nav: versionLinks('2.1'),
-        sidebar: {
-            '/v2.1/': {base: '/v2.1/', items: navbar21()},
-            '/v2.0/': {base: '/v2.0/', items: navbar20()},
-            '/v0.10/': {base: '/v0.10/', items: navbar010()}
-        },
+        nav: [
+            {text: 'Home', link: '/'},
+            {text: 'v2.1', items: [{text: 'v2.0', link: 'https://docs.froxlor.org/v2/'},{text: 'v0.10', link: 'https://docs.froxlor.org/v0.10/'}]}],
+
+        sidebar: navbar21(),
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/Froxlor/Froxlor'},
@@ -44,7 +45,8 @@ export default defineConfig({
         search: {
             provider: 'local'
         }
-    }
+    },
+    ignoreDeadLinks: 'localhostLinks'
 });
 
 function navbar21() {
@@ -195,7 +197,7 @@ function navbar21() {
             collapsed: true,
             link: '/api-guide/',
             items: [
-                getChildren('/v2.1/api-guide/commands', 'Commands')
+                getChildren('/api-guide/commands', 'Commands')
             ]
         },
         {
@@ -208,271 +210,6 @@ function navbar21() {
         }
     ];
 
-}
-
-function navbar20() {
-    return [
-        {
-            text: '1. General',
-            collapsed: false,
-            link: '/general/',
-            items: [
-                {
-                    text: 'Installation',
-                    link: '/general/installation/',
-                    items: [
-                        {
-                            text: 'Manual (tarball)',
-                            link: '/general/installation/tarball.md'
-                        },
-                        {
-                            text: 'Debian/Ubuntu',
-                            link: '/general/installation/apt-package.md'
-                        },
-                        {
-                            text: 'Git (developer)',
-                            link: '/general/installation/source.md'
-                        },
-                    ]
-                },
-                {
-                    text: 'Update Guide',
-                    link: '/general/update-guide.md'
-                },
-                {
-                    text: 'Migration Guide',
-                    link: '/general/migration-guide.md'
-                },
-                {
-                    text: 'Uninstall',
-                    link: '/general/uninstall.md'
-                },
-            ]
-        },
-        {
-            text: '2. Admin Guide',
-            collapsed: true,
-            link: '/admin-guide/',
-            items: [
-                {
-                    text: 'Configuration',
-                    link: '/admin-guide/configuration/',
-                    items: [
-                        {
-                            text: 'PHP-FPM',
-                            link: '/admin-guide/configuration/php-fpm/'
-                        },
-                        {
-                            text: 'FCGID',
-                            link: '/admin-guide/configuration/fcgid/'
-                        }
-                    ]
-                },
-                {
-                    text: 'Settings',
-                    link: '/admin-guide/settings/'
-                },
-                {
-                    text: 'Resources',
-                    link: '/admin-guide/resources/',
-                    items: [
-                        {
-                            text: 'IPs & Ports',
-                            link: '/admin-guide/resources/ips-and-ports/'
-                        },
-                        {
-                            text: 'Admins / Resellers',
-                            link: '/admin-guide/resources/admins-resellers/'
-                        },
-                        {
-                            text: 'Customers',
-                            link: '/admin-guide/resources/customers/'
-                        },
-                        {
-                            text: 'Domains',
-                            link: '/admin-guide/resources/domains/'
-                        },
-                        {
-                            text: 'MySQL Servers',
-                            link: '/admin-guide/resources/mysql-servers/'
-                        },
-                        {
-                            text: 'Hosting Plans',
-                            link: '/admin-guide/resources/hosting-plans/'
-                        },
-                        {
-                            text: 'SSL Certificates',
-                            link: '/admin-guide/resources/ssl-certificates/'
-                        }
-                    ]
-                },
-                {
-                    text: 'PHP Configurations',
-                    link: '/admin-guide/php-versions-and-configuration/'
-                },
-                {
-                    text: 'Miscellaneous',
-                    link: '/admin-guide/miscellaneous/'
-                },
-                {
-                    text: 'Domain import',
-                    link: '/admin-guide/domain-import/'
-                },
-                {
-                    text: 'Froxlor console scripts (CLI)',
-                    link: '/admin-guide/cli-scripts/'
-                },
-            ]
-        },
-        {
-            text: '3. User Guide',
-            collapsed: true,
-            link: '/user-guide/',
-            items: [
-                {
-                    text: 'E-Mails',
-                    link: '/user-guide/emails/',
-                },
-                {
-                    text: 'Databases (MySQL)',
-                    link: '/user-guide/databases/'
-                },
-                {
-                    text: 'Domains / Subdomains',
-                    link: '/user-guide/domains/'
-                },
-                {
-                    text: 'FTP Accounts',
-                    link: '/user-guide/ftp-accounts/'
-                },
-                {
-                    text: 'Extras',
-                    link: '/user-guide/extras/'
-                },
-                {
-                    text: 'Traffic',
-                    link: '/user-guide/traffic/'
-                },
-            ]
-        },
-        {
-            text: '4. API Guide',
-            collapsed: true,
-            link: '/api-guide/',
-            items: [
-                getChildren('/v2.0/api-guide/commands', 'Commands')
-            ]
-        },
-        {
-            text: '5. Security',
-            link: '/security/'
-        },
-        {
-            text: '6. Contribution',
-            link: '/contribution/'
-        }
-    ];
-}
-
-function navbar010() {
-    return [
-        {
-            text: '1. General',
-            link: '/general/',
-            collapsed: false,
-            items: [
-                {
-                    text: 'Installation',
-                    link: '/general/installation/',
-                    items: [
-                        {
-                            text: 'Manual (tarball)',
-                            link: '/general/installation/tarball'
-                        },
-                        {
-                            text: 'Debian/Ubuntu',
-                            link: '/general/installation/apt-package'
-                        },
-                        {
-                            text: 'Gentoo',
-                            link: '/general/installation/gentoo'
-                        },
-                        {
-                            text: 'Git (developer)',
-                            link: '/general/installation/source'
-                        },
-                    ],
-                },
-                {
-                    text: 'Configuration',
-                    link: '/general/configuration/',
-                    items: [
-                        {
-                            text: 'PHP-FPM',
-                            link: '/general/configuration/php-fpm'
-                        },
-                        {
-                            text: 'FCGID',
-                            link: '/general/configuration/fcgid'
-                        },
-                    ],
-                },
-                {
-                    text: 'Update Guide',
-                    link: '/general/update/'
-                },
-            ],
-        },
-        {
-            text: '2. Admin Guide',
-            link: '/admin-guide/',
-            collapsed: true,
-            items: [
-                {
-                    text: 'Domain Import',
-                    link: '/admin-guide/domain-import'
-                },
-                {
-                    text: 'Helper scripts',
-                    link: '/admin-guide/helper-scripts'
-                }
-            ]
-        },
-        {
-            text: '3. API Guide',
-            link: '/api-guide/',
-            collapsed: true,
-            items: [
-                getChildren('/v0.10/api-guide/commands', 'Commands')
-            ]
-        }
-    ];
-}
-
-function versionLinks(myversion: string) {
-    const home = [];
-    const items = [];
-    const dirs = fs
-        .readdirSync(`./`, {withFileTypes: true})
-        .filter(
-            (item) =>
-                item.isDirectory() &&
-                item.name.toLowerCase().startsWith("v")
-        )
-        .sort((a, b) => a.name > b.name ? -1 : 1);
-    home.push({text: 'Home', link: '/v' + myversion + '/'});
-    dirs.forEach((element) => {
-        items.push({
-            text: element.name + ((element.name == 'v' + latestVersion()) ? ' (latest)' : ''),
-            link: '/' + element.name + '/'
-        })
-    });
-    if (myversion == latestVersion()) {
-        myversion += ' (latest)'
-    }
-    // @todo show current selected in main-nav-menu correctly
-    home.push({text: myversion, items: [...items]});
-    return home;
 }
 
 function getChildren(folder, text) {
