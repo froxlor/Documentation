@@ -18,7 +18,8 @@ export default defineConfig({
         nav: versionLinks('2.1'),
         sidebar: {
             '/v2.1/': {base: '/v2.1/', items: navbar21()},
-            '/v2.0/': {base: '/v2.0/', items: navbar20()}
+            '/v2.0/': {base: '/v2.0/', items: navbar20()},
+            '/v0.10/': {base: '/v0.10/', items: navbar010()}
         },
 
         socialLinks: [
@@ -373,6 +374,81 @@ function navbar20() {
     ];
 }
 
+function navbar010() {
+    return [
+        {
+            text: '1. General',
+            link: '/general/',
+            collapsed: false,
+            items: [
+                {
+                    text: 'Installation',
+                    link: '/general/installation/',
+                    items: [
+                        {
+                            text: 'Manual (tarball)',
+                            link: '/general/installation/tarball'
+                        },
+                        {
+                            text: 'Debian/Ubuntu',
+                            link: '/general/installation/apt-package'
+                        },
+                        {
+                            text: 'Gentoo',
+                            link: '/general/installation/gentoo'
+                        },
+                        {
+                            text: 'Git (developer)',
+                            link: '/general/installation/source'
+                        },
+                    ],
+                },
+                {
+                    text: 'Configuration',
+                    link: '/general/configuration/',
+                    items: [
+                        {
+                            text: 'PHP-FPM',
+                            link: '/general/configuration/php-fpm'
+                        },
+                        {
+                            text: 'FCGID',
+                            link: '/general/configuration/fcgid'
+                        },
+                    ],
+                },
+                {
+                    text: 'Update Guide',
+                    link: '/general/update/'
+                },
+            ],
+        },
+        {
+            text: '2. Admin Guide',
+            link: '/admin-guide/',
+            collapsed: true,
+            items: [
+                {
+                    text: 'Domain Import',
+                    link: '/admin-guide/domain-import'
+                },
+                {
+                    text: 'Helper scripts',
+                    link: '/admin-guide/helper-scripts'
+                }
+            ]
+        },
+        {
+            text: '3. API Guide',
+            link: '/api-guide/',
+            collapsed: true,
+            items: [
+                getChildren('/v0.10/api-guide/commands', 'Commands')
+            ]
+        }
+    ];
+}
+
 function versionLinks(myversion: string) {
     const home = [];
     const items = [];
@@ -382,7 +458,8 @@ function versionLinks(myversion: string) {
             (item) =>
                 item.isDirectory() &&
                 item.name.toLowerCase().startsWith("v")
-        );
+        )
+        .sort((a, b) => a.name > b.name ? -1 : 1);
     home.push({text: 'Home', link: '/v' + myversion + '/'});
     dirs.forEach((element) => {
         items.push({
