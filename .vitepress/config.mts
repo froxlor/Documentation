@@ -79,7 +79,17 @@ function navbar21() {
             },
             {
                 text: 'Migration Guide',
-                link: '/general/migration-guide.md'
+                link: '/general/migration-guide/',
+                items: [
+                    {
+                        text: '2.0 to 2.1',
+                        link: '/general/migration-guide/2.1'
+                    },
+                    {
+                        text: '0.10 to 2.0',
+                        link: '/general/migration-guide/2.0'
+                    }
+                ]
             },
             {
                 text: 'Uninstall',

@@ -6,8 +6,9 @@ listed below.
 | Action                                                  | Description                                                                                           |
 |---------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
 | [froxlor:api-call](#api-call)                           | Run an API command as given user                                                                      |
+| [froxlor:config-diff](#config-diff)                     | Shows differences in config templates between OS versions                                             |
 | [froxlor:config-services](#config-services)             | Configure system services                                                                             |
-| [froxlor:cron](#cron)                                   | Regulary perform tasks created by froxlor                                                             |
+| [froxlor:cron](#cron)                                   | Regularly perform tasks created by froxlor                                                            |
 | [froxlor:install](#install)                             | Installation process to use instead of web-ui                                                         |
 | [froxlor:php-sessionclean](#php-sessionclean)           | Clean old php-session files from tmp folder                                                           |
 | [froxlor:switch-server-ip](#switch-server-ip)           | Easily switch IP addresses e.g. after server migration                                                |
@@ -33,7 +34,25 @@ listed below.
 |---------------------|-------------------------------------------------------------------------------------|
 | `-s, --show-params` | Show possible parameters for given api-command (given command will *not* be called) |
 
-<h2 id="config-services">2. Configure system services</h2>
+<h2 id="config-diff">2. Show configuration differences/updates</h2>
+
+**Usage:** `bin/froxlor-cli froxlor:config-diff [options] [--] [<from> [<to>]]`
+
+**Arguments:**
+
+| Argument | Description                   |
+|----------|-------------------------------|
+| `from`   | OS version to compare against |
+| `to`     | OS version to compare from    |
+
+**Options:**
+
+| Option                      | Description                                                           |
+|-----------------------------|-----------------------------------------------------------------------|
+| `-l, --list`                | List all possible OS versions                                         |
+| `--diff-params=DIFF-PARAMS` | Additional parameters for `diff`, e.g. --diff-params="--color=always" |
+
+<h2 id="config-services">3. Configure system services</h2>
 
 **Usage:** `bin/froxlor-cli froxlor:config-services [options]`
 
@@ -48,7 +67,7 @@ listed below.
 | `-i, --import-settings=IMPORT-SETTINGS` | Import settings from another froxlor installation. This can be done standalone or in addition to --apply.                                      |
 | `-A, --yes-to-all`                      | Install packages without asking questions (Debian/Ubuntu only currently)                                                                       |
 
-<h2 id="cron">3. Regulary perform tasks created by froxlor</h2>
+<h2 id="cron">4. Regularly perform tasks created by froxlor</h2>
 
 **Usage:** `bin/froxlor-cli froxlor:cron [options] [--] [<job>...]`
 
@@ -67,7 +86,7 @@ listed below.
 | `-d, --debug`             | Output debug information about what is going on to STDOUT.                                                                                         |
 | `-N, --no-fork`           | Do not fork to background (traffic cron only).                                                                                                     |
 
-<h2 id="install">4. Installation process to use instead of web-ui</h2>
+<h2 id="install">5. Installation process to use instead of web-ui</h2>
 
 **Usage:** `bin/froxlor-cli froxlor:install [options] [--] [<input-file>]`
 
@@ -84,7 +103,7 @@ listed below.
 | `-p, --print-example-file`                                | Outputs an example JSON content to be used with the input file parameter     |
 | `-c, --create-userdata-from-str=CREATE-USERDATA-FROM-STR` | Creates lib/userdata.inc.php file from string created by web-install process |
 
-<h2 id="php-sessionclean">5. Clean old php-session files from tmp folder</h2>
+<h2 id="php-sessionclean">6. Clean old php-session files from tmp folder</h2>
 
 **Usage:** `bin/froxlor-cli froxlor:php-sessionclean [<max-lifetime>]`
 
@@ -94,7 +113,7 @@ listed below.
 |----------------|-----------------------------------------------------------------------------------------------------------------|
 | `max-lifetime` | The number of seconds after which data will be seen as "garbage" and potentially cleaned up. Defaults to "1440" |
 
-<h2 id="switch-server-ip">6. Easily switch IP addresses e.g. after server migration</h2>
+<h2 id="switch-server-ip">7. Easily switch IP addresses e.g. after server migration</h2>
 
 If you ever switch your servers IP address or migrate to another server, you can invoke this script to switch your old
 IP's with the new IP's in your froxlor installation.
@@ -117,7 +136,7 @@ address assigned, let's say `234.30.20.10`. To switch these for your froxlor ins
 bin/froxlor-cli froxlor:switch-server-ip --switch=123.10.20.30,234.30.20.10
 ```
 
-<h2 id="update">7. Check for newer version and update froxlor</h2>
+<h2 id="update">8. Check for newer version and update froxlor</h2>
 
 **Usage:** `bin/froxlor-cli froxlor:update [options]`
 
@@ -130,7 +149,7 @@ bin/froxlor-cli froxlor:switch-server-ip --switch=123.10.20.30,234.30.20.10
 | `-A, --yes-to-all`     | Do not ask for download, extract and database-update, just do it (if not --check-only is set)                 |
 | `-i, --integer-return` | Return integer whether a new version is available or not (implies --check-only). Useful for programmatic use. |
 
-<h2 id="user">8. Various user actions</h2>
+<h2 id="user">9. Various user actions</h2>
 
 **Usage:** `bin/froxlor-cli froxlor:user [options] [--] <user> [<admin>]`
 
@@ -149,7 +168,7 @@ bin/froxlor-cli froxlor:switch-server-ip --switch=123.10.20.30,234.30.20.10
 | `-p, --change-passwd` | Set new password for given user                  |
 | `-s, --show-info`     | Output information details of given user         |
 
-<h2 id="validate-acme-webroot">9. Validate ACME webroot</h2>
+<h2 id="validate-acme-webroot">10. Validate ACME webroot</h2>
 
 If your documentroot for froxlor or the acme-challenge-directory setting has changed, run this to update existing
 acme.sh configuration files to reflect the new path so certificates can be renewed.
