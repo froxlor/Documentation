@@ -36,7 +36,7 @@ jobs:
 #      - name: Build documentation html (latest)
 #        run: npm run docs:build
 #        env:
-#          VERSION: "latest"
+#          VERSION: "/latest/"
 #        working-directory: .
 
 #      - name: Deploy to server (latest)
@@ -52,7 +52,7 @@ jobs:
       - name: Build documentation html (v2.1)
         run: npm run docs:build
         env:
-          VERSION: "v2.1"
+          VERSION: "/v2.1/"
         working-directory: .
 
       - name: Deploy to server (v2.1)
