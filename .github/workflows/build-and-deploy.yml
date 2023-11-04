@@ -43,7 +43,7 @@ jobs:
 #        uses: easingthemes/ssh-deploy@v3.4.3
 #        env:
 #          ARGS: "-rltgoDzvO --delete --chown=${{ secrets.WEB_USER }}:${{ secrets.WEB_USER }}"
-#          SOURCE: "dist/"
+#          SOURCE: ".vitepress/dist/"
 #          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
 #          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
 #          REMOTE_USER: ${{ secrets.REMOTE_USER }}
@@ -59,7 +59,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v3.4.3
         env:
           ARGS: "-rltgoDzvO --delete --chown=${{ secrets.WEB_USER }}:${{ secrets.WEB_USER }}"
-          SOURCE: "dist/"
+          SOURCE: ".vitepress/dist/"
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
