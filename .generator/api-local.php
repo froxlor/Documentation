@@ -17,7 +17,7 @@ class ApiLocal
     public function generateDocs($arguments)
     {
         $version = $arguments[1];
-        $dir = __DIR__ . '/../../../v' . $version . '/api-guide/commands';
+        $dir = __DIR__ . '/../../../api-guide/commands';
         if (!is_dir($dir)) {
             mkdir($dir, 0777, true);
         }
