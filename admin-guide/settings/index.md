@@ -24,6 +24,8 @@ A few settings will show the above notice. This means that adjusting the value o
 
 Settings that have a major impact on the system or which values are used to be executed with high privileges on the system require the admin-user to have set up and enabled _OTP_ for the corresponding account to change these values.
 
+This behaviour can be disabled via the `disable_otp_security_check` flag in the [config.inc.php](#_3-settings-in-config-inc-php).
+
 ::: warning NOTE
 In order to be able to adjust/change these settings, 2FA/OTP has to be enabled system-wide (__Settings -> Account settings -> Activate Two-factor authentication__). Additionally, the admin-user must have a valid 2FA method activated for his account.
 :::
