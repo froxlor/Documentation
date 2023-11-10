@@ -45,4 +45,4 @@ Only reproducible issues on a default/clean setup from the latest stable release
 
 ## Reporting a Vulnerability
 
-If you think you have found a vulnerability in froxlor, please head over to [https://huntr.dev/repos/froxlor/froxlor](https://huntr.dev/repos/froxlor/froxlor) and use the reporting possibilities there as we are funding the prize-pot for froxlor on this platform. Also, please give us appropriate time to fix the issue and build update-packages before publishing anything into the wild. Alternatively you can send us an email to [team@froxlor.org](team@froxlor.org).
+If you think you have found a vulnerability in froxlor, please head over to [https://github.com/Froxlor/Froxlor/security/advisories](https://github.com/Froxlor/Froxlor/security/advisories/new) and use the reporting possibilities there. Also, please give us appropriate time to fix the issue and build update-packages before publishing anything into the wild. Alternatively you can email us to [team@froxlor.org](team@froxlor.org).
