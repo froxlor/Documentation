@@ -4,13 +4,13 @@ froxlor provides packages for __Debian__ and __Ubuntu__ systems via its own repo
 
 ## 0. Supported distribution versions and recommendations
 
-Packages will be build for all supported debian/ubuntu distribution,
+Packages will be built for all supported debian/ubuntu distribution,
 see [configuration templates](https://github.com/Froxlor/Froxlor/tree/main/lib/configfiles).
 
-| Distro  |      Version      |                              Notes |             Recommended source for ISO |
-|---------|:-----------------:|-----------------------------------:|---------------------------------------:|
-| Debian* | stable, oldstable | *oldoldstable* is mostly supported | https://www.debian.org/distrib/netinst |
-| Ubuntu  |   LTS releases    |           e.g. 20.04, 22.04, 24.04 |     https://ubuntu.com/download/server |
+| Distro  |                    Version                    |                              Notes |             Recommended source for ISO |
+|---------|:---------------------------------------------:|-----------------------------------:|---------------------------------------:|
+| Debian* | 12 (bookworm/stable), 11 (bullseye/oldstable) | *oldoldstable* is mostly supported | https://www.debian.org/distrib/netinst |
+| Ubuntu  |         22.04 (jammy), 20.04 (focal)          |                  LTS releases only |     https://ubuntu.com/download/server |
 
 <small>*Debian is the recommended and most likely best supported distribution for froxlor.</small>
 
