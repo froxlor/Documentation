@@ -33,21 +33,21 @@ jobs:
       - name: Install npm dependencies
         run: npm install
 
-#      - name: Build documentation html (latest)
-#        run: npm run docs:build
-#        env:
-#          VERSION: "/latest/"
-#        working-directory: .
+      - name: Build documentation html (latest)
+        run: npm run docs:build
+        env:
+          VERSION: "/latest/"
+        working-directory: .
 
-#      - name: Deploy to server (latest)
-#        uses: easingthemes/ssh-deploy@v3.4.3
-#        env:
-#          ARGS: "-rltgoDzvO --delete --chown=${{ secrets.WEB_USER }}:${{ secrets.WEB_USER }}"
-#          SOURCE: ".vitepress/dist/"
-#          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-#          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-#          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-#          TARGET: "${{ secrets.REMOTE_TARGET }}/latest/"
+      - name: Deploy to server (latest)
+        uses: easingthemes/ssh-deploy@v3.4.3
+        env:
+          ARGS: "-rltgoDzvO --delete --chown=${{ secrets.WEB_USER }}:${{ secrets.WEB_USER }}"
+          SOURCE: ".vitepress/dist/"
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: "${{ secrets.REMOTE_TARGET }}/latest/"
 
       - name: Build documentation html (v2.1)
         run: npm run docs:build
