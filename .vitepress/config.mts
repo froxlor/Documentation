@@ -7,7 +7,7 @@ function latestVersion() {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "Froxlor Documentation",
+    title: "froxlor Documentation",
     description: "Froxlor is the lightweight server management software for your needs.",
 
     base: process.env.VERSION,

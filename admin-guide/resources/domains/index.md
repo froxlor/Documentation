@@ -48,6 +48,14 @@ The certificate data given will be validated, e.g. that the private key matches 
 
 <UiBrowser :src="('/img/frx_domains_ssleditor.png')" alt="Domain - SSL editor"/>
 
+### 2.4 Duplicate/clone domain
+
+Create a new domain by duplicating an existing one. Click on the <i class="fa-solid fa-clone"></i> icon on the right side. You just have to enter the new domain-name and select the customer to add the domain for.
+
+When used via API, the `Domains.duplicate()` call accepts all `Domains.add()` parameters to be passed to it and hence allows overwriting specific values of the duplicated domain if required.
+
+<UiBrowser :src="('/img/frx_duplicate_domain.png')" alt="Domain - Duplicate domain"/>
+
 ## 3. Properties of Domains
 
 ### 3.1 Domain settings

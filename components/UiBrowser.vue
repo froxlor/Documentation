@@ -23,6 +23,7 @@
 }
 
 .browser .bar {
+  display: flex;
   align-items: center;
   padding: .75rem;
 }

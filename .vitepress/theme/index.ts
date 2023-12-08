@@ -5,7 +5,7 @@ import './style.css'
 import FRXFooter from "../../components/FRXFooter.vue";
 
 // @ts-ignore
-const modules = import.meta.globEager('../../components/*.vue')
+const modules = import.meta.glob('../../components/*.vue', { eager: true })
 const components = []
 
 for (const path in modules) {
