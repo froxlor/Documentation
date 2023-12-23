@@ -40,3 +40,14 @@
     --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+.text-danger {
+    color: rgba(190, 18, 60, 1) !important;
+}
+
+.text-warning {
+    color: rgba(251, 191, 36, 1) !important;
+}
+
+.text-success {
+    color: rgba(5, 150, 105, 1) !important;
+}
