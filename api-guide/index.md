@@ -117,7 +117,7 @@ The result should then look somewhat like this (removed headers and actual data 
 ## 4. Usage with PHP
 
 In the froxlor repository, we provide an example class / curl-wrapper to work with the API.
-See [https://github.com/Froxlor/Froxlor/tree/master/doc/example](https://github.com/Froxlor/Froxlor/tree/master/doc/example)
+See [https://github.com/Froxlor/Froxlor/tree/main/doc/example](https://github.com/Froxlor/Froxlor/tree/main/doc/example)
 
 ## 5. Response structure/layout
 
