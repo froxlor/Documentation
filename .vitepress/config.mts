@@ -170,7 +170,7 @@ function navbar21() {
                 link: '/admin-guide/cli-scripts/'
             },
             {
-                text: 'Settings You Might Want',
+                text: 'Settings you might want',
                 link: '/admin-guide/settings-you-might-want/'
             },
         ]
