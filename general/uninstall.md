@@ -39,13 +39,13 @@ To reset the configurations of the other system services (i.e. mail-services, ft
 
 ## 2.5 Remove acme.sh and its cronjob
 
-Froxlor installs the shell script `acme.sh` that manages SSL certificates using acme such as Let's Encrypt. You will find the necessary files inside your root user's home directory.
+Froxlor installs the shell script `acme.sh` which manages SSL certificates using acme such as Let's Encrypt. You will find the necessary files in your root user's home directory.
 
 ```shell
 rm -r ~root/.acme.sh/
 ```
 
-With `acme.sh` also comes a cronjob for the user `root`. You can remove it by typing this into your shell:
+With `acme.sh` comes a cronjob for the `root` user. You can remove it by typing this in your shell:
 ```shell
 crontab -u root -e
 ```
