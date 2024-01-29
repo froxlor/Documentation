@@ -36,3 +36,18 @@ By default, all customer-related data (except for databases) is stored within th
 Froxlor installs a cronjob for its regular tasks, the default filename is `/etc/cron.d/froxlor`. You can safely delete this file and restart your cron-daemon.
 
 To reset the configurations of the other system services (i.e. mail-services, ftpd, webserver) you can either manually check against any usage of the froxlor mysql-database or, to be sure, re-install the service with fresh/default configurations. In case of the webserver virtual-host configurations, it is safe to remove files with the pattern `*_froxlor_*` in the corresponding directory, e.g. `/etc/apache2/sites-enabled/` (depending on your settings).
+
+## 2.5 Remove acme.sh and its cronjob
+
+Froxlor installs the shell script `acme.sh` that manages SSL certificates using acme such as Let's Encrypt. You will find the necessary files inside your root user's home directory.
+
+```shell
+rm -r ~root/.acme.sh/
+```
+
+With `acme.sh` also comes a cronjob for the user `root`. You can remove it by typing this into your shell:
+```shell
+crontab -u root -e
+```
+
+Delete the line and save the file.
