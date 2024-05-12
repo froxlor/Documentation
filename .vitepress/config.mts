@@ -1,10 +1,6 @@
 import {defineConfig} from 'vitepress'
 import * as fs from 'node:fs';
 
-function latestVersion() {
-    return '2.1';
-}
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "froxlor Documentation",

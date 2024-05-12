@@ -3,6 +3,7 @@ import {h} from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import FRXFooter from "../../components/FRXFooter.vue";
+import DeveloperNotice from '../../components/DeveloperNotice.vue';
 
 // @ts-ignore
 const modules = import.meta.glob('../../components/*.vue', { eager: true })
@@ -15,9 +16,13 @@ for (const path in modules) {
 export default {
     ...DefaultTheme,
     Layout() {
-        return h(DefaultTheme.Layout, null, {
+        const layoutChildren = {
             'doc-after': () => h(FRXFooter)
-        })
+        }
+        if (import.meta.env.VITE_DEV) {
+            layoutChildren['doc-before'] = () => h(DeveloperNotice)
+        }
+        return h(DefaultTheme.Layout, null, layoutChildren)
     },
     enhanceApp({app, router, siteData}) {
         // ...

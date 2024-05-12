@@ -33,11 +33,36 @@ jobs:
       - name: Install npm dependencies
         run: npm install
 
+      - name: Build documentation html (dev/nightly)
+        run: npm run docs:build
+        env:
+          VERSION: "/dev/"
+          VITE_DEV: 1
+        working-directory: .
+        if: ${{ github.ref == 'refs/heads/main' }}
+
+      - name: Deploy to server (dev/nightly)
+        uses: easingthemes/ssh-deploy@v3.4.3
+        env:
+          ARGS: "-rltgoDzvO --delete --chown=${{ secrets.WEB_USER }}:${{ secrets.WEB_USER }}"
+          SOURCE: ".vitepress/dist/"
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: "${{ secrets.REMOTE_TARGET }}/dev/"
+        if: ${{ github.ref == 'refs/heads/main' }}
+
+      - name: Set short version
+        id: vars
+        run: echo "version_short=${{ github.event.inputs.ref:0:3 }}" >> $GITHUB_OUTPUT
+        if: ${{ github.ref != 'refs/heads/main' }}
+
       - name: Build documentation html (latest)
         run: npm run docs:build
         env:
           VERSION: "/latest/"
         working-directory: .
+        if: ${{ github.ref != 'refs/heads/main' }}
 
       - name: Deploy to server (latest)
         uses: easingthemes/ssh-deploy@v3.4.3
@@ -48,14 +73,16 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "${{ secrets.REMOTE_TARGET }}/latest/"
+        if: ${{ github.ref != 'refs/heads/main' }}
 
-      - name: Build documentation html (v2.1)
+      - name: Build documentation html (v${{steps.vars.outputs.version_short}})
         run: npm run docs:build
         env:
-          VERSION: "/v2.1/"
+          VERSION: "/v${{steps.vars.outputs.version_short}}/"
         working-directory: .
+        if: ${{ github.ref != 'refs/heads/main' }}
 
-      - name: Deploy to server (v2.1)
+      - name: Deploy to server (v${{steps.vars.outputs.version_short}})
         uses: easingthemes/ssh-deploy@v3.4.3
         env:
           ARGS: "-rltgoDzvO --delete --chown=${{ secrets.WEB_USER }}:${{ secrets.WEB_USER }}"
@@ -63,4 +90,5 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: "${{ secrets.REMOTE_TARGET }}/v2.1/"
+          TARGET: "${{ secrets.REMOTE_TARGET }}/v${{steps.vars.outputs.version_short}}/"
+        if: ${{ github.ref != 'refs/heads/main' }}

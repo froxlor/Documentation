@@ -1,8 +1,8 @@
 <template>
   <div class="developer-notice">
-    <div class="custom-container warning">
-      <p class="custom-container-title">ATTENTION</p>
-      <p>We are excited to announce that the new froxlor version 2.0 will be available soon. This version includes many new features and improvements, which we are introducing on our new website. Stay tuned and look forward to the release of froxlor v2!<br>The 0.10.x documentation can be found <a href="https://docs.froxlor.org/v0.10/">here</a>.</p>
+    <div class="custom-block danger">
+      <div class="custom-block-title">ATTENTION</div>
+      <div>You are viewing the documentation of the current <b>development state</b> (git-main / nightly).<br>The current latest stable documentation can be found <a target="_blank" href="https://docs.froxlor.org/latest/">here</a>.</div>
     </div>
   </div>
 </template>
@@ -14,14 +14,7 @@ export default {
 </script>
 
 <style>
-/*
 .developer-notice {
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 2rem 2.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  overflow: auto;
+  margin-bottom: 2rem;
 }
-*/
 </style>
