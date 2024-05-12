@@ -54,7 +54,7 @@ jobs:
 
       - name: Set short version
         id: vars
-        run: echo "version_short=${{ github.event.inputs.ref:0:3 }}" >> $GITHUB_OUTPUT
+        run: echo "version_short=$( echo ${{ github.event.inputs.ref }} | cut -c 1-3)" >> $GITHUB_OUTPUT
         if: ${{ github.ref != 'refs/heads/main' }}
 
       - name: Build documentation html (latest)
