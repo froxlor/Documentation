@@ -39,7 +39,7 @@ jobs:
           VERSION: "/dev/"
           VITE_DEV: 1
         working-directory: .
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ github.event.inputs.ref == 'main' }}
 
       - name: Deploy to server (dev/nightly)
         uses: easingthemes/ssh-deploy@v3.4.3
@@ -50,19 +50,19 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "${{ secrets.REMOTE_TARGET }}/dev/"
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ github.event.inputs.ref == 'main' }}
 
       - name: Set short version
         id: vars
         run: echo "version_short=$( echo ${{ github.event.inputs.ref }} | cut -c 1-3)" >> $GITHUB_OUTPUT
-        if: ${{ github.ref != 'refs/heads/main' }}
+        if: ${{ github.event.inputs.ref != 'main' }}
 
       - name: Build documentation html (latest)
         run: npm run docs:build
         env:
           VERSION: "/latest/"
         working-directory: .
-        if: ${{ github.ref != 'refs/heads/main' }}
+        if: ${{ github.event.inputs.ref != 'main' }}
 
       - name: Deploy to server (latest)
         uses: easingthemes/ssh-deploy@v3.4.3
@@ -73,14 +73,14 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "${{ secrets.REMOTE_TARGET }}/latest/"
-        if: ${{ github.ref != 'refs/heads/main' }}
+        if: ${{ github.event.inputs.ref != 'main' }}
 
       - name: Build documentation html (short release version)
         run: npm run docs:build
         env:
           VERSION: "/v${{steps.vars.outputs.version_short}}/"
         working-directory: .
-        if: ${{ github.ref != 'refs/heads/main' }}
+        if: ${{ github.event.inputs.ref != 'main' }}
 
       - name: Deploy to server (short release version)
         uses: easingthemes/ssh-deploy@v3.4.3
@@ -91,4 +91,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: "${{ secrets.REMOTE_TARGET }}/v${{steps.vars.outputs.version_short}}/"
-        if: ${{ github.ref != 'refs/heads/main' }}
+        if: ${{ github.event.inputs.ref != 'main' }}
