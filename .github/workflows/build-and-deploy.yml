@@ -75,14 +75,14 @@ jobs:
           TARGET: "${{ secrets.REMOTE_TARGET }}/latest/"
         if: ${{ github.ref != 'refs/heads/main' }}
 
-      - name: Build documentation html (v${{steps.vars.outputs.version_short}})
+      - name: Build documentation html (short release version)
         run: npm run docs:build
         env:
           VERSION: "/v${{steps.vars.outputs.version_short}}/"
         working-directory: .
         if: ${{ github.ref != 'refs/heads/main' }}
 
-      - name: Deploy to server (v${{steps.vars.outputs.version_short}})
+      - name: Deploy to server (short release version)
         uses: easingthemes/ssh-deploy@v3.4.3
         env:
           ARGS: "-rltgoDzvO --delete --chown=${{ secrets.WEB_USER }}:${{ secrets.WEB_USER }}"
