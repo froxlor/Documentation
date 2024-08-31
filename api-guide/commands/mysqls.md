@@ -15,7 +15,7 @@ add a new mysql-database
 | mysql_password | string | password for the created database and database-user |
 | mysql_server | int | optional, default is 0 |
 | description | string | optional, description for database |
-| custom_suffix | string | optional, name for database |
+| custom_suffix | string | optional, name for database if customer.mysqlprefix setting is set to "DBNAME" |
 | sendinfomail | bool | optional, send created resource-information to customer, default: false |
 | customerid | int | optional, required when called as admin (if $loginname is not specified) |
 | loginname | string | optional, required when called as admin (if $customerid is not specified) |

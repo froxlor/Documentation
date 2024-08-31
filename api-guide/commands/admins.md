@@ -45,11 +45,12 @@ create a new admin user
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| name | string |  |
-| email | string |  |
-| new_loginname | string |  |
+| name | string | required, name of the adminstrator |
+| email | string | required, email address of the administrator |
+| new_loginname | string | required, loginname/username of the administrator |
 | admin_password | string | optional, default auto-generated |
-| def_language | string | optional, default is system-default language |
+| def_language | string | optional, ISO 639-1 language code (e.g. 'en', 'de', see lng-folder for supported languages),default is system-default language |
+| gui_access | bool | optional, allow login via webui, if false ONLY the login via webui is disallowed; default true |
 | api_allowed | bool | optional, default is true if system setting api.enabled is true, else false |
 | custom_notes | string | optional, default empty |
 | custom_notes_show | bool | optional, default false |
@@ -120,7 +121,8 @@ update an admin user by given id or loginname
 | name | string | optional |
 | email | string | optional |
 | admin_password | string | optional, default auto-generated |
-| def_language | string | optional, default is system-default language |
+| def_language | string | optional, ISO 639-1 language code (e.g. 'en', 'de', see lng-folder for supported languages),default is system-default language |
+| gui_access | bool | optional, allow login via webui, if false ONLY the login via webui is disallowed; default true |
 | api_allowed | bool | optional, default is true if system setting api.enabled is true, else false |
 | custom_notes | string | optional, default empty |
 | theme | string | optional |

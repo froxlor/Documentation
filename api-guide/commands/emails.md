@@ -14,6 +14,10 @@ add a new email address
 | :--- | :--- | :--- |
 | email_part | string | name of the address before @ |
 | domain | string | domain-name for the email-address |
+| spam_tag_level | float | optional, score which is required to tag emails as spam, default: 7.0 |
+| spam_kill_level | float | optional, score which is required to discard emails, default: 14.0 |
+| bypass_spam | boolean | optional, disable spam-filter entirely, default: no |
+| policy_greylist | boolean | optional, enable grey-listing, default: yes |
 | iscatchall | boolean | optional, make this address a catchall address, default: no |
 | customerid | int | optional, required when called as admin (if $loginname is not specified) |
 | loginname | string | optional, required when called as admin (if $customerid is not specified) |
@@ -58,6 +62,10 @@ toggle catchall flag of given email address either by id or email-address
 | emailaddr | string | optional, the email-address |
 | customerid | int | optional, required when called as admin (if $loginname is not specified) |
 | loginname | string | optional, required when called as admin (if $customerid is not specified) |
+| spam_tag_level | float | optional, score which is required to tag emails as spam, default: 7.0 |
+| spam_kill_level | float | optional, score which is required to discard emails, default: 14.0 |
+| bypass_spam | boolean | optional, disable spam-filter entirely, default: no |
+| policy_greylist | boolean | optional, enable grey-listing, default: yes |
 | iscatchall | boolean | optional |
 | description | string | optional custom description (currently not used/shown in the frontend), default empty |
 

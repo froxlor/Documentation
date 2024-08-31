@@ -15,9 +15,9 @@ export default defineConfig({
 
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'v2.1', items: [{text: 'v2.0', link: 'https://docs.froxlor.org/v2/'},{text: 'v0.10', link: 'https://docs.froxlor.org/v0.10/'}]}],
+            {text: 'v2.2', items: [{text: 'v2.1', link: 'https://docs.froxlor.org/v2.1/'},{text: 'v2.0', link: 'https://docs.froxlor.org/v2/'},{text: 'v0.10', link: 'https://docs.froxlor.org/v0.10/'}]}],
 
-        sidebar: navbar21(),
+        sidebar: navbar22(),
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/Froxlor/Froxlor'},
@@ -45,7 +45,7 @@ export default defineConfig({
     ignoreDeadLinks: 'localhostLinks'
 });
 
-function navbar21() {
+function navbar22() {
     return [{
         text: '1. General',
         collapsed: false,
@@ -77,6 +77,10 @@ function navbar21() {
                 text: 'Migration Guide',
                 link: '/general/migration-guide/',
                 items: [
+                    {
+                        text: '2.1 to 2.2',
+                        link: '/general/migration-guide/2.2'
+                    },
                     {
                         text: '2.0 to 2.1',
                         link: '/general/migration-guide/2.1'

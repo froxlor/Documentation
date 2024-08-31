@@ -109,7 +109,7 @@ returns a random password based on froxlor settings for min-length, included cha
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| length | int | optional length of password, defaults to 10 |
+| length | int | optional length of password, defaults to 0 (panel.password_min_length) |
 
 #### Response
 

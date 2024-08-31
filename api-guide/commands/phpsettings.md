@@ -75,7 +75,7 @@ add new php-settings entry
 | phpfpm_enable_slowlog | bool | optional whether to write a slowlog or not if FPM is used, default is 0 (false) |
 | phpfpm_reqtermtimeout | string | optional request terminate timeout if FPM is used, default is '60s' |
 | phpfpm_reqslowtimeout | string | optional request slowlog timeout if FPM is used, default is '5s' |
-| phpfpm_pass_authorizationheader | bool | optional whether to pass authorization header to webserver if FPM is used, default is 0 (false) |
+| pass_authorizationheader | bool | optional whether to pass authorization header to webserver if FPM/FCGID is used, default is 0 (false) |
 | override_fpmconfig | bool | optional whether to override fpm-daemon-config value for the following settings if FPM is used,default is 0 (false) |
 | pm | string | optional process-manager to use if FPM is used (allowed values are 'static', 'dynamic' and'ondemand'), default is fpm-daemon-value |
 | max_children | int | optional number of max children if FPM is used, default is the fpm-daemon-value |
@@ -115,7 +115,7 @@ update a php-setting entry by given id
 | phpfpm_enable_slowlog | bool | optional whether to write a slowlog or not if FPM is used, default is 0 (false) |
 | phpfpm_reqtermtimeout | string | optional request terminate timeout if FPM is used, default is '60s' |
 | phpfpm_reqslowtimeout | string | optional request slowlog timeout if FPM is used, default is '5s' |
-| phpfpm_pass_authorizationheader | bool | optional whether to pass authorization header to webserver if FPM is used, default is 0 (false) |
+| pass_authorizationheader | bool | optional whether to pass authorization header to webserver if FPM is used, default is 0 (false) |
 | override_fpmconfig | bool | optional whether to override fpm-daemon-config value for the following settings if FPM is used,default is 0 (false) |
 | pm | string | optional process-manager to use if FPM is used (allowed values are 'static', 'dynamic' and'ondemand'), default is fpm-daemon-value |
 | max_children | int | optional number of max children if FPM is used, default is the fpm-daemon-value |

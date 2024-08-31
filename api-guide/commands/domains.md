@@ -199,6 +199,7 @@ delete a domain entry by either id or domainname
 | id | int | optional, the domain-id |
 | domainname | string | optional, the domainname |
 | is_stdsubdomain | bool | optional, default false, specify whether it's a std-subdomain you are deleting as it does not countas subdomain-resource |
+| delete_userfiles | bool | optional, delete email account files on filesystem (if any), default false |
 
 #### Response
 
