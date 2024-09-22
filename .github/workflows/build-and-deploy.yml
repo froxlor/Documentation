@@ -16,7 +16,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup PHP with PECL extension
         uses: shivammathur/setup-php@v2
         with:
@@ -27,7 +27,7 @@ jobs:
         working-directory: .generator
 
       - name: Install Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: '20.x'
       - name: Install npm dependencies
@@ -42,7 +42,7 @@ jobs:
         if: ${{ github.event.inputs.ref == 'main' }}
 
       - name: Deploy to server (dev/nightly)
-        uses: easingthemes/ssh-deploy@v3.4.3
+        uses: easingthemes/ssh-deploy@main
         env:
           ARGS: "-rltgoDzvO --delete --chown=${{ secrets.WEB_USER }}:${{ secrets.WEB_USER }}"
           SOURCE: ".vitepress/dist/"
@@ -65,7 +65,7 @@ jobs:
         if: ${{ github.event.inputs.ref != 'main' }}
 
       - name: Deploy to server (latest)
-        uses: easingthemes/ssh-deploy@v3.4.3
+        uses: easingthemes/ssh-deploy@main
         env:
           ARGS: "-rltgoDzvO --delete --chown=${{ secrets.WEB_USER }}:${{ secrets.WEB_USER }}"
           SOURCE: ".vitepress/dist/"
@@ -83,7 +83,7 @@ jobs:
         if: ${{ github.event.inputs.ref != 'main' }}
 
       - name: Deploy to server (short release version)
-        uses: easingthemes/ssh-deploy@v3.4.3
+        uses: easingthemes/ssh-deploy@main
         env:
           ARGS: "-rltgoDzvO --delete --chown=${{ secrets.WEB_USER }}:${{ secrets.WEB_USER }}"
           SOURCE: ".vitepress/dist/"
