@@ -16,7 +16,7 @@ If enabled for an e-email address, all emails sent to unknown usernames of that 
 
 ### 1.2 Options after adding
 
-After successfully creating the email-address you will automatically be redirected to the edit form for this address. Here you can additionally create an actual [account](#_2-accounts) for the address, toggle the catchall-flag and add [email-forwarders](#_3-forwarders). Creating accounts and forwarders require separate resources assigned to the user by the administrator/reseller.
+After successfully creating the email-address you will automatically be redirected to the edit form for this address. Here you can additionally create an actual [account](#_2-accounts) for the address, toggle the catchall-flag, adjust spam-levels (if enabled) and add [email-forwarders](#_3-forwarders). Creating accounts and forwarders require separate resources assigned to the user by the administrator/reseller.
 
 <UiBrowser :src="('/img/frx_ug_emails_edit.png')" alt="Edit email address"/>
 
@@ -26,6 +26,18 @@ To add an email account, you first need to create an e-mail address or edit an e
 Set a password and optionally (if enabled) the desired maximum diskspace allowed for this account ([quota](#_4-quota)).
 
 <UiBrowser :src="('/img/frx_ug_emails_createacc.png')" alt="Create email account"/>
+
+### 2.1 Adding your account to an email client
+
+::: tip NOTE
+These settings can vary widely, if in doubt, please ask your system administrator / hosting provider for details.
+:::
+
+The username required to log in to your account is the **complete email address** itself, e.g. _test@demo.froxlor.org_.
+
+The type of account usually is **IMAP**, alternatively, POP3 is also supported. The ports for incoming and outgoing servers are always the default ones (143 for IMAP and 110 for POP3). Depending on the setup, you may use secure connection using SSL (Port 993 for IMAPs and 995 for POP3s).
+
+By default, the incoming (IMAP/POP3) and outgoing (SMTP) server should be the **domain from the browser address** you are using to access froxlor (without http(s):// and without any path/file information), for example _demo.froxlor.org_.
 
 ## 3. Forwarders
 
