@@ -62,7 +62,7 @@ When used via API, the `Domains.duplicate()` call accepts all `Domains.add()` pa
 
 #### Domain
 
-The domain you want to add to froxlor. Must be a <abbr title="full qualified domain name">FQDN</abbr> e.g. _mydomain.tld_. Adding subdomains is also possible (for example if a customer should not be able to use the complete domain). Just remember to specify the parentdomain correctly in case it is managed via froxlor too, see [This domain is a subdomain of another domain](#this-domain-is-a-subdomain-of-another-domain).
+The domain you want to add to froxlor. Must be a <abbr title="full qualified domain name">FQDN</abbr> e.g. _mydomain.tld_. Adding subdomains is also possible (for example if a customer should not be able to use the complete domain).
 
 Internationalized domain names (IDN) can also be added, just enter the domain as is (not Punycode/IDNA format). Froxlor will automatically encode the domain correctly for you.
 
@@ -73,12 +73,6 @@ Select the target customer and admin to assign the new domain to.
 #### Alias for domain
 
 Set this domain as _alias of another_ domain. Most of the domain-specific settings will be inherited from the specified domain as the alias-domain will be added to the parent domains virtual-host.
-
-#### This domain is a subdomain of another domain
-
-In case you want to add a subdomain of a domain, select the corresponding main-domain here. This is important for a correct order of virtual-hosts in the webserver.
-
-If the corresponding parent-domain is no managed within your froxlor-installation, you can skip this setting.
 
 #### Allow editing of domain
 

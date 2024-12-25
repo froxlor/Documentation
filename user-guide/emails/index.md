@@ -37,7 +37,7 @@ The username required to log in to your account is the **complete email address*
 
 The type of account usually is **IMAP**, alternatively, POP3 is also supported. The ports for incoming and outgoing servers are always the default ones (143 for IMAP and 110 for POP3). Depending on the setup, you may use secure connection using SSL (Port 993 for IMAPs and 995 for POP3s).
 
-By default, the incoming (IMAP/POP3) and outgoing (SMTP) server should be the **domain from the browser address** you are using to access froxlor (without http(s):// and without any path/file information), for example _demo.froxlor.org_.
+By default, the incoming (IMAP/POP3) and outgoing (SMTP) server should be the **domain from the browser address** you are using to access froxlor (without `http(s)://` and without any `path/file` information), for example _demo.froxlor.org_.
 
 ## 3. Forwarders
 
