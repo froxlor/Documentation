@@ -10,14 +10,14 @@ see [configuration templates](https://github.com/Froxlor/Froxlor/tree/main/lib/c
 | Distro  |                    Version                    |                              Notes |             Recommended source for ISO |
 |---------|:---------------------------------------------:|-----------------------------------:|---------------------------------------:|
 | Debian* | 12 (bookworm/stable), 11 (bullseye/oldstable) | *oldoldstable* is mostly supported | https://www.debian.org/distrib/netinst |
-| Ubuntu  |         24.04 (noble), 22.04 (jammy), 20.04 (focal)          |                  LTS releases only |     https://ubuntu.com/download/server |
+| Ubuntu  |  24.04 (noble), 22.04 (jammy), 20.04 (focal)  |                  LTS releases only |     https://ubuntu.com/download/server |
 
 <small>*Debian is the recommended and most likely best supported distribution for froxlor.</small>
 
 ## 1. Edit apt sources
 
 In order to install froxlor, we need to add the GPG keys and the repository to the APT sources (
-key: `FD88018B6F2D5390D051343FF6B4A8704F9E9BBC`).
+key: `CEED364A432D3158EEEB65BAABB22822918FBEA4`).
 
 ### Debian
 
