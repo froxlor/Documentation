@@ -142,12 +142,15 @@ bin/froxlor-cli froxlor:switch-server-ip --switch=123.10.20.30,234.30.20.10
 
 **Options:**
 
-| Option                 | Description                                                                                                   |
-|------------------------|---------------------------------------------------------------------------------------------------------------|
-| `-c, --check-only`     | Only check for newer version and exit                                                                         |
-| `-m, --mail-notify`    | Additionally inform administrator via email if a newer version was found                                      |
-| `-A, --yes-to-all`     | Do not ask for download, extract and database-update, just do it (if not --check-only is set)                 |
-| `-i, --integer-return` | Return integer whether a new version is available or not (implies --check-only). Useful for programmatic use. |
+| Option                                  | Description                                                                                                   |
+|-----------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| `-c`, `--check-only`                    | Only check for newer version and exit                                                                         |
+| `-o`, `--show-update-options`           | Show possible update option parameter for the update if any. Only usable in combination with "check-only".    | 
+| `-O`, `--update-options=UPDATE-OPTIONS` | Parameter list of update options. (multiple values allowed)                                                   |
+| `-d`, `--database`                      | Only run database updates in case updates are done via apt or manually.                                       |
+| `-m`, `--mail-notify`                   | Additionally inform administrator via email if a newer version was found                                      |
+| `-A`, `--yes-to-all`                    | Do not ask for download, extract and database-update, just do it (if not --check-only is set)                 |
+| `-i`, `--integer-return`                | Return integer whether a new version is available or not (implies --check-only). Useful for programmatic use. |
 
 <h2 id="user">9. Various user actions</h2>
 
