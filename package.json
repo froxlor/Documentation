@@ -1,6 +1,6 @@
 {
   "name": "documentation",
-  "version": "2.1.0",
+  "version": "2.3.0",
   "description": "Froxlor Documentation",
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   },
   "dependencies": {
     "medium-zoom": "^1.0.8"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
