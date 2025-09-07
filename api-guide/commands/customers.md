@@ -59,6 +59,7 @@ create a new customer with default ftp-user and standard-subdomain (if wanted)
 | def_language | string | optional, ISO 639-1 language code (e.g. 'en', 'de', see lng-folder for supported languages),default is system-default language |
 | gui_access | bool | optional, allow login via webui, if false ONLY the login via webui is disallowed; default true |
 | api_allowed | bool | optional, default is true if system setting api.enabled is true, else false |
+| shell_allowed | bool | optional, default is true if system setting system.allow_customer_shell is true, else false |
 | gender | int | optional, 0 = no-gender, 1 = male, 2 = female |
 | custom_notes | string | optional notes |
 | custom_notes_show | bool | optional, whether to show the content of custom_notes to the customer, default 0(false) |
@@ -146,6 +147,7 @@ update customer entry by either id or loginname, customer can only change langua
 | def_language | string | optional, ISO 639-1 language code (e.g. 'en', 'de', see lng-folder for supported languages),default is system-default language |
 | gui_access | bool | optional, allow login via webui, if false ONLY the login via webui is disallowed; default true |
 | api_allowed | bool | optional, default is true if system setting api.enabled is true, else false |
+| shell_allowed | bool | optional, default is true if system setting system.allow_customer_shell is true, else false |
 | gender | int | optional, 0 = no-gender, 1 = male, 2 = female |
 | custom_notes | string | optional notes |
 | custom_notes_show | bool | optional, whether to show the content of custom_notes to the customer, default 0(false) |

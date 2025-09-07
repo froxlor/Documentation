@@ -15,9 +15,10 @@ add a new email address
 | email_part | string | name of the address before @ |
 | domain | string | domain-name for the email-address |
 | spam_tag_level | float | optional, score which is required to tag emails as spam, default: 7.0 |
+| rewrite_subject | bool | optional, whether to add ***SPAM*** to the email's subject if applicable, default: [antispam.default_spam_rewrite_subject] |
 | spam_kill_level | float | optional, score which is required to discard emails, default: 14.0 |
-| bypass_spam | boolean | optional, disable spam-filter entirely, default: no |
-| policy_greylist | boolean | optional, enable grey-listing, default: yes |
+| bypass_spam | boolean | optional, disable spam-filter entirely, default: [antispam.default_bypass_spam] |
+| policy_greylist | boolean | optional, enable grey-listing, default: [antispam.default_policy_greylist] |
 | iscatchall | boolean | optional, make this address a catchall address, default: no |
 | customerid | int | optional, required when called as admin (if $loginname is not specified) |
 | loginname | string | optional, required when called as admin (if $customerid is not specified) |
@@ -63,9 +64,10 @@ toggle catchall flag of given email address either by id or email-address
 | customerid | int | optional, required when called as admin (if $loginname is not specified) |
 | loginname | string | optional, required when called as admin (if $customerid is not specified) |
 | spam_tag_level | float | optional, score which is required to tag emails as spam, default: 7.0 |
+| rewrite_subject | bool | optional, whether to add ***SPAM*** to the email's subject if applicable, default: [antispam.default_spam_rewrite_subject] |
 | spam_kill_level | float | optional, score which is required to discard emails, default: 14.0 |
-| bypass_spam | boolean | optional, disable spam-filter entirely, default: no |
-| policy_greylist | boolean | optional, enable grey-listing, default: yes |
+| bypass_spam | boolean | optional, disable spam-filter entirely, default: [antispam.default_bypass_spam] |
+| policy_greylist | boolean | optional, enable grey-listing, default: [antispam.default_policy_greylist] |
 | iscatchall | boolean | optional |
 | description | string | optional custom description (currently not used/shown in the frontend), default empty |
 

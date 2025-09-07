@@ -62,7 +62,7 @@ add new domain entry
 | caneditdomain | bool | optional, whether to allow the customer to edit domain settings, default 0 (false) |
 | isbinddomain | bool | optional, whether to generate a dns-zone or not (only of nameserver is activated), default 0 (false) |
 | zonefile | string | optional, custom dns zone filename (only of nameserver is activated), default empty (auto-generated) |
-| dkim | bool | optional, currently not in use, default 0 (false) |
+| dkim | bool | optional, whether this domain should use dkim if antispam is activated, default 0 (false) |
 | specialsettings | string | optional, custom webserver vhost-content which is added to the generated vhost, default empty |
 | ssl_specialsettings | string | optional, custom webserver vhost-content which is added to the generated ssl-vhost, default empty |
 | include_specialsettings | bool | optional, whether to include non-ssl specialsettings in the generated ssl-vhost, default false |
@@ -93,6 +93,7 @@ add new domain entry
 | ssl_cipher_list | string | optional list of allowed/used ssl/tls ciphers, see system.ssl_cipher_list setting, only used/requiredif $override_tls is true, default empty or system.ssl_cipher_list setting if $override_tls is true |
 | tlsv13_cipher_list | string | optional list of allowed/used tls-1.3 specific ciphers, see system.tlsv13_cipher_list setting, onlyused/required if $override_tls is true, default empty or system.tlsv13_cipher_list setting if$override_tls is true |
 | description | string | optional custom description (currently not used/shown in the frontend), default empty |
+| is_stdsubdomain | bool | (internally) optional whether this is a standard subdomain for a customer which is being added so no usage is decreased |
 
 #### Response
 
@@ -139,6 +140,7 @@ update domain entry by either id or domainname
 | ipandport | array | optional list of ip/ports to assign to domain, default is system-default-ips |
 | subcanemaildomain | int | optional, allow subdomains of this domain as email domains, 1 = choosable (default no), 2 = choosable(default yes), 3 = always, default 0 (never) |
 | isemaildomain | bool | optional, allow email usage with this domain, default 0 (false) |
+| emaildomainverified | bool | optional, when setting $isemaildomain to false, this needs to be set to true to confirm the action in case email addresses exist for this domain,default 0 (false) |
 | email_only | bool | optional, restrict domain to email usage, default 0 (false) |
 | selectserveralias | int | optional, 0 = wildcard, 1 = www-alias, 2 = none, default 0 |
 | speciallogfile | bool | optional, whether to create an exclusive web-logfile for this domain, default 0 (false) |
@@ -149,7 +151,7 @@ update domain entry by either id or domainname
 | caneditdomain | bool | optional, whether to allow the customer to edit domain settings, default 0 (false) |
 | isbinddomain | bool | optional, whether to generate a dns-zone or not (only of nameserver is activated), default 0 (false) |
 | zonefile | string | optional, custom dns zone filename (only of nameserver is activated), default empty (auto-generated) |
-| dkim | bool | optional, currently not in use, default 0 (false) |
+| dkim | bool | optional, whether this domain should use dkim if antispam is activated, default 0 (false) |
 | specialsettings | string | optional, custom webserver vhost-content which is added to the generated vhost, default empty |
 | ssl_specialsettings | string | optional, custom webserver vhost-content which is added to the generated ssl-vhost, default empty |
 | include_specialsettings | bool | optional, whether to include non-ssl specialsettings in the generated ssl-vhost, default false |
