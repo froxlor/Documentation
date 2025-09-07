@@ -197,6 +197,10 @@ function navbar22() {
                     link: '/user-guide/ftp-accounts/'
                 },
                 {
+                    text: 'SSH Keys',
+                    link: '/user-guide/ssh-keys/'
+                },
+                {
                     text: 'Extras',
                     link: '/user-guide/extras/'
                 },
