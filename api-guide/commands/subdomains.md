@@ -25,6 +25,7 @@ add a new subdomain
 | ssl_redirect | bool | optional, whether to generate a https-redirect or not, default false; requires SSL to be enabled |
 | letsencrypt | bool | optional, whether to generate a Let's Encrypt certificate for this domain, default false; requiresSSL to be enabled |
 | http2 | bool | optional, whether to enable http/2 for this subdomain (requires to be enabled in the settings),default 0 (false) |
+| http3 | bool | optional, whether to enable http/3 for this subdomain (requires to be enabled in the settings),default 0 (false) |
 | hsts_maxage | int | optional max-age value for HSTS header, default 0 |
 | hsts_sub | bool | optional whether or not to add subdomains to the HSTS header, default 0 |
 | hsts_preload | bool | optional whether or not to preload HSTS header value, default 0 |
@@ -83,6 +84,7 @@ update subdomain entry by either id or domainname
 | ssl_redirect | bool | optional, whether to generate a https-redirect or not, default false; requires SSL to be enabled |
 | letsencrypt | bool | optional, whether to generate a Let's Encrypt certificate for this domain, default false; requiresSSL to be enabled |
 | http2 | bool | optional, whether to enable http/2 for this domain (requires to be enabled in the settings), default0 (false) |
+| http3 | bool | optional, whether to enable http/3 for this domain (requires to be enabled in the settings), default0 (false) |
 | hsts_maxage | int | optional max-age value for HSTS header |
 | hsts_sub | bool | optional whether or not to add subdomains to the HSTS header |
 | hsts_preload | bool | optional whether or not to preload HSTS header value |

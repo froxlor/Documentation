@@ -66,6 +66,7 @@ listed below.
 | `-d, --daemon=DAEMON`                   | When used with --apply you can specify one or multiple daemons. These will be the only services that get configured. (multiple values allowed) |
 | `-i, --import-settings=IMPORT-SETTINGS` | Import settings from another froxlor installation. This can be done standalone or in addition to --apply.                                      |
 | `-A, --yes-to-all`                      | Install packages without asking questions (Debian/Ubuntu only currently)                                                                       |
+| `-D, --delete-file`                     | If --apply is called with a local file, remove it after successful configurations.                                                             |
 
 <h2 id="cron">4. Regularly perform tasks created by froxlor</h2>
 

@@ -82,6 +82,7 @@ add new domain entry
 | dont_use_default_ssl_ipandport_if_empty | bool | optional, do NOT set the systems default ssl ip addresses if none are given via $ssl_ipandportparameter |
 | sslenabled | bool | optional, whether SSL is enabled for this domain, regardless of the assigned ssl-ips, default1 (true) |
 | http2 | bool | optional, whether to enable http/2 for this domain (requires to be enabled in the settings), default0 (false) |
+| http3 | bool | optional, whether to enable http/3 for this domain (requires to be enabled in the settings), default0 (false) |
 | hsts_maxage | int | optional max-age value for HSTS header |
 | hsts_sub | bool | optional whether to add subdomains to the HSTS header |
 | hsts_preload | bool | optional whether to preload HSTS header value |
@@ -173,6 +174,7 @@ update domain entry by either id or domainname
 | remove_ssl_ipandport | bool | optional, if set to true and no $ssl_ipandport value is given, the ip's get removed, otherwise, thecurrently set value is used, default false |
 | sslenabled | bool | optional, whether SSL is enabled for this domain, regardless of the assigned ssl-ips, default1 (true) |
 | http2 | bool | optional, whether to enable http/2 for this domain (requires to be enabled in the settings), default0 (false) |
+| http3 | bool | optional, whether to enable http/3 for this domain (requires to be enabled in the settings), default0 (false) |
 | hsts_maxage | int | optional max-age value for HSTS header |
 | hsts_sub | bool | optional whether to add subdomains to the HSTS header |
 | hsts_preload | bool | optional whether to preload HSTS header value |
