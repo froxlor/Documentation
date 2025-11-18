@@ -39,6 +39,18 @@ The type of account usually is **IMAP**, alternatively, POP3 is also supported. 
 
 By default, the incoming (IMAP/POP3) and outgoing (SMTP) server should be the **domain from the browser address** you are using to access froxlor (without `http(s)://` and without any `path/file` information), for example _demo.froxlor.org_.
 
+### 2.2 Adding "Allowed sender" for your account
+
+You can specify sender addresses that are allowed to be used with this account when sending emails (From-address). You must own the domains in order to use them.
+
+In the email address detail view, browse to the end of the page and click on `Add allowed sender`.
+
+<UiBrowser :src="('/img/frx_ug_emails_acc_overview.png')" alt="Email account overview"/>
+
+Enter a specific username or leave empty to allow any username of the given domain and click `Save`.
+
+<UiBrowser :src="('/img/frx_ug_emails_acc_addsender.png')" alt="Email account - add allowed sender"/>
+
 ## 3. Forwarders
 
 To add an email forwarder, you first need to create an e-mail address or edit an existing one. From there (see [graph above](#_1-2-options-after-adding)) you can click on `Create forwarder`.
