@@ -1,5 +1,5 @@
 # Overview
-### Thank you for considering Froxlor.
+### Thank you for considering froxlor.
 
 Froxlor is the lightweight server management software for your needs.
 
