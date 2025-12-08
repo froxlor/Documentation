@@ -40,7 +40,7 @@ Most servers ship without a restrictive firewall enabled by default, which means
 
 When using UFW, keep in mind that it is restrictive by design: once activated, it blocks all incoming traffic except for the services you explicitly allow. Therefore, you must open only the ports required for the services you intend to use.
 
-The following example shows how to permit standard Web, DNS, Mail, FTP, and administrative traffic using `UFW (Uncomplicated Firewall)`:
+The following example shows how to permit standard web, mail, FTP, DNS, and administrative traffic using `UFW (Uncomplicated Firewall)`:
 
 ```bash
 # Allow HTTP and HTTPS traffic (required for websites + froxlor)
