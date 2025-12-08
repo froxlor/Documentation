@@ -166,6 +166,10 @@ function navbar22() {
                 link: '/admin-guide/miscellaneous/'
             },
             {
+                text: 'Service Ports',
+                link: '/admin-guide/service-ports/'
+            },
+            {
                 text: 'Domain import',
                 link: '/admin-guide/domain-import/'
             },
