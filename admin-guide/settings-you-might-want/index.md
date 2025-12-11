@@ -113,9 +113,19 @@ SELECT SUM(data_length + index_length) / 1024 / 1024 / 1024 AS total_gb FROM inf
 
 Whatever number it returns, double it and use this (max. half of your available memory, though) as your `innodb_buffer_pool_size`.
 
+Closely related settings are `innodb_log_file_size` and `innodb_log_files_in_group`. While `innodb_log_files_in_group` usually defaults to 2, `innodb_log_file_size` should be set to 25 percent of your `innodb_buffer_pool_size`, i.e., `4G` if your buffer pool is `16G` as in the example.
+
+**Please note that this applies to MariaDB.** If you are using modern MySQL (8.0.30+), both `innodb_log_file_size` and `innodb_log_files_in_group` have been merged into one setting: `innodb_redo_log_capacity`. On MySQL, the value would be `innodb_log_file_size` multiplied by `innodb_log_files_in_group`, so `8G` in our example.
+
 ```
 [mysqld]
 innodb_buffer_pool_size = 16G
+
+# Uncomment for MariaDB
+# innodb_log_file_size = 4G
+
+# Uncomment for MySQL 8+
+# innodb_redo_log_capacity = 8G
 ```
 
 ### Assorted performance optimizations
