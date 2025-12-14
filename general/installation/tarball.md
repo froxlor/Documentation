@@ -55,6 +55,10 @@ To create the user, execute the following commands:
 Please change the default password (CHANGEM3) in the first line!
 :::
 
+::: tip NOTE
+Please avoid characters that could have some sort of meaning, such as space, quote, double quote or number sign when generating a password for both the privileged and non-privileged user. It may cause problems in the config files down the road. Since MySQL isn't accessible from the Internet by default, it won't have huge security implications one way or the other.
+:::
+
 ```sql
 CREATE USER 'froxroot'@'localhost' IDENTIFIED BY 'CHANGEM3';
 GRANT ALL PRIVILEGES ON *.* TO 'froxroot'@'localhost' WITH GRANT OPTION;
