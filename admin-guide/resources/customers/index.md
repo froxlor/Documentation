@@ -71,6 +71,10 @@ see [Email & file templates](../../miscellaneous/#_2-email-file-templates)
 When API usage is enabled in the `System settings` globally, you can decide whether the customer can create/manage API
 keys and be able to access data via [API](../../../api-guide/).
 
+### Allow shell access
+
+When shell-usage is enabled in the `System settings` globally, you can decide whether the customer can access the server using scp/ssh and manage ssh-keys via froxlor.
+
 ### 3.2 Contact Data
 
 Specify the customers first- and lastname or company and e-mail address. Optionally you can add an internal note or make

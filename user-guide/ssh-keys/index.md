@@ -2,6 +2,10 @@
 
 Customers may add one or more ssh public keys to an existing ftp-user. They are added to the users `~/.ssh/authorized_keys` file in order to allow ssh/scp login via ssh key.
 
+::: tip NOTE
+For a customer to be able to use shell / SSH-keys an admin needs to allow shell-usage globally and define allowed shells in the [system settings](../../admin-guide/settings/) as well as allow the specific customer shell-usage.
+:::
+
 ## 1. Add a new SSH key
 
 <UiBrowser :src="('/img/frx_ug_sshkeys_overview.png')" alt="SSH keys overview"/>
