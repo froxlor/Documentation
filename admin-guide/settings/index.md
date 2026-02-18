@@ -2,7 +2,7 @@
 
 ## 1. Main settings
 
-Froxlor offers a variety of settings for the panel itself and the server services used. For the more demanding users, there is an advanced more which opens even more possibilities. Settings can also be _exported_ and _imported_ to and from other froxlor installations. You can always use the _Global search_ at the top if you are unsure where to find a specific setting.
+Froxlor offers a variety of settings for the panel itself and the server services used. For the more demanding users, there is an advanced mode (click the top-right button `Mode: Basic` to toggle) which opens even more possibilities. Settings can also be _exported_ and _imported_ to and from other froxlor installations. You can always use the _Global search_ at the top if you are unsure where to find a specific setting.
 
 <UiBrowser :src="('/img/frx_settings_overview.png')" alt="Settings overview"/>
 
