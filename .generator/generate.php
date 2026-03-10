@@ -11,8 +11,8 @@ class generate
 	public function start(string $type, string $ref): void
 	{
 		$dir = __DIR__ . '/release';
-		$file = sprintf('Froxlor-%s', $ref);
-		$source = sprintf('https://github.com/Froxlor/Froxlor/archive/refs/%s/%s.zip', $type, $ref);
+		$file = sprintf('froxlor-%s', $ref);
+		$source = sprintf('https://github.com/froxlor/froxlor/archive/refs/%s/%s.zip', $type, $ref);
 		$destination = sprintf('%s/%s.zip', __DIR__, $file);
 
 		$this->task('Cleanup directories', function () use ($dir) {
