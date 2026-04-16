@@ -10,9 +10,9 @@ recommend installing on one of the supported distributions: __Debian__ or __Ubun
 | Component     |                                                          Info |
 |---------------|--------------------------------------------------------------:|
 | Webserver     |                                                apache2, nginx |
-| PHP           |                                                 7.4 up to 8.2 |
+| PHP           |                                                 7.4 up to 8.5 |
 | PHP extension | session, ctype, xml, filter, posix, mbstring, curl, gmp, json |
-| Database      |                                    MySQL-5.7+ / MariaDB 10.3+ |
+| Database      |                                      MySQL-8.4 / MariaDB 11.7 |
 
 ## 2. Installation methods
 
